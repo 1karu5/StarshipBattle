@@ -5,9 +5,11 @@ var playerObj:GameObject;
 var spawnObjOne:Transform;
 var spawnObjTwo:Transform;
 
+private var port:int;
 private var refreshing:boolean;
 private var hostData: HostData[];
 
+private var inputIp:String = "Enter IP here...";
 private var buttonX:float;
 private var buttonY:float;
 private var buttonH:float;
@@ -19,6 +21,8 @@ function Start(){
 	buttonY=Screen.width * 0.05;
 	buttonH=Screen.width * 0.1;
 	buttonW=Screen.width * 0.1;
+	
+	port = 25000;
 }
 
 function refreshHostList(){
@@ -28,7 +32,7 @@ function refreshHostList(){
 }
 
 function startServer(){
-	Network.InitializeServer(2,25000,!Network.HavePublicAddress);
+	Network.InitializeServer(2,port,!Network.HavePublicAddress);
 	MasterServer.RegisterHost(gameName,"prototypgame","coment und so");
 }
 
@@ -70,17 +74,27 @@ function Update(){
 
 function OnGUI(){
 	if(!Network.isClient && !Network.isServer){
-		if(GUI.Button(Rect(buttonX,buttonY,buttonH,buttonW),"Start Server")){
+		//manuall connect
+		inputIp=GUI.TextField(Rect (buttonX*1.5+buttonW, buttonY,buttonW*3,buttonH*0.3),inputIp , 25);
+		
+		if(GUI.Button(Rect(buttonX,buttonY,buttonH,buttonW),"Connect")){
+			Debug.Log("Connecting manually...");
+			Network.Connect(inputIp,port);
+		}
+		//create Server  
+		if(GUI.Button(Rect(buttonX,buttonY*1.2+buttonH,buttonH,buttonW),"Start Server")){
 			Debug.Log("starting server");
 			startServer();
 		}
-		if(GUI.Button(Rect(buttonX,buttonY*1.2+buttonH,buttonH,buttonW),"Refresh")){
+		//getting server list
+		if(GUI.Button(Rect(buttonX,buttonY*1.4+(buttonH*2),buttonH,buttonW),"Refresh")){
 			Debug.Log("Refreshing");
 			refreshHostList();
 		}
+		//show server list
 		if(hostData){
 			for(var i:int=0;i<hostData.Length;i++){
-				if(GUI.Button(Rect(buttonX*1.5+buttonW,buttonY*1.2+(buttonH*i),buttonW*3,buttonH*0.5),hostData[i].gameName)){
+				if(GUI.Button(Rect(buttonX*1.5+buttonW,buttonY*2+(buttonH*i),buttonW*3,buttonH*0.5),hostData[i].gameName)){
 					Network.Connect(hostData[i]);
 				}
 			}
