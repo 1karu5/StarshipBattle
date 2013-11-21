@@ -2,6 +2,7 @@
 
 var gameName:String = "hsmannheimjimws1314";
 
+
 private var refreshing:boolean;
 private var hostData: HostData[];
 
@@ -31,6 +32,7 @@ function startServer(){
 
 function OnServerInitialized(){
 	Debug.Log("startet server successfully");
+	//Network.Instantiate(playerPref,spwanPoint.position,Quaternion.identity,0);
 }
 
 function OnMasterServerEvent(mse:MasterServerEvent){
