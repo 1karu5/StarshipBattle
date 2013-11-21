@@ -7,34 +7,15 @@ var player:boolean;
 private var targetPosition:Vector3;
 private static var activeObject:GameObject;
 
-function Start(){
-	enabled=false;
-}
 
 function OnMouseDown(){
-	if(Network.isClient == player){
+	if(networkView.isMine){
 		activeObject = gameObject;
 	}
 }
 
-function OnPlayerConnected(){
-	startGame();
-}
-
-function OnConnectedToServer(){
-	startGame();
-}
-
-function startGame(){
-	
-	if(Network.isClient == player){
-    	enabled=true;
-    	//Network.Instantiate(gameObject,gameObject.position,Quaternion.identity,0);
-    }
-}
-
 function Update () {
-	if(Network.isClient == player){
+	if(networkView.isMine){
 		if(Input.GetKeyDown(KeyCode.Mouse0) && activeObject==gameObject)
 		    {
 		        var playerPlane = new Plane(Vector3.up, transform.position);
