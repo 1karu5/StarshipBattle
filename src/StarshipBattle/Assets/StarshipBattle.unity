@@ -102,9 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameName: hsmannheimjimws1314
-  playerObj: {fileID: 100000, guid: 4bd7123d94775486d962e4455bf3045b, type: 2}
-  spawnObjOne: {fileID: 1747032059}
-  spawnObjTwo: {fileID: 1723356252}
 --- !u!4 &63488948
 Transform:
   m_ObjectHideFlags: 0
@@ -211,6 +208,46 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!1 &134535313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 134535314}
+  - 114: {fileID: 134535315}
+  m_Layer: 0
+  m_Name: spwan2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &134535314
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 134535313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.1093025, y: 1.18719244, z: .530601501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 608443180}
+--- !u!114 &134535315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 134535313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940ded5e764ee4085b54787966769bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 100000, guid: 4bd7123d94775486d962e4455bf3045b, type: 2}
+  player: player1
 --- !u!1 &216408672
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +537,7 @@ Transform:
   - {fileID: 375055860}
   - {fileID: 2115157451}
   - {fileID: 1747032059}
+  - {fileID: 134535314}
   m_Father: {fileID: 0}
 --- !u!1 &675255590
 GameObject:
@@ -901,6 +939,7 @@ Transform:
   - {fileID: 1678306279}
   - {fileID: 502849720}
   - {fileID: 1723356252}
+  - {fileID: 1881778287}
   m_Father: {fileID: 0}
 --- !u!1 &1078753106
 GameObject:
@@ -1185,8 +1224,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1723356252}
+  - 114: {fileID: 1723356253}
   m_Layer: 0
-  m_Name: spwan
+  m_Name: spwan1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1199,10 +1239,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723356251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.0360909, y: 1.18719244, z: .530601501}
+  m_LocalPosition: {x: -10.9678202, y: 1.18719244, z: -43.5735664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1043284617}
+--- !u!114 &1723356253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1723356251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940ded5e764ee4085b54787966769bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 100000, guid: 4bd7123d94775486d962e4455bf3045b, type: 2}
+  player: player2
 --- !u!1 &1731522983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,8 +1326,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1747032059}
+  - 114: {fileID: 1747032060}
   m_Layer: 0
-  m_Name: spwan
+  m_Name: spwan1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1287,10 +1341,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1747032058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.0360909, y: 1.18719244, z: .530601501}
+  m_LocalPosition: {x: -6.49501896, y: 1.18719244, z: 43.5532684}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 608443180}
+--- !u!114 &1747032060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1747032058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940ded5e764ee4085b54787966769bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 100000, guid: 4bd7123d94775486d962e4455bf3045b, type: 2}
+  player: player1
 --- !u!1 &1809174083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1420,46 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &1881778286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1881778287}
+  - 114: {fileID: 1881778288}
+  m_Layer: 0
+  m_Name: spwan2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1881778287
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881778286}
+  m_LocalRotation: {x: 0, y: -1.62920685e-07, z: 0, w: 1}
+  m_LocalPosition: {x: -31.4190674, y: 1.18719244, z: .530598879}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1043284617}
+--- !u!114 &1881778288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881778286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940ded5e764ee4085b54787966769bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 100000, guid: 4bd7123d94775486d962e4455bf3045b, type: 2}
+  player: player2
 --- !u!1001 &1952918228
 Prefab:
   m_ObjectHideFlags: 0

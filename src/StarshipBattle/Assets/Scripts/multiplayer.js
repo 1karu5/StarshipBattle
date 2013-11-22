@@ -1,9 +1,6 @@
 ﻿#pragma strict
 
 var gameName:String = "hsmannheimjimws1314";
-var playerObj:GameObject;
-var spawnObjOne:Transform;
-var spawnObjTwo:Transform;
 
 private var port:int;
 private var refreshing:boolean;
@@ -38,22 +35,6 @@ function startServer(){
 
 function OnServerInitialized(){
 	Debug.Log("startet server successfully");
-}
-
-function OnPlayerConnected(){
-	spawnPlayerOne();
-}
-
-function OnConnectedToServer(){
-	spawnPlayerTwo();
-}
-
-function spawnPlayerOne(){
-	Network.Instantiate(playerObj,spawnObjOne.position,spawnObjOne.rotation,0);	
-}
-
-function spawnPlayerTwo(){
-	Network.Instantiate(playerObj,spawnObjTwo.position,spawnObjTwo.rotation,0);	
 }
 
 function OnMasterServerEvent(mse:MasterServerEvent){
