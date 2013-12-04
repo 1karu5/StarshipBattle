@@ -57,6 +57,11 @@ function Update(){
         //Camera.main.orthographicSize = Mathf.Min(Camera.main.orthographicSize-1, 6);
     }
     
+    // set camera to start position
+    if (Input.GetKeyDown (KeyCode.K)){
+    	transform.position = Vector3(xPos, yPos, zPos);
+    }
+    
     /* 
      // Do camera movement by keyboard
      transform.Translate(Vector3(Input.GetAxis("EditorHorizontal") * scrollSpeed * Time.deltaTime,
