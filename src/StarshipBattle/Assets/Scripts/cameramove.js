@@ -8,14 +8,18 @@ var maxZoomFactor:float = 2;
 private var xPos:float; 
 private var yPos:float; 
 private var zPos:float;
+private var xPosLast:float; 
+private var yPosLast:float; 
+private var zPosLast:float;
 private var fieldOfView:float;
+private var thatCamera:Camera;
 
 function Start(){
 	xPos = transform.position.x;
 	yPos = transform.position.y;
 	zPos = transform.position.z;
-	fieldOfView = camera.fieldOfView;
-	Debug.Log(fieldOfView);
+	thatCamera = transform.camera;
+	fieldOfView = thatCamera.fieldOfView;
 }
 
 function Update(){
@@ -59,7 +63,17 @@ function Update(){
     
     // set camera to start position
     if (Input.GetKeyDown (KeyCode.K)){
-    	transform.position = Vector3(xPos, yPos, zPos);
+    	if (transform.position.x != xPos || transform.position.y != yPos || transform.position.z != zPos){
+    		xPosLast = transform.position.x;
+			yPosLast = transform.position.y;
+			zPosLast = transform.position.z;
+			transform.position = Vector3(xPos, yPos, zPos);
+    	}
+    	else {
+    		transform.position = Vector3(xPosLast, yPosLast, zPosLast);
+    	}
+    	
+    	
     }
     
     /* 
