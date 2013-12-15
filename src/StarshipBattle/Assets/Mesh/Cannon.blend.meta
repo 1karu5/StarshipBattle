@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: 86d7d53f187d841b3aaa7522c2fb2e42
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: G_ngeNeu
+    100004: KanonenRohrSegment
+    100006: Plane
+    100008: PlattformGrob
+    100010: Rohr
+    100012: Roof
+    100014: Ship
+    100016: Spiegelaxe
+    100018: TurmGrob
+    100020: Verbindungsst_ck
+    100022: verstrebung
+    100024: verstrebungOben
+    400000: //RootNode
+    400002: G_ngeNeu
+    400004: KanonenRohrSegment
+    400006: Plane
+    400008: PlattformGrob
+    400010: Rohr
+    400012: Roof
+    400014: Ship
+    400016: Spiegelaxe
+    400018: TurmGrob
+    400020: Verbindungsst_ck
+    400022: verstrebung
+    400024: verstrebungOben
+    2300000: G_ngeNeu
+    2300002: KanonenRohrSegment
+    2300004: Plane
+    2300006: PlattformGrob
+    2300008: Roof
+    2300010: Ship
+    2300012: TurmGrob
+    2300014: Verbindungsst_ck
+    2300016: verstrebung
+    2300018: verstrebungOben
+    3300000: G_ngeNeu
+    3300002: KanonenRohrSegment
+    3300004: Plane
+    3300006: PlattformGrob
+    3300008: Roof
+    3300010: Ship
+    3300012: TurmGrob
+    3300014: Verbindungsst_ck
+    3300016: verstrebung
+    3300018: verstrebungOben
+    4300000: TurmGrob
+    4300002: Verbindungsst_ck
+    4300004: PlattformGrob
+    4300006: Plane
+    4300008: Roof
+    4300010: G_ngeNeu
+    4300012: Ship
+    4300014: verstrebungOben
+    4300016: verstrebung
+    4300018: KanonenRohrSegment
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 
