@@ -1,5 +1,6 @@
 ﻿#pragma strict
 
+var prettify : GUISkin;
 var objectName:String = "empty";
 var player:String = "playerLeft";
 var posX:float = 0.5;
@@ -28,12 +29,18 @@ function Update () {
  
 function OnGUI()
 {
+
+	
  	var X = Screen.width * posX;
  	var Y = Screen.height * posY;
  	var sX = Screen.height * sizeX;
  	var sY = Screen.height * sizeY;
+ 	GUI.skin = prettify;
+ 	GUI.HorizontalScrollbar(Rect (X,Y,sX,sY), 0, health.health, 0, 100);
+ 	
+ 	
     // draw the background:
-    GUI.BeginGroup (new Rect (X, Y, sX, sY));
+    /*GUI.BeginGroup (new Rect (X, Y, sX, sY));
         GUI.Box (Rect (0,0, sX, sY),progressBarEmpty);
  
         // draw the filled-in part:
@@ -42,5 +49,6 @@ function OnGUI()
         GUI.EndGroup ();
  
     GUI.EndGroup ();
+    */
  
 } 
