@@ -141,7 +141,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300008, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
+      propertyPath: m_Name
+      value: schiffLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
@@ -158,7 +162,7 @@ GameObject:
   - 4: {fileID: 91642675}
   - 95: {fileID: 91642676}
   m_Layer: 0
-  m_Name: schiff
+  m_Name: schiffRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -526,13 +530,75 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300008, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
+      propertyPath: m_Name
+      value: schiffRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
   m_RootGameObject: {fileID: 91642674}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &497874713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 497874716}
+  - 114: {fileID: 497874715}
+  - 114: {fileID: 497874714}
+  m_Layer: 0
+  m_Name: mainLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &497874714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497874713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e669242c53f0428c8f2143179cce889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: empty
+  player: playerLeft
+  posX: .0500000007
+  posY: .949999988
+  sizeX: .5
+  sizeY: .0500000007
+  progressBarEmpty: {fileID: 0}
+  progressBarFull: {fileID: 0}
+--- !u!114 &497874715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497874713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0b3f06d5ebe4f5eb87b96cb6017f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &497874716
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497874713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5525198, y: -3.22232676, z: 14.5661926}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &563521761
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +634,7 @@ Renderer:
     type: 3}
   m_PrefabInternal: {fileID: 81010960}
   m_GameObject: {fileID: 563521761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -663,7 +729,7 @@ GameObject:
   - 4: {fileID: 932581304}
   - 95: {fileID: 932581305}
   m_Layer: 0
-  m_Name: schiff
+  m_Name: schiffLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,7 +887,7 @@ Renderer:
     type: 3}
   m_PrefabInternal: {fileID: 428532727}
   m_GameObject: {fileID: 1295544821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
