@@ -33,8 +33,12 @@ function startServer(){
 	MasterServer.RegisterHost(gameName,"prototypgame","coment und so");
 }
 
+function setControls(){
+
+}
+
 function OnServerInitialized(){
-	Debug.Log("startet server successfully");
+	Debug.Log("started server successfully");
 }
 
 function OnMasterServerEvent(mse:MasterServerEvent){
@@ -72,6 +76,11 @@ function OnGUI(){
 			Debug.Log("Refreshing");
 			refreshHostList();
 		}
+		//set controls
+		if(GUI.Button(Rect(buttonX,buttonY*1.6+(buttonH*3),buttonH,buttonW),"Set controls")){
+			Debug.Log("setting controls");
+			setControls();
+		}
 		//show server list
 		if(hostData){
 			for(var i:int=0;i<hostData.Length;i++){
@@ -81,5 +90,13 @@ function OnGUI(){
 			}
 		}
 		
+	} else if(Network.isServer) {
+	
+		GUI.Label(Rect(buttonX * 8,buttonY*5,buttonH*20,buttonW*20),"Waiting for a player to connect...");
+	
+		if (GUI.Button(Rect(buttonX * 8,buttonY*2+(buttonH*3),buttonH,buttonW),"cancel")) {
+			Network.Disconnect();
+			MasterServer.UnregisterHost();
+		}
 	}
 }
