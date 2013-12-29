@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 63488948}
   - 114: {fileID: 63488947}
   m_Layer: 0
-  m_Name: multiplayer
+  m_Name: mainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 63488946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5b5e7ddc7474f55b1195acd6536731, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c57775147ade874bb95ad1520043486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameName: hsmannheimjimws1314
@@ -139,7 +139,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129592555}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
   m_LocalPosition: {x: 164.959106, y: 233.410736, z: -96.220047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -158,6 +158,7 @@ MonoBehaviour:
   scrollArea: 100
   scrollSpeed: 50
   zoomSpeed: 100
+  maxZoomFactor: 2
 --- !u!81 &129592558
 AudioListener:
   m_ObjectHideFlags: 0
@@ -431,7 +432,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 1281f5b0940eb414d963185e14b338eb, type: 3}
   m_PrefabInternal: {fileID: 1952918228}
   m_GameObject: {fileID: 502849719}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
+  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
   m_LocalPosition: {x: -14.2524452, y: -6.04418945, z: 88.2531128}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
@@ -1649,7 +1650,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 1281f5b0940eb414d963185e14b338eb, type: 3}
   m_PrefabInternal: {fileID: 1229245322}
   m_GameObject: {fileID: 2115157447}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
+  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
   m_LocalPosition: {x: -14.2524452, y: -6.04418945, z: 88.2531128}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []

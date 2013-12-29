@@ -1,9 +1,4 @@
 ﻿#pragma strict
 
-function Start () {
-
-}
-
-function Update () {
-
-}
+public static var left:KeyCode = KeyCode.A;
+public static var right:KeyCode = KeyCode.D;
