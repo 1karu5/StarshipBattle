@@ -639,15 +639,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e669242c53f0428c8f2143179cce889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prettify: {fileID: 11400000, guid: d9177a552faa14283a196765344496d1, type: 2}
   objectName: empty
   player: playerLeft
   posX: .0500000007
   posY: .949999988
   sizeX: .5
   sizeY: .0500000007
-  progressBarEmpty: {fileID: 0}
-  progressBarFull: {fileID: 0}
 --- !u!114 &497874715
 MonoBehaviour:
   m_ObjectHideFlags: 0
