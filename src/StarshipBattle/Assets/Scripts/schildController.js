@@ -58,8 +58,14 @@ function OnCollisionEnter(collision:Collision) {
 	if (isEnabled && collision.collider.name == "laser(Clone)" && collision.collider.transform.parent.name != ownerName){
 		if (Random.value > schildRandom){
 			Debug.Log("Destroy laser");
-			Destroy(collision.collider.gameObject);
+			//if(collision.gameObject.rigidbody) {
+		    //    for(var contact in collision.contacts) {
+		    //        collision.gameObject.rigidbody.AddExplosionForce(5, contact.point, 5, 10);
+		    //    }
+		    //}
 			health = Mathf.Max(health - updateMinusOnCollision, 0.0);
+			Destroy(collision.collider.gameObject);
+			
 		}
 	}
 }
