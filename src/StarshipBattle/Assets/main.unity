@@ -284,7 +284,7 @@ GameObject:
   - 4: {fileID: 91642675}
   - 95: {fileID: 91642676}
   m_Layer: 0
-  m_Name: schiffRight
+  m_Name: schiff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,7 +777,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
       propertyPath: m_Name
-      value: schiffRight
+      value: schiff
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
       propertyPath: m_LocalScale.x
@@ -808,7 +808,7 @@ GameObject:
   - 136: {fileID: 449502131}
   - 23: {fileID: 449502130}
   m_Layer: 0
-  m_Name: schildLeft
+  m_Name: schild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1274,7 +1274,7 @@ GameObject:
   - 4: {fileID: 932581304}
   - 95: {fileID: 932581305}
   m_Layer: 0
-  m_Name: schiffLeft
+  m_Name: schiff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2768,7 +2768,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6face9ab07f3844d290a113371de9f9a, type: 2}
       propertyPath: m_Name
-      value: schildLeft
+      value: schild
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6face9ab07f3844d290a113371de9f9a, type: 2}
