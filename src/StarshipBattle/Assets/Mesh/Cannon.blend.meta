@@ -56,6 +56,8 @@ ModelImporter:
     100100: Zylinder
     100102: Zylinder2
     100104: ZylinderRechts
+    100106: Alles_drehbare
+    100108: Alles_nicht_drehbare
     400000: Antenne
     400002: AntenneD_nn
     400004: AntenneEckig
@@ -109,6 +111,8 @@ ModelImporter:
     400100: Zylinder
     400102: Zylinder2
     400104: ZylinderRechts
+    400106: Alles_drehbare
+    400108: Alles_nicht_drehbare
     2300000: AntenneD_nn
     2300002: AntenneEckig
     2300004: AntenneParabol

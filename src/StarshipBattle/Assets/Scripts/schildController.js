@@ -3,7 +3,7 @@
 var posX:float = 0.05;
 var posY:float = 0.95;
 
-var posXR:float = 0.55;
+var posXR:float = 0.60;
 
 var sizeX:float = 0.5;
 var sizeY:float = 0.05;
