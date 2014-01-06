@@ -3,80 +3,74 @@
 var posX:float = 0.05;
 var posY:float = 0.95;
 
-var posXR:float = 0.60;
-
 var sizeX:float = 0.5;
 var sizeY:float = 0.05;
 
-private static var schildLeft:GameObject;
-private static var schildRight:GameObject;
+private var schildRandom:float = 0.2;
 
-private static var schildLeftOn:boolean = true;
-private static var schildRightOn:boolean = true;
+public var updatePlus:float = 0.025;
+public var updateMinus:float = 0.025;
+public var updateMinusOnCollision:float = 2.5;
 
-public static var schildLeftHealth:float = 100.0;
-public static var schildRightHealth:float = 100.0;
 
-public var schildPerUpdatePlus:float = 0.1;
-public var schildPerUpdateMinus:float = 0.1;
+private var isEnabled:boolean = true;
+private var ownerName:String;
+private var health:float = 100.0;
+
 
 function getSchild(player){
 	return GameObject.Find(player).transform.FindChild("schild").gameObject;
 }
 
 function Start () {
-	schildLeft = getSchild("playerLeft");
-	schildRight = getSchild("playerRight");
+	ownerName = transform.parent.gameObject.name;
+	if (ownerName == "playerRight"){
+		posX = 0.6;
+	}
 }
 
 function Update () {
-	if (schildLeftHealth == 0){
-		schildLeftOn = false;
-	}
 	
-	if (schildRightHealth == 0){
-		schildRightOn = false;
+	if (health == 0){
+		isEnabled = false;
 	}
 
-	if (schildLeftOn){
-		schildLeft.active = true;
-		schildLeftHealth = Mathf.Max(schildLeftHealth - schildPerUpdateMinus, 0.0);
+	if (isEnabled){
+		health = Mathf.Max(health - updateMinus, 0.0);
 	}
 	else {
-		schildLeft.active = false;
-		schildLeftHealth = Mathf.Min(schildLeftHealth + schildPerUpdatePlus, 100.0);
+		health = Mathf.Min(health + updatePlus, 100.0);
 	}
-
-	if (schildRightOn){
-		schildRight.active = true;
-		schildRightHealth = Mathf.Max(schildRightHealth - schildPerUpdateMinus, 0.0);
-	}
-	else {
-		schildRight.active = false;
-		schildRightHealth = Mathf.Min(schildRightHealth + schildPerUpdatePlus, 100.0);
-	}
+	transform.renderer.enabled = isEnabled;
 }
 
-static function sichtbar(playerName) {
-	if (playerName == "playerLeft"){
-		schildLeftOn = !schildLeftOn;
+function changeIsEnabled(){
+	isEnabled = !isEnabled;
+}
+
+public static function enabling(playerName) {
+	var schildObj = GameObject.Find(playerName).transform.FindChild("schild").gameObject;
+	var script:schildController = schildObj.GetComponent("schildController");
+	script.changeIsEnabled();
+}
+
+function OnCollisionEnter(collision:Collision) {
+	if (isEnabled && collision.collider.name == "laser(Clone)" && collision.collider.transform.parent.name != ownerName){
+		if (Random.value > schildRandom){
+			Debug.Log("Destroy laser");
+			Destroy(collision.collider.gameObject);
+			health = Mathf.Max(health - updateMinusOnCollision, 0.0);
+		}
 	}
-	if (playerName == "playerRight"){
-		schildRightOn = !schildRightOn;
-	}
-	
 }
 
 function OnGUI()
 {	
  	var X = Screen.width * posX;
- 	var XR = Screen.width * posXR;
  	var Y = Screen.height * posY;
  	var sX = Screen.height * sizeX;
  	var sY = Screen.height * sizeY;
  	
     GUI.backgroundColor = Color.green;
- 	GUI.HorizontalScrollbar(Rect (X,Y,sX,sY), 0, schildController.schildLeftHealth, 0, 100);
- 	
- 	GUI.HorizontalScrollbar(Rect (XR,Y,sX,sY), 0, schildController.schildRightHealth, 0, 100);
+ 	GUI.HorizontalScrollbar(Rect (X,Y,sX,sY), 0, health, 0, 100);
 }
