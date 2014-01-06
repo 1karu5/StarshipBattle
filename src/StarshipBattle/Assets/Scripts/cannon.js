@@ -34,9 +34,9 @@ function Update () {
 				Debug.Log("shoot");
 				var laser:GameObject = Instantiate(prefab, Alles_drehbare.transform.position, Quaternion.identity);
 				
-				var toPosition = GameObject.Find("playerRight").transform.Find("r1").transform.forward;
+				var toPosition = GameObject.Find("playerRight").transform.Find("r1").transform.position;
 				
-				laser.rigidbody.velocity = (laser.transform.position - toPosition).normalized;
+				laser.rigidbody.AddForce((laser.transform.position - toPosition).normalized * 100);
 				timer =0;	
 			}
 		}

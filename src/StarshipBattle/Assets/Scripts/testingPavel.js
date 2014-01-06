@@ -4,7 +4,8 @@ function Start () {
 
 }
 
-function Update () {
+function UpdateBlabLA () {
+
 	if (Input.GetKeyDown(KeyCode.V)){
 		schildController.sichtbar("playerLeft");
 	}

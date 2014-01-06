@@ -4961,6 +4961,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106709
       objectReference: {fileID: 0}
+    - target: {fileID: 13600000, guid: d8223c5242ec94b0897387e333fdb424, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8223c5242ec94b0897387e333fdb424, type: 2}
   m_RootGameObject: {fileID: 726393920}
@@ -5882,7 +5886,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 726393920}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: .5
   m_Height: 2
   m_Direction: 1
