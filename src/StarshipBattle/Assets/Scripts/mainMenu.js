@@ -78,6 +78,12 @@ function OnGUI(){
 			Player1Keys.prevStep = System.Enum.Parse(KeyCode, p1_prevStep);
 			Player1Keys.nextStep = System.Enum.Parse(KeyCode, p1_nextStep);
 			Player1Keys.shield = System.Enum.Parse(KeyCode, p1_shield);
+			
+			Player2Keys.prevObject = System.Enum.Parse(KeyCode, p2_prevObject);
+			Player2Keys.nextObject = System.Enum.Parse(KeyCode, p2_nextObject);
+			Player2Keys.prevStep = System.Enum.Parse(KeyCode, p2_prevStep);
+			Player2Keys.nextStep = System.Enum.Parse(KeyCode, p2_nextStep);
+			Player2Keys.shield = System.Enum.Parse(KeyCode, p2_shield);
 		}
 		
 		
