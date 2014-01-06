@@ -1,22 +1,28 @@
 ﻿#pragma strict
 
 public var rotateY:float = 0;
-private var startRotateY:float;
+private var currentRotation:int = 0;
 private var Alles_drehbare:GameObject;
+private var shooting:boolean = false;
 
 function Start () {
 	Alles_drehbare = transform.FindChild("Alles_drehbare").gameObject;
-	startRotateY = Alles_drehbare.transform.rotation.y;
 }
 
 function Update () {
-	var diff = Mathf.FloorToInt(Mathf.Abs(Alles_drehbare.transform.rotation.y - startRotateY));
-	if (diff > rotateY){
-		Alles_drehbare.transform.Rotate(0,0,-1);
-		//Alles_drehbare.transform.eulerAngles.y += 1;
+	if (currentRotation != rotateY){
+		if (currentRotation > rotateY){
+			Alles_drehbare.transform.Rotate(0,0,-1);
+			currentRotation -= 1;
+		}
+		if (currentRotation < rotateY){
+			Alles_drehbare.transform.Rotate(0,0,1);
+			currentRotation += 1;
+		}
 	}
-	if (diff < rotateY){
-		Alles_drehbare.transform.Rotate(0,0,1);
-		//Alles_drehbare.transform.eulerAngles.y -= 1;
+	else {
+		if (shooting){
+			
+		}
 	}
 }
