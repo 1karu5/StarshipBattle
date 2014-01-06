@@ -99,6 +99,7 @@ function OnGUI(){
 		if(GUI.Button(Rect(buttonX,buttonY,buttonH,buttonW),"Start Game")){
 			Debug.Log("started game");
 			gameStarted = true;
+			Application.LoadLevel("main"); 
 		}
 		
 		
