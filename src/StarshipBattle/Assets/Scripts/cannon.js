@@ -1,17 +1,27 @@
 ﻿#pragma strict
 
+private static var rotateToRaum:Array = [0,-15,-30,-45];
+private static var rotateToRaumFront:Array = [45,30,15,0];
+public var shootingEnabled:boolean = false;
 public var rotateY:float = 0;
+public var shootingToPlayer:String;
+public var shootingRaum:String;
+
+private var ownerName:String;
+private var ownerObject:GameObject;
 private var currentRotation:int = 0;
 private var Alles_drehbare:GameObject;
-private var shooting:boolean = false;
 
 private var timer : float = 0;
 private var prefab : GameObject;
-private var freq : int = 1;
+private var freq : int = 3;
 
 function Start () {
 	Alles_drehbare = transform.FindChild("Alles_drehbare").gameObject;
 	prefab = GameObject.Find("laser");
+	
+	ownerObject = transform.parent.gameObject;
+	ownerName = ownerObject.name;
 }
 
 function Update () {
@@ -26,19 +36,50 @@ function Update () {
 		}
 	}
 	else {
-		if (shooting){
+		if (shootingEnabled){
 			// KanonenRohrSegment
 			timer += Time.deltaTime;
  			//Debug.Log(timer);
 			if(timer > freq){
-				Debug.Log("shoot");
 				var laser:GameObject = Instantiate(prefab, Alles_drehbare.transform.position, Quaternion.identity);
-				
-				var toPosition = GameObject.Find("playerRight").transform.Find("r1").transform.position;
-				
-				laser.rigidbody.AddForce((laser.transform.position - toPosition).normalized * 100);
-				timer =0;	
+				var toPosition = GameObject.Find(shootingToPlayer).transform.Find(shootingRaum).transform.position;
+				var laserFly:laserFly = laser.GetComponent("laserFly");
+				laserFly.toPosition = toPosition;
+				laser.gameObject.transform.parent = ownerObject.transform;
+				timer = 0;	
 			}
 		}
 	}
 }
+// Player: 	
+// 			playerLeft
+// 			playerRIght
+// Cannon:
+// 			Front
+//			Back
+// Raum 0-3
+// 	 	front to back
+public static function shootingTo(player:String, cannon:String, raum:int){	
+	var cannonObject = GameObject.Find(player).transform.FindChild("Cannon" + cannon).gameObject;
+	var scriptA:cannon = cannonObject.GetComponent("cannon");
+	
+	if (cannon == "Front"){
+		scriptA.rotateY = rotateToRaumFront[raum];
+	}
+	else {
+		scriptA.rotateY = rotateToRaum[raum];
+	}
+	
+	scriptA.shootingEnabled = true;
+	
+	scriptA.shootingToPlayer = (player == "playerLeft" ? "playerRight": "playerLeft");
+	scriptA.shootingRaum = "r" + (raum + 1);
+}
+
+public static function shootingDisable(player:String, cannon:String){	
+	var cannonObject = GameObject.Find(player).transform.FindChild("Cannon" + cannon).gameObject;
+	var scriptA:cannon = cannonObject.GetComponent("cannon");
+	scriptA.shootingEnabled = false;
+}
+
+

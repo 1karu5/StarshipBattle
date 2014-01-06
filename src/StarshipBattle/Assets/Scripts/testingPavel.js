@@ -9,20 +9,20 @@ function Start () {
 function Update() {
 
 	if (Input.GetKeyDown(KeyCode.V)){
-		schildController.sichtbar("playerLeft");
+		schildController.enabling("playerLeft");
 	}
 	if (Input.GetKeyDown(KeyCode.B)){
-		schildController.sichtbar("playerRight");
+		schildController.enabling("playerRight");
 	}
 }
 
 function OnGUI(){
 	if (Debug.isDebugBuild){
 		if(GUI.Button(Rect(10,10,100,20),"cannon test")){
-			cannonController.rotateTo("playerLeft","Back",raum);
-			cannonController.rotateTo("playerLeft","Front",raum);
-			cannonController.rotateTo("playerRight","Back",raum);
-			cannonController.rotateTo("playerRight","Front",raum);
+			cannon.shootingTo("playerLeft","Back",raum);
+			cannon.shootingTo("playerLeft","Front",raum);
+			cannon.shootingTo("playerRight","Back",raum);
+			cannon.shootingTo("playerRight","Front",raum);
 			raum = (raum + 1) % 4;
 		}
 	}
