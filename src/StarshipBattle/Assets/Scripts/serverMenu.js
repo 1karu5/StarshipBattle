@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-var gameName:String = "hsmannheimjimws1314";
+/*var gameName:String = "hsmannheimjimws1314";
 
 private var port:int;
 private var refreshing:boolean;
@@ -172,3 +172,4 @@ function OnGUI(){
 		}
 	}
 }
+*/
