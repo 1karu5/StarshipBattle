@@ -1257,7 +1257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7faf9c417664bfc849d092121a5fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingEnabled: 0
   rotateY: 0
+  shootingToPlayer: 
+  shootingRaum: 
 --- !u!1 &205671064
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,7 +2980,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7faf9c417664bfc849d092121a5fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingEnabled: 0
   rotateY: 0
+  shootingToPlayer: 
+  shootingRaum: 
 --- !u!1 &392956765
 GameObject:
   m_ObjectHideFlags: 0
@@ -4158,13 +4164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abeb2dbce7e0c439d9d1e19eff9d362c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posX: .0500000007
-  posY: .949999988
-  posXR: .550000012
-  sizeX: .5
-  sizeY: .0500000007
-  schildPerUpdatePlus: .100000001
-  schildPerUpdateMinus: .100000001
 --- !u!1 &500822273
 GameObject:
   m_ObjectHideFlags: 0
@@ -6755,7 +6754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7faf9c417664bfc849d092121a5fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingEnabled: 0
   rotateY: 0
+  shootingToPlayer: 
+  shootingRaum: 
 --- !u!95 &841404101
 Animator:
   serializedVersion: 2
@@ -10074,7 +10076,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7faf9c417664bfc849d092121a5fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingEnabled: 0
   rotateY: 0
+  shootingToPlayer: 
+  shootingRaum: 
 --- !u!95 &1389346961
 Animator:
   serializedVersion: 2
@@ -12315,7 +12320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779af06f459594000b84c2fbbab280c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raum: 1
 --- !u!4 &1701352797
 Transform:
   m_ObjectHideFlags: 0
