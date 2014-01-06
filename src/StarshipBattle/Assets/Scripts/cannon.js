@@ -6,14 +6,17 @@ private var Alles_drehbare:GameObject;
 
 function Start () {
 	Alles_drehbare = transform.FindChild("Alles_drehbare").gameObject;
-	startRotateY = Alles_drehbare.transform.eulerAngles.y;
+	startRotateY = Alles_drehbare.transform.rotation.y;
 }
 
 function Update () {
-	if (Mathf.Abs(Alles_drehbare.transform.eulerAngles.y - startRotateY) > rotateY){
-		Alles_drehbare.transform.eulerAngles.y += 1;
+	var diff = Mathf.FloorToInt(Mathf.Abs(Alles_drehbare.transform.rotation.y - startRotateY));
+	if (diff > rotateY){
+		Alles_drehbare.transform.Rotate(0,0,-1);
+		//Alles_drehbare.transform.eulerAngles.y += 1;
 	}
-	if (Mathf.Abs(Alles_drehbare.transform.eulerAngles.y - startRotateY) < rotateY){
-		Alles_drehbare.transform.eulerAngles.y -= 1;
+	if (diff < rotateY){
+		Alles_drehbare.transform.Rotate(0,0,1);
+		//Alles_drehbare.transform.eulerAngles.y -= 1;
 	}
 }
