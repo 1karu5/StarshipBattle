@@ -17,14 +17,8 @@ private var target_l:SBRoom;
 function Start () {
 
 	state_r = SBStep.choseChar;
-	char_r = null;
-	room_r = null;
-	target_r = null; 
 	
 	state_l = SBStep.choseChar;
-	char_l = null;
-	room_l = null;
-	target_l = null; 
 	
 }
 
