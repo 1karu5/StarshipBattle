@@ -20,9 +20,13 @@ public static var schildRightHealth:float = 100.0;
 public var schildPerUpdatePlus:float = 0.1;
 public var schildPerUpdateMinus:float = 0.1;
 
+function getSchild(player){
+	return GameObject.Find(player).transform.FindChild("schild").gameObject;
+}
+
 function Start () {
-	schildLeft = GameObject.Find("schildLeft");
-	schildRight = GameObject.Find("schildRight");
+	schildLeft = getSchild("playerLeft");
+	schildRight = getSchild("playerRight");
 }
 
 function Update () {
@@ -56,11 +60,9 @@ function Update () {
 static function sichtbar(playerName) {
 	if (playerName == "playerLeft"){
 		schildLeftOn = !schildLeftOn;
-		schildLeft.active = schildLeftOn;
 	}
 	if (playerName == "playerRight"){
 		schildRightOn = !schildRightOn;
-		schildRight.active = schildRightOn;
 	}
 	
 }
