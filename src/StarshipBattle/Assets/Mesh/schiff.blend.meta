@@ -11,6 +11,22 @@ ModelImporter:
     100010: Ship
     100012: Spiegelaxe
     100014: Waffe
+    100016: Boden
+    100018: Cylinder
+    100020: Empty
+    100022: H_lle
+    100024: h_lleRundung
+    100026: h_lleUmrissBackup
+    100028: Rippen
+    100030: Rohr
+    100032: Rohre
+    100034: Schilder
+    100036: segmenteLinks
+    100038: SpiegelaxeSchiff
+    100040: Triebwerk1
+    100042: Triebwerk1_001
+    100044: Triebwerk2
+    100046: Triebwerke
     400000: EmptyCam
     400002: G_ngeNeu
     400004: Plane
@@ -19,21 +35,70 @@ ModelImporter:
     400010: Ship
     400012: Spiegelaxe
     400014: Waffe
+    400016: Boden
+    400018: Cylinder
+    400020: Empty
+    400022: H_lle
+    400024: h_lleRundung
+    400026: h_lleUmrissBackup
+    400028: Rippen
+    400030: Rohr
+    400032: Rohre
+    400034: Schilder
+    400036: segmenteLinks
+    400038: SpiegelaxeSchiff
+    400040: Triebwerk1
+    400042: Triebwerk1_001
+    400044: Triebwerk2
+    400046: Triebwerke
     2300000: G_ngeNeu
     2300002: Plane
     2300004: Roof
     2300006: Ship
     2300008: Waffe
+    2300010: Boden
+    2300012: Cylinder
+    2300014: h_lleRundung
+    2300016: h_lleUmrissBackup
+    2300018: Rippen
+    2300020: Rohr
+    2300022: Schilder
+    2300024: segmenteLinks
+    2300026: Triebwerk1
+    2300028: Triebwerk1_001
+    2300030: Triebwerk2
     3300000: G_ngeNeu
     3300002: Plane
     3300004: Roof
     3300006: Ship
     3300008: Waffe
+    3300010: Boden
+    3300012: Cylinder
+    3300014: h_lleRundung
+    3300016: h_lleUmrissBackup
+    3300018: Rippen
+    3300020: Rohr
+    3300022: Schilder
+    3300024: segmenteLinks
+    3300026: Triebwerk1
+    3300028: Triebwerk1_001
+    3300030: Triebwerk2
     4300000: G_ngeNeu
     4300002: Waffe
     4300004: Roof
     4300006: Plane
     4300008: Ship
+    4300010: Cylinder
+    4300012: h_lleUmrissBackup
+    4300014: segmenteLinks
+    4300016: Boden
+    4300018: Rohr
+    4300020: Triebwerk1_001
+    4300022: Triebwerk1
+    4300024: Triebwerk2
+    4300026: Schilder
+    4300028: Rippen
+    4300030: h_lleRundung
     7400000: Default Take
     9500000: //RootNode
   materials:
