@@ -1,10 +1,12 @@
 ﻿#pragma strict
 
-function Start () {
+public var raum: int = 1;
 
+function Start () {
+	
 }
 
-function UpdateBlabLA () {
+function Update() {
 
 	if (Input.GetKeyDown(KeyCode.V)){
 		schildController.sichtbar("playerLeft");
@@ -12,10 +14,16 @@ function UpdateBlabLA () {
 	if (Input.GetKeyDown(KeyCode.B)){
 		schildController.sichtbar("playerRight");
 	}
-	if (Input.GetKeyDown(KeyCode.C)){
-		cannonController.rotateTo("playerLeft","Back",3);
-	}
-	if (Input.GetKeyDown(KeyCode.X)){
-		cannonController.rotateTo("playerLeft","Back",0);
+}
+
+function OnGUI(){
+	if (Debug.isDebugBuild){
+		if(GUI.Button(Rect(10,10,100,20),"cannon test")){
+			cannonController.rotateTo("playerLeft","Back",raum);
+			cannonController.rotateTo("playerLeft","Front",raum);
+			cannonController.rotateTo("playerRight","Back",raum);
+			cannonController.rotateTo("playerRight","Front",raum);
+			raum = (raum + 1) % 4;
+		}
 	}
 }
