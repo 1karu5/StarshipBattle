@@ -16,6 +16,19 @@ function Update () {
 	if (isRepair){
 		Mathf.Min(health + repairSpeed, healthMax);
 	}
+	
+	if (health > 50){
+		// set texture
+	
+	}
+	else if (health > 15){
+		// set texture
+	
+	}
+	else {
+		// set texture
+	
+	}
 }
 
 function OnCollisionEnter(collision:Collision) {
@@ -23,7 +36,6 @@ function OnCollisionEnter(collision:Collision) {
 		Destroy(collision.collider.gameObject);
 		health = Mathf.Max(health - Random.RandomRange(damageMin, damageMax), healthMin);
 		Debug.Log("Current health:" + health);
-		
 	}
 }
 
