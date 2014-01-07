@@ -50,7 +50,7 @@ function Update () {
 			}
 		} else if(Input.GetKeyDown(Player2Keys.nextStep)) {
 			//accepting sets the next step
-			step_r = choseRoom;
+			step_r = SBStep.choseRoom;
 		}
 		
 	} else if(step_r == SBStep.choseRoom) {
@@ -82,7 +82,7 @@ function Update () {
 				step_r = SBStep.choseTarget;
 			} else {
 				//if an engineer was chose, the actionchain is completed
-				step_r = SBStep.choseChar
+				step_r = SBStep.choseChar;
 			}
 			
 			//TODO let the char walk into the selected room
@@ -113,7 +113,7 @@ function Update () {
 			}
 		} else if(Input.GetKeyDown(Player2Keys.nextStep)) {
 			//the actionchain is completed
-			step_r = SBStep.choseChar			
+			step_r = SBStep.choseChar;	
 			
 			//TODO set the target room for the tower
 		} else if(Input.GetKeyDown(Player2Keys.prevStep)) {
@@ -145,7 +145,7 @@ function Update () {
 			}
 		} else if(Input.GetKeyDown(Player1Keys.nextStep)) {
 			//accepting sets the next step
-			step_l = choseRoom;
+			step_l = SBStep.choseRoom;
 		}
 		
 	} else if(step_l == SBStep.choseRoom) {
@@ -177,7 +177,7 @@ function Update () {
 				step_l = SBStep.choseTarget;
 			} else {
 				//if an engineer was chose, the actionchain is completed
-				step_l = SBStep.choseChar
+				step_l = SBStep.choseChar;
 			}
 			
 			//TODO let the char walk into the selected room
@@ -208,7 +208,7 @@ function Update () {
 			}
 		} else if(Input.GetKeyDown(Player1Keys.nextStep)) {
 			//the actionchain is completed
-			step_l = SBStep.choseChar			
+			step_l = SBStep.choseChar;		
 			
 			//TODO set the target room for the tower
 		} else if(Input.GetKeyDown(Player1Keys.prevStep)) {
