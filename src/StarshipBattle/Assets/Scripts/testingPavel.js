@@ -19,10 +19,11 @@ function Update() {
 function OnGUI(){
 	if (Debug.isDebugBuild){
 		if(GUI.Button(Rect(10,10,100,20),"cannon test")){
+			Debug.Log(raum);
 			cannon.shootingTo("playerLeft","Back",raum);
 			cannon.shootingTo("playerLeft","Front",raum);
-			//cannon.shootingTo("playerRight","Back",raum);
-			//cannon.shootingTo("playerRight","Front",raum);
+			cannon.shootingTo("playerRight","Back",raum);
+			cannon.shootingTo("playerRight","Front",raum);
 			raum = (raum + 1) % 4;
 		}
 	}

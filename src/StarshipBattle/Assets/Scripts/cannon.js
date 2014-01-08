@@ -1,7 +1,10 @@
 ﻿#pragma strict
 
-private static var rotateToRaum:Array = [0,-15,-30,-45];
-private static var rotateToRaumFront:Array = [45,30,15,0];
+import System.Collections.Generic;
+
+//private static var rotateToRaum:Array = [0,-15,-30,-45];
+//private static var rotateToRaumFront:Array = [45,30,15,0];
+private static var rotateTo = new Dictionary.<String,Array>();
 public var shootingEnabled:boolean = false;
 public var rotateY:float = 0;
 public var shootingToPlayer:String;
@@ -17,6 +20,12 @@ private var prefab : GameObject;
 private var freq : int = 3;
 
 function Start () {
+	
+	rotateTo["playerLeftBack"]=[0,-15,-30,-45];
+	rotateTo["playerLeftFront"]=[45,30,15,0];
+	rotateTo["playerRightBack"]=[0,15,30,45];
+	rotateTo["playerRightFront"]=[-45,-15,-30,0];
+
 	Alles_drehbare = transform.FindChild("Alles_drehbare").gameObject;
 	prefab = GameObject.Find("laser");
 	
@@ -42,7 +51,8 @@ function Update () {
  			//Debug.Log(timer);
 			if(timer > freq){
 				var laser:GameObject = Instantiate(prefab, Alles_drehbare.transform.position, Quaternion.identity);
-				var toPosition = GameObject.Find(shootingToPlayer).transform.Find(shootingRaum).transform.position;
+				Debug.Log(shootingRaum);
+				var toPosition = GameObject.Find(shootingToPlayer).transform.FindChild("Ship").transform.FindChild(shootingRaum).transform.position;
 				var laserFly:laserFly = laser.GetComponent("laserFly");
 				laserFly.toPosition = toPosition;
 				laser.gameObject.transform.parent = ownerObject.transform;
@@ -63,12 +73,7 @@ public static function shootingTo(player:String, cannon:String, raum:int){
 	var cannonObject = GameObject.Find(player).transform.FindChild("Cannon" + cannon).gameObject;
 	var scriptA:cannon = cannonObject.GetComponent("cannon");
 	
-	if (cannon == "Front"){
-		scriptA.rotateY = rotateToRaumFront[raum];
-	}
-	else {
-		scriptA.rotateY = rotateToRaum[raum];
-	}
+	scriptA.rotateY = rotateTo[player+cannon][raum];
 	
 	scriptA.shootingEnabled = true;
 	
