@@ -27,6 +27,8 @@ ModelImporter:
     100042: Triebwerk1_001
     100044: Triebwerk2
     100046: Triebwerke
+    100048: antenne
+    100050: ShipMesh
     400000: EmptyCam
     400002: G_ngeNeu
     400004: Plane
@@ -51,6 +53,8 @@ ModelImporter:
     400042: Triebwerk1_001
     400044: Triebwerk2
     400046: Triebwerke
+    400048: antenne
+    400050: ShipMesh
     2300000: G_ngeNeu
     2300002: Plane
     2300004: Roof
@@ -67,6 +71,8 @@ ModelImporter:
     2300026: Triebwerk1
     2300028: Triebwerk1_001
     2300030: Triebwerk2
+    2300032: antenne
+    2300034: ShipMesh
     3300000: G_ngeNeu
     3300002: Plane
     3300004: Roof
@@ -83,6 +89,8 @@ ModelImporter:
     3300026: Triebwerk1
     3300028: Triebwerk1_001
     3300030: Triebwerk2
+    3300032: antenne
+    3300034: ShipMesh
     4300000: G_ngeNeu
     4300002: Waffe
     4300004: Roof
@@ -99,6 +107,8 @@ ModelImporter:
     4300026: Schilder
     4300028: Rippen
     4300030: h_lleRundung
+    4300032: ShipMesh
+    4300034: antenne
     7400000: Default Take
     9500000: //RootNode
   materials:
