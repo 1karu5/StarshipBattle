@@ -1,4 +1,4 @@
-﻿#pragma strict
+﻿/*#pragma strict
 
 public var toPosition:Vector3;
 public var speed = 0.1;
@@ -19,5 +19,5 @@ function Update () {
 
 public function moveTo(raumFrom, raumTo){
 	
-}
+}*/
 

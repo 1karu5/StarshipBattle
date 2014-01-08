@@ -29,6 +29,7 @@ ModelImporter:
     100046: Triebwerke
     100048: antenne
     100050: ShipMesh
+    100052: Huelle
     400000: EmptyCam
     400002: G_ngeNeu
     400004: Plane
@@ -55,6 +56,7 @@ ModelImporter:
     400046: Triebwerke
     400048: antenne
     400050: ShipMesh
+    400052: Huelle
     2300000: G_ngeNeu
     2300002: Plane
     2300004: Roof
