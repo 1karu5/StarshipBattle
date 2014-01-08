@@ -12,7 +12,7 @@ function Update () {
 	var currentPosition = transform.position;
 	
 	if (toPosition){
-		var dir:Vector3 = (toPosition-currentPosition).normalized * new Vector3(1,0,1);
+		var dir:Vector3 = (toPosition-transform.position).normalized * new Vector3(1,0,1);
 		transform.position += dir * speed;
 	}
 }
