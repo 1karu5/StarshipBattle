@@ -49,7 +49,7 @@ function changeIsEnabled(){
 }
 
 public static function enabling(playerName) {
-	var schildObj = GameObject.Find(playerName).transform.FindChild("schild").gameObject;
+	var schildObj = GameObject.Find(playerName).transform.FindChild("Ship").transform.FindChild("schild").gameObject;
 	var script:schildController = schildObj.GetComponent("schildController");
 	script.changeIsEnabled();
 }

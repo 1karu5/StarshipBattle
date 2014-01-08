@@ -21,10 +21,15 @@ private var freq : int = 3;
 
 function Start () {
 	
-	rotateTo["playerLeftBack"]=[0,-15,-30,-45];
+	/*rotateTo["playerLeftBack"]=[0,-15,-30,-45];
 	rotateTo["playerLeftFront"]=[45,30,15,0];
 	rotateTo["playerRightBack"]=[0,15,30,45];
-	rotateTo["playerRightFront"]=[-45,-15,-30,0];
+	rotateTo["playerRightFront"]=[-45,-15,-30,0];*/
+	
+	rotateTo["playerLeftBack"]=[-45,-15,-30,0];
+	rotateTo["playerLeftFront"]=[0,15,30,45];
+	rotateTo["playerRightBack"]=[45,30,15,0];
+	rotateTo["playerRightFront"]=[0,-15,-30,-45];
 
 	Alles_drehbare = transform.FindChild("Alles_drehbare").gameObject;
 	prefab = GameObject.Find("laser");
