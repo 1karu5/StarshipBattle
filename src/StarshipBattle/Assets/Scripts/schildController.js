@@ -10,7 +10,7 @@ private var schildRandom:float = 0.2;
 
 public var updatePlus:float = 0.025;
 public var updateMinus:float = 0.025;
-public var updateMinusOnCollision:float = 2.5;
+public var updateMinusOnCollision:float = 20;
 
 
 private var isEnabled:boolean = true;

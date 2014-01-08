@@ -4872,7 +4872,7 @@ MonoBehaviour:
   sizeY: .0500000007
   updatePlus: .0250000004
   updateMinus: .0250000004
-  updateMinusOnCollision: .100000001
+  updateMinusOnCollision: 20
 --- !u!23 &585269404
 Renderer:
   m_ObjectHideFlags: 0
@@ -10692,13 +10692,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abeb2dbce7e0c439d9d1e19eff9d362c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posX: .0500000007
+  posX: .699999988
   posY: .949999988
   sizeX: .5
   sizeY: .0500000007
   updatePlus: .0250000004
   updateMinus: .0250000004
-  updateMinusOnCollision: .100000001
+  updateMinusOnCollision: 20
 --- !u!23 &1280268154
 Renderer:
   m_ObjectHideFlags: 0
