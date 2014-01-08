@@ -1,52 +1,72 @@
-﻿#pragma strict
+#pragma strict
 
-enum SBStep { choseChar, choseRoom, choseTarget};
-enum SBChar { gun1, gun2, eng};
+enum SBStep { choseOjbect, choseRoom};
+enum SBObject { gunner1, gunner2, eng, gun1, gun2};
 enum SBRoom { cannon1, cannon2, medic, engineRoom};
 
 private var step_r:SBStep;
-private var char_r:SBChar;
+private var object_r:SBObject;
 private var room_r:SBRoom;
-private var target_r:SBRoom;
 
 private var step_l:SBStep;
-private var char_l:SBChar;
+private var object_l:SBObject;
 private var room_l:SBRoom;
-private var target_l:SBRoom;
 
 function Start () {
 
-	step_r = SBStep.choseChar;
-	char_r = SBChar.gun1;
+	step_r = SBStep.choseOjbect;
+	object_r = SBObject.gun1;
 	room_r = SBRoom.cannon1;
-	target_r = SBRoom.cannon1;
 	
-	step_l = SBStep.choseChar;
+	step_l = SBStep.choseOjbect;
+	object_l = SBObject.gun1;
+	room_l = SBRoom.cannon1;
 	
 }
 
 function Update () {
+	/* 
+		shields
+	*/
+	if(Input.GetKeyDown(Player1Keys.shield)) {
+		Debug.Log("toggle shield playerleft");
+		schildController.enabling("playerLeft");
+	} else if(Input.GetKeyDown(Player2Keys.shield)) {
+		Debug.Log("toggle shield playerright");
+		schildController.enabling("playerRight");
+	}
+
+
+
 	/*
 		Right player actionchain
 		right = player2
 	*/
-	if(step_r == SBStep.choseChar) {
+	else if(step_r == SBStep.choseOjbect) {
 		//switch through the chars
 		if(Input.GetKeyDown(Player2Keys.nextObject)) {
-			if(char_r == SBChar.gun1) {
-				char_r = SBChar.gun2;
-			} else if(char_r == SBChar.gun2) {
-				char_r = SBChar.eng;
-			} else if(char_r == SBChar.eng) {
-				char_r = SBChar.gun1;
+			if(object_r == SBObject.gunner1) {
+				object_r = SBObject.gunner2;
+			} else if(object_r == SBObject.gunner2) {
+				object_r = SBObject.eng;
+			} else if(object_r == SBObject.eng) {
+				object_r = SBObject.gun1;
+			} else if(object_r == SBObject.gun1) {
+				object_r = SBObject.gun2;
+			} else if(object_r == SBObject.gun2) {
+				object_r = SBObject.gunner1;
 			}
 		} else if(Input.GetKeyDown(Player2Keys.prevObject)) {
-			if(char_r == SBChar.gun1) {
-				char_r = SBChar.eng;
-			} else if(char_r == SBChar.gun2) {
-				char_r = SBChar.gun1;
-			} else if(char_r == SBChar.eng) {
-				char_r = SBChar.gun2;
+			if(object_r == SBObject.gunner1) {
+				object_r = SBObject.gun2;
+			} else if(object_r == SBObject.gunner2) {
+				object_r = SBObject.gunner1;
+			} else if(object_r == SBObject.eng) {
+				object_r = SBObject.gunner2;
+			} else if(object_r == SBObject.gun1) {
+				object_r = SBObject.eng;
+			} else if(object_r == SBObject.gun2) {
+				object_r = SBObject.gun1;
 			}
 		} else if(Input.GetKeyDown(Player2Keys.nextStep)) {
 			//accepting sets the next step
@@ -76,72 +96,44 @@ function Update () {
 				room_r = SBRoom.medic;
 			}
 		} else if(Input.GetKeyDown(Player2Keys.nextStep)) {
-			//accepting sets the next step which depends on the selected char
-			if(char_r != SBChar.eng) {
-				//if the chosen char is a gunner, a target needs to be selected
-				step_r = SBStep.choseTarget;
-			} else {
-				//if an engineer was chose, the actionchain is completed
-				step_r = SBStep.choseChar;
-			}
+			step_r = SBStep.choseOjbect;
 			
-			//TODO let the char walk into the selected room
-		} else if(Input.GetKeyDown(Player2Keys.prevStep)) {
-			step_r = SBStep.choseChar;
-		}
-	} else if(step_r == SBStep.choseTarget) {
-		//switch through the rooms (target
-		if(Input.GetKeyDown(Player2Keys.nextObject)) {
-			if(room_r == SBRoom.cannon1) {
-				room_r = SBRoom.cannon2;
-			} else if(room_r == SBRoom.cannon2) {
-				room_r = SBRoom.medic;
-			} else if(room_r == SBRoom.medic) {
-				room_r = SBRoom.engineRoom;
-			}else if(room_r == SBRoom.engineRoom) {
-				room_r = SBRoom.cannon1;
-			}
-		} else if(Input.GetKeyDown(Player2Keys.prevObject)) {
-			if(room_r == SBRoom.cannon1) {
-				room_r = SBRoom.engineRoom;
-			} else if(room_r == SBRoom.cannon2) {
-				room_r = SBRoom.cannon1;
-			} else if(room_r == SBRoom.medic) {
-				room_r = SBRoom.cannon2;
-			}else if(room_r == SBRoom.engineRoom) {
-				room_r = SBRoom.medic;
-			}
-		} else if(Input.GetKeyDown(Player2Keys.nextStep)) {
-			//the actionchain is completed
-			step_r = SBStep.choseChar;	
+			//TODO let the char walk into the selected room or let the gun shot a room
 			
-			//TODO set the target room for the tower
 		} else if(Input.GetKeyDown(Player2Keys.prevStep)) {
-			step_r = SBStep.choseRoom;
+			step_r = SBStep.choseOjbect;
 		}
-	}
+	} 
 	
 	/*
 		Left player actionchain
 		left = player1
 	*/
-	else if(step_l == SBStep.choseChar) {
+	else if(step_l == SBStep.choseOjbect) {
 		//switch through the chars
 		if(Input.GetKeyDown(Player1Keys.nextObject)) {
-			if(char_l == SBChar.gun1) {
-				char_l = SBChar.gun2;
-			} else if(char_l == SBChar.gun2) {
-				char_l = SBChar.eng;
-			} else if(char_l == SBChar.eng) {
-				char_l = SBChar.gun1;
+			if(object_l == SBObject.gunner1) {
+				object_l = SBObject.gunner2;
+			} else if(object_r == SBObject.gunner2) {
+				object_l = SBObject.eng;
+			} else if(object_r == SBObject.eng) {
+				object_l = SBObject.gun1;
+			} else if(object_r == SBObject.gun1) {
+				object_l = SBObject.gun2;
+			} else if(object_r == SBObject.gun2) {
+				object_l = SBObject.gunner1;
 			}
 		} else if(Input.GetKeyDown(Player1Keys.prevObject)) {
-			if(char_l == SBChar.gun1) {
-				char_l = SBChar.eng;
-			} else if(char_l == SBChar.gun2) {
-				char_l = SBChar.gun1;
-			} else if(char_l == SBChar.eng) {
-				char_l = SBChar.gun2;
+			if(object_l == SBObject.gunner1) {
+				object_l = SBObject.gun2;
+			} else if(object_r == SBObject.gunner2) {
+				object_l = SBObject.gunner1;
+			} else if(object_r == SBObject.eng) {
+				object_l = SBObject.gunner2;
+			} else if(object_r == SBObject.gun1) {
+				object_l = SBObject.eng;
+			} else if(object_r == SBObject.gun2) {
+				object_l = SBObject.gun1;
 			}
 		} else if(Input.GetKeyDown(Player1Keys.nextStep)) {
 			//accepting sets the next step
@@ -171,48 +163,12 @@ function Update () {
 				room_l = SBRoom.medic;
 			}
 		} else if(Input.GetKeyDown(Player1Keys.nextStep)) {
-			//accepting sets the next step which depends on the selected char
-			if(char_l != SBChar.eng) {
-				//if the chosen char is a gunner, a target needs to be selected
-				step_l = SBStep.choseTarget;
-			} else {
-				//if an engineer was chose, the actionchain is completed
-				step_l = SBStep.choseChar;
-			}
 			
-			//TODO let the char walk into the selected room
-		} else if(Input.GetKeyDown(Player1Keys.prevStep)) {
-			step_l = SBStep.choseChar;
-		}
-	} else if(step_l == SBStep.choseTarget) {
-		//switch through the rooms (target
-		if(Input.GetKeyDown(Player1Keys.nextObject)) {
-			if(room_l == SBRoom.cannon1) {
-				room_l = SBRoom.cannon2;
-			} else if(room_l == SBRoom.cannon2) {
-				room_l = SBRoom.medic;
-			} else if(room_l == SBRoom.medic) {
-				room_l = SBRoom.engineRoom;
-			}else if(room_l == SBRoom.engineRoom) {
-				room_l = SBRoom.cannon1;
-			}
-		} else if(Input.GetKeyDown(Player1Keys.prevObject)) {
-			if(room_l == SBRoom.cannon1) {
-				room_l = SBRoom.engineRoom;
-			} else if(room_l == SBRoom.cannon2) {
-				room_l = SBRoom.cannon1;
-			} else if(room_l == SBRoom.medic) {
-				room_l = SBRoom.cannon2;
-			}else if(room_l == SBRoom.engineRoom) {
-				room_l = SBRoom.medic;
-			}
-		} else if(Input.GetKeyDown(Player1Keys.nextStep)) {
-			//the actionchain is completed
-			step_l = SBStep.choseChar;		
+			step_l = SBStep.choseOjbect;
 			
-			//TODO set the target room for the tower
+			//TODO let the char walk into the selected room or let the gun shot a room
 		} else if(Input.GetKeyDown(Player1Keys.prevStep)) {
-			step_l = SBStep.choseRoom;
+			step_l = SBStep.choseOjbect;
 		}
-	}
+	} 
 }
