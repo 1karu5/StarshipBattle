@@ -98,7 +98,11 @@ function Update () {
 		} else if(Input.GetKeyDown(Player2Keys.nextStep)) {
 			step_r = SBStep.choseOjbect;
 			
-			//TODO let the char walk into the selected room or let the gun shot a room
+			if(object_r == SBObject.gunner1 || object_r == SBObject.gunner2 || object_r == SBObject.eng) {
+				//let the chars walk into the room
+			} else if(object_r == SBObject.gun1 || object_r == SBObject.gun2) {
+				//let the gun shoot at the room
+			}
 			
 		} else if(Input.GetKeyDown(Player2Keys.prevStep)) {
 			step_r = SBStep.choseOjbect;
