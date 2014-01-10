@@ -11,7 +11,7 @@ public class characterMovement extends actionClass
 	private var nextWaypoint:Vector3;
 
 	//waypoints
-	private static var waypoints = new Dictionary.<String,Vector3>();
+	private var waypoints = new Dictionary.<String,Vector3>();
 
 	function Start () {
 		ownerObject = transform.parent.gameObject;
