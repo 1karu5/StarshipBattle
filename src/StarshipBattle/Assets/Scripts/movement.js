@@ -3,7 +3,7 @@
 var endPoint : Vector3;
 private var player;
 private var corridorCoord : int;
-private var moveSpeed : float = 0.15;
+private var moveSpeed : float = 0.1;
 
 //0 is moving out of the room, 1 is moving to the corridor position, 2 is moving in the room
 private var moveStep : int;
