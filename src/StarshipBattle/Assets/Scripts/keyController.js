@@ -1,30 +1,19 @@
 #pragma strict
 
 enum SBStep { choseOjbect, choseRoom};
-enum SBObject { gunner1, gunner2, eng, gun1, gun2};
-enum SBRoom { cannon1, medic, engineRoom, cannon2};
 
 private var step_r:SBStep;
-private var object_r:SBObject;
-private var room_r:SBRoom;
-private var chosenChar_R;
-private var chosenRoomId_R;
+private var chosenChar_r;
+private var chosenRoomId_r;
 
 private var step_l:SBStep;
-private var object_l:SBObject;
-private var room_l:SBRoom;
-private var chosenChar_L;
-private var chosenRoomId_L;
+private var chosenChar_l;
+private var chosenRoomId_l;
 
 function Start () {
 
 	step_r = SBStep.choseOjbect;
-	object_r = SBObject.gun1;
-	room_r = SBRoom.cannon1;
-	
 	step_l = SBStep.choseOjbect;
-	object_l = SBObject.gun1;
-	room_l = SBRoom.cannon1;
 	
 }
 
@@ -50,40 +39,34 @@ function Update () {
 		if(Input.GetKeyDown(Player1Keys.nextObject)) {
 			Debug.Log("player1 next obj");
 			
-			if(object_l == SBObject.gunner1) {
-				object_l = SBObject.gunner2;
-				chosenChar_L = "gunner2";
-			} else if(object_l == SBObject.gunner2) {
-				object_l = SBObject.eng;
-				chosenChar_L = "engineer";
-			} else if(object_l == SBObject.eng) {
-				object_l = SBObject.gun1;
-				chosenChar_L = "CannonBack";
-			} else if(object_l == SBObject.gun1) {
-				object_l = SBObject.gun2;
-				chosenChar_L = "CannonFront";
-			} else if(object_l == SBObject.gun2) {
-				object_l = SBObject.gunner1;
-				chosenChar_L = "gunner1";
+			if(chosenChar_l == "gunner1") {
+				chosenChar_l = "gunner2";
+			} else if(chosenChar_l == "gunner2") {
+				chosenChar_l = "engineer";
+			} else if(chosenChar_l == "engineer") {
+				chosenChar_l = "CannonBack";
+			} else if(chosenChar_l == "CannonBack") {
+				chosenChar_l = "CannonFront";
+			} else if(chosenChar_l == "CannonFront") {
+				chosenChar_l = "gunner1";
+			} else {
+				chosenChar_l = "gunner1";
 			}
 		} else if(Input.GetKeyDown(Player1Keys.prevObject)) {
 			Debug.Log("player1 prev obj");
 			
-			if(object_l == SBObject.gunner1) {
-				object_l = SBObject.gun2;
-				chosenChar_L = "CannonFront";
-			} else if(object_l == SBObject.gunner2) {
-				object_l = SBObject.gunner1;
-				chosenChar_L = "gunner1";
-			} else if(object_l == SBObject.eng) {
-				object_l = SBObject.gunner2;
-				chosenChar_L = "gunner2";
-			} else if(object_l == SBObject.gun1) {
-				object_l = SBObject.eng;
-				chosenChar_L = "engineer";
-			} else if(object_l == SBObject.gun2) {
-				object_l = SBObject.gun1;
-				chosenChar_L = "CannonBack";
+			if(chosenChar_l == "gunner1") {
+				chosenChar_l = "CannonFront";
+			} else if(chosenChar_l == "gunner2") {
+				chosenChar_l = "gunner1";
+			} else if(chosenChar_l == "engineer") {
+				chosenChar_l = "gunner2";
+			} else if(chosenChar_l == "CannonBack") {
+				chosenChar_l = "engineer";
+			} else if(chosenChar_l == "CannonFront") {
+				chosenChar_l = "CannonBack";
+			} else {
+				chosenChar_l = "gunner1";
 			}
 		} else if(Input.GetKeyDown(Player1Keys.nextStep)) {
 			//accepting sets the next step
@@ -92,55 +75,51 @@ function Update () {
 			//reset selection
 			selectObject("playerLeft", null);
 			
-			Debug.Log(chosenChar_L + " SELECTED by player 1");
+			Debug.Log(chosenChar_l + " SELECTED by player 1");
 			
 			
 			//
 		}
-		if(chosenChar_L != null) {
-			selectObject("playerLeft", chosenChar_L);
+		if(chosenChar_l != null) {
+			selectObject("playerLeft", chosenChar_l);
 		}
 		
 	} else if(step_l == SBStep.choseRoom) {
 		//switch through the rooms
 		if(Input.GetKeyDown(Player1Keys.nextObject)) {
 			Debug.Log("player1 next room");
-			if(room_l == SBRoom.cannon1) {
-				room_l = SBRoom.cannon2;
-				chosenRoomId_L = 7;
-			} else if(room_l == SBRoom.cannon2) {
-				room_l = SBRoom.medic;
-				chosenRoomId_L = 5;
-			} else if(room_l == SBRoom.medic) {
-				room_l = SBRoom.engineRoom;
-				chosenRoomId_L = 3;
-			}else if(room_l == SBRoom.engineRoom) {
-				room_l = SBRoom.cannon1;
-				chosenRoomId_L = 1;
+			if(chosenRoomId_l == 1) {
+				chosenRoomId_l = 7;
+			} else if(chosenRoomId_l == 7) {
+				chosenRoomId_l = 5;
+			} else if(chosenRoomId_l == 5) {
+				chosenRoomId_l = 3;
+			}else if(chosenRoomId_l == 3) {
+				chosenRoomId_l = 1;
+			} else {
+				chosenRoomId_l = 1;
 			}
 		} else if(Input.GetKeyDown(Player1Keys.prevObject)) {
 			Debug.Log("player1 next room");
-			if(room_l == SBRoom.cannon1) {
-				room_l = SBRoom.engineRoom;
-				chosenRoomId_L = 3;
-			} else if(room_l == SBRoom.cannon2) {
-				room_l = SBRoom.cannon1;
-				chosenRoomId_L = 1;
-			} else if(room_l == SBRoom.medic) {
-				room_l = SBRoom.cannon2;
-				chosenRoomId_L = 7;
-			}else if(room_l == SBRoom.engineRoom) {
-				room_l = SBRoom.medic;
-				chosenRoomId_L = 5;
+			if(chosenRoomId_l == 1) {
+				chosenRoomId_l = 3;
+			} else if(chosenRoomId_l == 7) {
+				chosenRoomId_l = 1;
+			} else if(chosenRoomId_l == 5) {
+				chosenRoomId_l = 7;
+			}else if(chosenRoomId_l == 3) {
+				chosenRoomId_l = 5;
+			} else {
+				chosenRoomId_l = 1;
 			}
 		} else if(Input.GetKeyDown(Player1Keys.nextStep)) {
 			
 			step_l = SBStep.choseOjbect;
-			Debug.Log(chosenRoomId_L + " SELECTED by player 1");
+			Debug.Log(chosenRoomId_l + " SELECTED by player 1");
 			
 			//let the char walk into the selected room or let the gun shot a room
-			if(isSelectedObjectAChar(object_l))  {
-				moveChar("playerLeft", chosenChar_L, chosenRoomId_L);
+			if(isSelectedObjectAChar(chosenChar_l))  {
+				moveChar("playerLeft", chosenChar_l, chosenRoomId_l);
 			} else {
 			
 			}
@@ -159,40 +138,34 @@ function Update () {
 		if(Input.GetKeyDown(Player2Keys.nextObject)) {
 			Debug.Log("player2 next obj");
 			
-			if(object_r == SBObject.gunner1) {
-				object_r = SBObject.gunner2;
-				chosenChar_R = "gunner2";
-			} else if(object_r == SBObject.gunner2) {
-				object_r = SBObject.eng;
-				chosenChar_R = "engineer";
-			} else if(object_r == SBObject.eng) {
-				object_r = SBObject.gun1;
-				chosenChar_R = "CannonBack";
-			} else if(object_r == SBObject.gun1) {
-				object_r = SBObject.gun2;
-				chosenChar_R = "CannonFront";
-			} else if(object_r == SBObject.gun2) {
-				object_r = SBObject.gunner1;
-				chosenChar_R = "gunner1";
+			if(chosenChar_r == "gunner1") {
+				chosenChar_r = "gunner2";
+			} else if(chosenChar_r == "gunner2") {
+				chosenChar_r = "engineer";
+			} else if(chosenChar_r == "engineer") {
+				chosenChar_r = "CannonBack";
+			} else if(chosenChar_r == "CannonBack") {
+				chosenChar_r = "CannonFront";
+			} else if(chosenChar_r == "CannonFront") {
+				chosenChar_r = "gunner1";
+			} else {
+				chosenChar_r = "gunner1";
 			}
 		} else if(Input.GetKeyDown(Player2Keys.prevObject)) {
 			Debug.Log("player2 prev obj");
 			
-			if(object_r == SBObject.gunner1) {
-				object_r = SBObject.gun2;
-				chosenChar_R = "CannonFront";
-			} else if(object_r == SBObject.gunner2) {
-				object_r = SBObject.gunner1;
-				chosenChar_R = "gunner1";
-			} else if(object_r == SBObject.eng) {
-				object_r = SBObject.gunner2;
-				chosenChar_R = "gunner2";
-			} else if(object_r == SBObject.gun1) {
-				object_r = SBObject.eng;
-				chosenChar_R = "engineer";
-			} else if(object_r == SBObject.gun2) {
-				object_r = SBObject.gun1;
-				chosenChar_R = "CannonBack";
+			if(chosenChar_r == "gunner1") {
+				chosenChar_r = "CannonFront";
+			} else if(chosenChar_r == "gunner2") {
+				chosenChar_r = "gunner1";
+			} else if(chosenChar_r == "engineer") {
+				chosenChar_r = "gunner2";
+			} else if(chosenChar_r == "CannonBack") {
+				chosenChar_r = "engineer";
+			} else if(chosenChar_r == "CannonFront") {
+				chosenChar_r = "CannonBack";
+			} else {
+				chosenChar_r = "gunner1";
 			}
 		} else if(Input.GetKeyDown(Player2Keys.nextStep)) {
 			//accepting sets the next step
@@ -201,55 +174,51 @@ function Update () {
 			//reset selection
 			selectObject("playerRight", null);
 			
-			Debug.Log(chosenChar_R + " SELECTED by player 2");
+			Debug.Log(chosenChar_r + " SELECTED by player 2");
 			
 			
 			//
 		}
-		if(chosenChar_R != null) {
-			selectObject("playerRight", chosenChar_R);
+		if(chosenChar_r != null) {
+			selectObject("playerRight", chosenChar_r);
 		}
 		
 	} else if(step_r == SBStep.choseRoom) {
 		//switch through the rooms
 		if(Input.GetKeyDown(Player2Keys.nextObject)) {
 			Debug.Log("player2 next room");
-			if(room_r == SBRoom.cannon1) {
-				room_r = SBRoom.cannon2;
-				chosenRoomId_R = 7;
-			} else if(room_r == SBRoom.cannon2) {
-				room_r = SBRoom.medic;
-				chosenRoomId_R = 5;
-			} else if(room_r == SBRoom.medic) {
-				room_r = SBRoom.engineRoom;
-				chosenRoomId_R = 3;
-			}else if(room_r == SBRoom.engineRoom) {
-				room_r = SBRoom.cannon1;
-				chosenRoomId_R = 1;
+			if(chosenRoomId_r == 1) {
+				chosenRoomId_r = 7;
+			} else if(chosenRoomId_r == 7) {
+				chosenRoomId_r = 5;
+			} else if(chosenRoomId_r == 5) {
+				chosenRoomId_r = 3;
+			}else if(chosenRoomId_r == 3) {
+				chosenRoomId_r = 1;
+			} else {
+				chosenRoomId_r = 1;
 			}
 		} else if(Input.GetKeyDown(Player2Keys.prevObject)) {
 			Debug.Log("player2 next room");
-			if(room_r == SBRoom.cannon1) {
-				room_r = SBRoom.engineRoom;
-				chosenRoomId_R = 3;
-			} else if(room_r == SBRoom.cannon2) {
-				room_r = SBRoom.cannon1;
-				chosenRoomId_R = 1;
-			} else if(room_r == SBRoom.medic) {
-				room_r = SBRoom.cannon2;
-				chosenRoomId_R = 7;
-			}else if(room_r == SBRoom.engineRoom) {
-				room_r = SBRoom.medic;
-				chosenRoomId_R = 5;
+			if(chosenRoomId_r == 1) {
+				chosenRoomId_r = 3;
+			} else if(chosenRoomId_r == 7) {
+				chosenRoomId_r = 1;
+			} else if(chosenRoomId_r == 5) {
+				chosenRoomId_r = 7;
+			}else if(chosenRoomId_r == 3) {
+				chosenRoomId_r = 5;
+			} else {
+				chosenRoomId_r = 1;
 			}
 		} else if(Input.GetKeyDown(Player2Keys.nextStep)) {
 			
 			step_r = SBStep.choseOjbect;
-			Debug.Log(chosenRoomId_R + " SELECTED by player 2");
+			Debug.Log(chosenRoomId_r + " SELECTED by player 2");
 			
 			//let the char walk into the selected room or let the gun shot a room
-			if(isSelectedObjectAChar(object_r))  {
-				moveChar("playerRight", chosenChar_R, chosenRoomId_R);
+			if(isSelectedObjectAChar(chosenChar_r))  {
+				moveChar("playerRight", chosenChar_r, chosenRoomId_r);
 			} else {
 			
 			}
@@ -286,12 +255,12 @@ function moveChar(playerName, objectName, waypointNumber) {
 	GameObject.Find(playerName).transform.FindChild(objectName).gameObject.GetComponent(movement).endPoint = waypointLoc;
 }
 
-function isSelectedObjectAChar(object : SBObject) {
-	if(object == SBObject.gunner1) {
+function isSelectedObjectAChar(object) {
+	if(object == "gunner1") {
 		return true;
-	} else if(object == SBObject.gunner2) {
+	} else if(object == "gunner2") {
 		return true;
-	} else if(object == SBObject.eng) {
+	} else if(object == "engineer") {
 		return true;
 	} else {
 		return false;
