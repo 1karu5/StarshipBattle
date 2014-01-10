@@ -1,4 +1,4 @@
-﻿/*#pragma strict
+﻿#pragma strict
 
 private var settingControls:boolean;
 public static var gameStarted:boolean;
@@ -9,15 +9,18 @@ private var buttonW:float;
 
 //controlbuttons
 private var lastKeyCode = "";
-private var p1_prevObject = Player1Keys.prevObject.ToString();
+private var p1_one = Player1Keys.one.ToString();
+private var p1_two = Player1Keys.two.ToString();
+private var p1_three = Player1Keys.three.ToString();
+private var p1_four = Player1Keys.four.ToString();
 private var p1_nextObject = Player1Keys.nextObject.ToString();
-private var p1_prevStep = Player1Keys.prevStep.ToString();
-private var p1_nextStep = Player1Keys.nextStep.ToString();
 private var p1_shield = Player1Keys.shield.ToString();
-private var p2_prevObject = Player2Keys.prevObject.ToString();
+
+private var p2_one = Player2Keys.one.ToString();
+private var p2_two = Player2Keys.one.ToString();
+private var p2_three = Player2Keys.three.ToString();
+private var p2_four = Player2Keys.four.ToString();
 private var p2_nextObject = Player2Keys.nextObject.ToString();
-private var p2_prevStep = Player2Keys.prevStep.ToString();
-private var p2_nextStep = Player2Keys.nextStep.ToString();
 private var p2_shield = Player2Keys.shield.ToString();
 
 
@@ -37,16 +40,18 @@ function OnGUI(){
 			Debug.Log("setting controls");
 			settingControls = false;
 			
-			Player1Keys.prevObject = System.Enum.Parse(KeyCode, p1_prevObject);
+			Player1Keys.one = System.Enum.Parse(KeyCode, p1_one);
+			Player1Keys.two = System.Enum.Parse(KeyCode, p1_two);
+			Player1Keys.three = System.Enum.Parse(KeyCode, p1_three);
+			Player1Keys.four = System.Enum.Parse(KeyCode, p1_four);
 			Player1Keys.nextObject = System.Enum.Parse(KeyCode, p1_nextObject);
-			Player1Keys.prevStep = System.Enum.Parse(KeyCode, p1_prevStep);
-			Player1Keys.nextStep = System.Enum.Parse(KeyCode, p1_nextStep);
 			Player1Keys.shield = System.Enum.Parse(KeyCode, p1_shield);
 			
-			Player2Keys.prevObject = System.Enum.Parse(KeyCode, p2_prevObject);
+			Player2Keys.one = System.Enum.Parse(KeyCode, p2_one);
+			Player2Keys.two = System.Enum.Parse(KeyCode, p2_two);
+			Player2Keys.three = System.Enum.Parse(KeyCode, p2_three);
+			Player2Keys.four = System.Enum.Parse(KeyCode, p2_four);
 			Player2Keys.nextObject = System.Enum.Parse(KeyCode, p2_nextObject);
-			Player2Keys.prevStep = System.Enum.Parse(KeyCode, p2_prevStep);
-			Player2Keys.nextStep = System.Enum.Parse(KeyCode, p2_nextStep);
 			Player2Keys.shield = System.Enum.Parse(KeyCode, p2_shield);
 		}
 		
@@ -55,43 +60,51 @@ function OnGUI(){
 		GUI.Label(Rect(10,10,200,25),"Last KeyCode: " + lastKeyCode);
 		var e = Event.current;
 		Debug.Log(e.ToString());
-	    if (e.isKey) {
+	    if (e.isKey && e.keyCode != KeyCode.None) {
 	    	lastKeyCode = e.keyCode.ToString(); 
 	    	Debug.Log(e.ToString());
 	    }
 		
 		
 		//Keys player_1
-		GUI.Label(Rect(200,10,200,25),"P1 previous object:");
-		p1_prevObject = GUI.TextField(Rect(350,10,100,25),p1_prevObject);
+		GUI.Label(Rect(200,10,200,25),"P1 one:");
+		p1_one = GUI.TextField(Rect(300,10,100,25),p1_one);
 		
-		GUI.Label(Rect(200,30,200,25),"P1 next object:");
-		p1_nextObject = GUI.TextField(Rect(350,30,100,25),p1_nextObject);
+		GUI.Label(Rect(200,30,200,25),"P1 two:");
+		p1_two = GUI.TextField(Rect(300,30,100,25),p1_two);
 		
-		GUI.Label(Rect(200,50,200,25),"P1 previous step :");
-		p1_prevStep = GUI.TextField(Rect(350,50,100,25),p1_prevStep);
+		GUI.Label(Rect(200,50,200,25),"P1 three:");
+		p1_three = GUI.TextField(Rect(300,50,100,25),p1_three);
 		
-		GUI.Label(Rect(200,70,200,25),"P1 next step :");
-		p1_nextStep = GUI.TextField(Rect(350,70,100,25),p1_nextStep);
+		GUI.Label(Rect(200,70,200,25),"P1 four:");
+		p1_four = GUI.TextField(Rect(300,70,100,25),p1_four);
 		
 		GUI.Label(Rect(200,90,200,25),"P1 shield:");
-		p1_shield = GUI.TextField(Rect(350,90,100,25),p1_shield);
+		p1_shield = GUI.TextField(Rect(300,90,100,25),p1_shield);
+		
+		GUI.Label(Rect(200,110,200,25),"P1 next Object:");
+		p1_nextObject = GUI.TextField(Rect(300,110,100,25),p1_nextObject);
+		
+		
 		
 		//Keys player_2
-		GUI.Label(Rect(500,10,200,25),"P2 previous object:");
-		p2_prevObject = GUI.TextField(Rect(650,10,100,25),p2_prevObject);
+		GUI.Label(Rect(450,10,200,25),"P2 one:");
+		p2_one = GUI.TextField(Rect(550,10,100,25),p2_one);
 		
-		GUI.Label(Rect(500,30,200,25),"P2 next object:");
-		p2_nextObject = GUI.TextField(Rect(650,30,100,25),p2_nextObject);
+		GUI.Label(Rect(450,30,200,25),"P2 two:");
+		p2_two = GUI.TextField(Rect(550,30,100,25),p2_two);
 		
-		GUI.Label(Rect(500,50,200,25),"P2 previous step :");
-		p2_prevStep = GUI.TextField(Rect(650,50,100,25),p2_prevStep);
+		GUI.Label(Rect(450,50,200,25),"P2 three:");
+		p2_three = GUI.TextField(Rect(550,50,100,25),p2_three);
 		
-		GUI.Label(Rect(500,70,200,25),"P2 next step :");
-		p2_nextStep = GUI.TextField(Rect(650,70,100,25),p2_nextStep);
+		GUI.Label(Rect(450,70,200,25),"P2 four:");
+		p2_four = GUI.TextField(Rect(550,70,100,25),p2_four);
 		
-		GUI.Label(Rect(500,90,200,25),"P2 shield:");
-		p2_shield = GUI.TextField(Rect(650,90,100,25),p2_shield);
+		GUI.Label(Rect(450,90,200,25),"P2 shield:");
+		p2_shield = GUI.TextField(Rect(550,90,100,25),p2_shield);
+		
+		GUI.Label(Rect(450,110,200,25),"P2 next Object:");
+		p2_nextObject = GUI.TextField(Rect(550,110,100,25),p2_nextObject);
 		
 	} else if(!gameStarted){
 		
@@ -109,4 +122,4 @@ function OnGUI(){
 			settingControls = true;
 		}
 	}
-}*/
+}
