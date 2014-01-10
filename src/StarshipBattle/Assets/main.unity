@@ -369,6 +369,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 43903406}
   - 95: {fileID: 43903407}
+  - 114: {fileID: 43903408}
   m_Layer: 0
   m_Name: gunner2
   m_TagString: Untagged
@@ -404,6 +405,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!114 &43903408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43903405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e256c8952fbb2418cb12dde0d6affe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &53718705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1137,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 146470878}
   - 95: {fileID: 146470879}
+  - 114: {fileID: 146470880}
   m_Layer: 0
   m_Name: engineer
   m_TagString: Untagged
@@ -1159,6 +1173,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!114 &146470880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146470877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e256c8952fbb2418cb12dde0d6affe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &146943065
 GameObject:
   m_ObjectHideFlags: 0
@@ -3941,7 +3967,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 497874713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779b73e1c0e814466bc7429025a7f672, type: 3}
+  m_Script: {fileID: 11500000, guid: 84bf97bd42d1d7a41ac7990ddbd55c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &497874716
@@ -8641,6 +8667,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 991241218}
   - 95: {fileID: 991241219}
+  - 114: {fileID: 991241220}
   m_Layer: 0
   m_Name: gunner1
   m_TagString: Untagged
@@ -8676,6 +8703,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!114 &991241220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 991241217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e256c8952fbb2418cb12dde0d6affe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000120399
 GameObject:
   m_ObjectHideFlags: 0
