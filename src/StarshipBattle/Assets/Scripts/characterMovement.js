@@ -4,6 +4,7 @@ public class characterMovement extends actionClass
 	public var toPosition:Vector3;
 	public var speed = 1;
 	private var ownerObject:GameObject;
+	private var ownerName:String;
 
 	//movement
 	private var targetRoom:String="";
@@ -15,10 +16,14 @@ public class characterMovement extends actionClass
 	function Start () {
 		ownerObject = transform.parent.gameObject;
 		
+		ownerName = ownerObject.name;
+		
+		Debug.Log(ownerName);
+		
 		//find all waypoints
 		for(var i=1;i<=4;i++){
-			waypoints["Waypoint_"+i]=GameObject.Find("playerLeft").transform.FindChild("waypoints").transform.FindChild("Waypoint_"+i).transform.position;
-			waypoints[("Waypoint_"+i)+i]=GameObject.Find("playerLeft").transform.FindChild("waypoints").transform.FindChild("Waypoint_"+i+i).transform.position;
+			waypoints["Waypoint_"+i]=GameObject.Find(ownerName).transform.FindChild("waypoints").transform.FindChild("Waypoint_"+i).transform.position;
+			waypoints[("Waypoint_"+i)+i]=GameObject.Find(ownerName).transform.FindChild("waypoints").transform.FindChild("Waypoint_"+i+i).transform.position;
 		}
 		
 	}
