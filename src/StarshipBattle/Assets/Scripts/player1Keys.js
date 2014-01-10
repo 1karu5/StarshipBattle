@@ -2,11 +2,14 @@
 
 public class Player1Keys {
 
-	public static var prevObject:KeyCode = KeyCode.Q;
-	public static var nextObject:KeyCode = KeyCode.W;
+	
+	public static var nextObject:KeyCode = KeyCode.Tab;
 
-	public static var prevStep:KeyCode = KeyCode.Y;
-	public static var nextStep:KeyCode = KeyCode.X;
+	public static var one:KeyCode = KeyCode.Alpha1;
+	public static var two:KeyCode = KeyCode.Alpha2;
+	public static var three:KeyCode = KeyCode.Alpha3;
+	public static var four:KeyCode = KeyCode.Alpha4;
+	
 
 	public static var shield:KeyCode = KeyCode.C;
 

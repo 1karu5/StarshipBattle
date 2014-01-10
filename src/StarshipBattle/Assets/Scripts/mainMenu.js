@@ -1,4 +1,4 @@
-﻿#pragma strict
+﻿/*#pragma strict
 
 private var settingControls:boolean;
 public static var gameStarted:boolean;
@@ -109,4 +109,4 @@ function OnGUI(){
 			settingControls = true;
 		}
 	}
-}
+}*/
