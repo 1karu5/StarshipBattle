@@ -497,7 +497,6 @@ GameObject:
   - 4: {fileID: 43903406}
   - 95: {fileID: 43903407}
   - 114: {fileID: 43903408}
-  - 23: {fileID: 43903409}
   m_Layer: 0
   m_Name: gunner2
   m_TagString: Untagged
@@ -546,27 +545,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
---- !u!23 &43903409
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43903405}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!1 &53718705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,7 +1522,6 @@ GameObject:
   - 4: {fileID: 146470878}
   - 95: {fileID: 146470879}
   - 114: {fileID: 146470880}
-  - 23: {fileID: 146470881}
   m_Layer: 0
   m_Name: engineer
   m_TagString: Untagged
@@ -1593,27 +1570,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
---- !u!23 &146470881
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 146470877}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!1 &146833921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9109,7 +9065,6 @@ GameObject:
   - 4: {fileID: 991241218}
   - 95: {fileID: 991241219}
   - 114: {fileID: 991241220}
-  - 23: {fileID: 991241221}
   m_Layer: 0
   m_Name: gunner1
   m_TagString: Untagged
@@ -9158,27 +9113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
---- !u!23 &991241221
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 991241217}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!1 &992983848
 GameObject:
   m_ObjectHideFlags: 0
@@ -14581,7 +14515,6 @@ GameObject:
   - 4: {fileID: 1627520723}
   - 95: {fileID: 1627520725}
   - 114: {fileID: 1627520724}
-  - 23: {fileID: 1627520726}
   m_Layer: 0
   m_Name: CannonBack
   m_TagString: Untagged
@@ -14632,27 +14565,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
---- !u!23 &1627520726
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1627520722}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!1 &1645282421
 GameObject:
   m_ObjectHideFlags: 0
@@ -16217,7 +16129,6 @@ GameObject:
   - 4: {fileID: 1791779786}
   - 95: {fileID: 1791779788}
   - 114: {fileID: 1791779787}
-  - 23: {fileID: 1791779789}
   m_Layer: 0
   m_Name: CannonFront
   m_TagString: Untagged
@@ -16268,27 +16179,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
---- !u!23 &1791779789
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1791779785}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!1 &1822098888
 GameObject:
   m_ObjectHideFlags: 0

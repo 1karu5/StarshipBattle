@@ -10,12 +10,20 @@ public class actionClass extends MonoBehaviour
 		Debug.Log("action in actionClass: "+val);	
 	}
 	
-	public function highlight(show:boolean){
+	public function highlight(show:boolean){	
 		if(show){
-			renderer.material.color = Color.red;
+			for(var obj:Renderer in GetComponentsInChildren(Renderer)){
+				for (var mat:Material in obj.materials) {
+        			mat.color = Color.red;
+    			}
+			}
 		}
 		else{
-			renderer.material.color = Color.white;
+			for(var obj:Renderer in GetComponentsInChildren(Renderer)){
+				for (var mat:Material in obj.materials) {
+        			mat.color = Color.white;
+    			}
+			}
 		}
 	}
 }
