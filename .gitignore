@@ -4,6 +4,7 @@ Temp/
 Obj/
 UnityGenerated/
 Library/
+Physics2DSettings.asset
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
