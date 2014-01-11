@@ -59,7 +59,6 @@ public class cannon extends actionClass
 	 			//Debug.Log(timer);
 				if(timer > freq){
 					var laser:GameObject = Instantiate(prefab, Alles_drehbare.transform.position, Quaternion.identity);
-					Debug.Log(shootingRaum);
 					var toPosition = GameObject.Find(shootingToPlayer).transform.FindChild("Ship").transform.FindChild(shootingRaum).transform.position;
 					var laserFly:laserFly = laser.GetComponent("laserFly");
 					laserFly.toPosition = toPosition;
@@ -69,33 +68,14 @@ public class cannon extends actionClass
 			}
 		}
 	}
-	// Player: 	
-	// 			playerLeft
-	// 			playerRIght
-	// Cannon:
-	// 			Front
-	//			Back
-	// Raum 0-3
-	// 	 	front to back
 	
-	//kann weg, action ersetzt das
-	public static function shootingTo(player:String, cannon:String, raum:int){	
-		var cannonObject = GameObject.Find(player).transform.FindChild("Cannon" + cannon).gameObject;
-		var scriptA:cannon = cannonObject.GetComponent("cannon");
-		
-		scriptA.rotateY = rotateTo[player+cannon][raum];
-		
-		scriptA.shootingEnabled = true;
-		
-		scriptA.shootingToPlayer = (player == "playerLeft" ? "playerRight": "playerLeft");
-		scriptA.shootingRaum = "r" + (raum + 1);
-	}
 	//umschreiben
 	public static function shootingDisable(player:String, cannon:String){	
 		var cannonObject = GameObject.Find(player).transform.FindChild("Cannon" + cannon).gameObject;
 		var scriptA:cannon = cannonObject.GetComponent("cannon");
 		scriptA.shootingEnabled = false;
 	}
+	
 
 	public override function action(shootTo:int){
 		Debug.Log(shootTo);

@@ -17,11 +17,6 @@ private var isEnabled:boolean = true;
 private var ownerName:String;
 private var health:float = 100.0;
 
-
-function getSchild(player){
-	return GameObject.Find(player).transform.FindChild("schild").gameObject;
-}
-
 function Start () {
 	ownerName = transform.parent.gameObject.name;
 	if (ownerName == "playerRight"){
@@ -49,7 +44,7 @@ function changeIsEnabled(){
 }
 
 public static function enabling(playerName) {
-	var schildObj = GameObject.Find(playerName).transform.FindChild("Ship").transform.FindChild("schild").gameObject;
+	var schildObj = GameObject.Find(playerName).transform.FindChild("schild").gameObject;
 	var script:schildController = schildObj.GetComponent("schildController");
 	script.changeIsEnabled();
 }
