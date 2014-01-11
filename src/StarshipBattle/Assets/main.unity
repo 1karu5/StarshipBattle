@@ -4668,6 +4668,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 497874716}
   - 114: {fileID: 497874714}
+  - 114: {fileID: 497874715}
   m_Layer: 0
   m_Name: mainLogic
   m_TagString: Untagged
@@ -4688,6 +4689,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1Objects: []
   player2Objects: []
+--- !u!114 &497874715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497874713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d819fab2d38204bd79c4db522e08197a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
 --- !u!4 &497874716
 Transform:
   m_ObjectHideFlags: 0
