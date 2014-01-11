@@ -2,9 +2,6 @@
 import System.Collections.Generic;
 public class cannon extends actionClass
 {
-
-	//private static var rotateToRaum:Array = [0,-15,-30,-45];
-	//private static var rotateToRaumFront:Array = [45,30,15,0];
 	private static var rotateTo = new Dictionary.<String,Array>();
 	public var shootingEnabled:boolean = false;
 	public var rotateY:float = 0;
@@ -26,16 +23,10 @@ public class cannon extends actionClass
 	private var gunnerCount : int = 0;
 
 	function Start () {
-		
-		/*rotateTo["playerLeftBack"]=[0,-15,-30,-45];
-		rotateTo["playerLeftFront"]=[45,30,15,0];
-		rotateTo["playerRightBack"]=[0,15,30,45];
-		rotateTo["playerRightFront"]=[-45,-15,-30,0];*/
-		
-		rotateTo["playerLeftBack"]=[-45,-15,-30,0];
-		rotateTo["playerLeftFront"]=[0,15,30,45];
-		rotateTo["playerRightBack"]=[45,30,15,0];
-		rotateTo["playerRightFront"]=[0,-15,-30,-45];
+		rotateTo["playerLeftBack"]=[-40,-15,-30,0];
+		rotateTo["playerLeftFront"]=[0,15,30,40];
+		rotateTo["playerRightBack"]=[40,30,15,0];
+		rotateTo["playerRightFront"]=[0,-15,-30,-40];
 
 		Alles_drehbare = transform.FindChild("Alles_drehbare").gameObject;
 		prefab = GameObject.Find("laser");
@@ -58,10 +49,8 @@ public class cannon extends actionClass
 			}
 		}
 		else if (shootingEnabled && gunnerCount > 0){
-			// KanonenRohrSegment
 			timer += Time.deltaTime;
- 			//Debug.Log(timer);
-			if(timer > freq){
+			if(timer > (freq/gunnerCount) ){
 				var laser:GameObject = Instantiate(prefab, Alles_drehbare.transform.position, Quaternion.identity);
 				var toPosition = GameObject.Find(shootingToPlayer).transform.FindChild("Ship").transform.FindChild(shootingRaum).transform.position;
 				var laserFly:laserFly = laser.GetComponent("laserFly");
@@ -85,7 +74,6 @@ public class cannon extends actionClass
 		parent = GameObject.Find(ownerName).transform;
 		gunnerCount = 0;
 		
-	
 		if(parent.FindChild("gunner1").transform.position == waypoint.transform.position) {
 			gunnerCount++;
 		}
