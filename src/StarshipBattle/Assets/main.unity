@@ -5818,6 +5818,7 @@ GameObject:
   - 33: {fileID: 648057289}
   - 64: {fileID: 648057288}
   - 23: {fileID: 648057287}
+  - 114: {fileID: 648057291}
   m_Layer: 0
   m_Name: space
   m_TagString: Untagged
@@ -5877,6 +5878,17 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &648057291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648057286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ceec765ab18f4dc3be1f1486e9760d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &656302471
 GameObject:
   m_ObjectHideFlags: 0
