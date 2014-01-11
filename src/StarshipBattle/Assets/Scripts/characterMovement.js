@@ -75,7 +75,8 @@ public class characterMovement extends actionClass
 		//Debug.Log("calcNext: where="+where);
 		if("Waypoint_"+where==targetRoom){	//arived
 			Debug.Log("arived");
-			targetRoom="";	
+			targetRoom="";
+			//TODO: stop walk animation	
 		}else{
 			if("Waypoint_"+where==targetRoom+targetRoom.Substring(targetRoom.length-1,1)){	//move inside the room
 				nextWaypoint = waypoints[targetRoom];
@@ -96,5 +97,7 @@ public class characterMovement extends actionClass
 		targetRoom = "Waypoint_"+raumTo;
 		
 		calcNextWaypoint();
+		
+		//TODO: start walk animation
 	}
 }
