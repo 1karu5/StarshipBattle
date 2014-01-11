@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1c0e55e45184a16b707843e9057b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: .158620834, g: 0, b: 1, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
 --- !u!95 &940089
@@ -330,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7faf9c417664bfc849d092121a5fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: 1, g: 0, b: .186206818, a: 0}
   shootingEnabled: 0
   rotateY: 0
   shootingToPlayer: 
@@ -1169,6 +1171,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131970233}
   m_Mesh: {fileID: 4300076, guid: 86d7d53f187d841b3aaa7522c2fb2e42, type: 3}
+--- !u!1 &140086609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 140086611}
+  - 114: {fileID: 140086610}
+  m_Layer: 0
+  m_Name: CameraRotateCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &140086610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 140086609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a679f1728e5447b79dcdca8a7af2f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+--- !u!4 &140086611
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 140086609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 11.0138474}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1734201076}
+  m_Father: {fileID: 0}
 --- !u!1 &142087611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,6 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1c0e55e45184a16b707843e9057b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: .0758619308, g: 0, b: 1, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
 --- !u!1 &146833921
@@ -3383,6 +3426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1c0e55e45184a16b707843e9057b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: .117241383, g: 0, b: 1, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
 --- !u!95 &338679616
@@ -5116,6 +5160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7faf9c417664bfc849d092121a5fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: 1, g: 0, b: 0, a: 0}
   shootingEnabled: 0
   rotateY: 0
   shootingToPlayer: 
@@ -5875,7 +5920,7 @@ Transform:
   m_GameObject: {fileID: 648057286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -10, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 13, y: 1, z: 13}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!114 &648057291
@@ -6737,6 +6782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1c0e55e45184a16b707843e9057b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: 1, g: 0, b: 0, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
 --- !u!95 &742628786
@@ -13502,6 +13548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1c0e55e45184a16b707843e9057b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: 1, g: 0, b: 0, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
 --- !u!95 &1559405530
@@ -14027,6 +14074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7faf9c417664bfc849d092121a5fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: 0, g: .00689649582, b: 1, a: 0}
   shootingEnabled: 0
   rotateY: 0
   shootingToPlayer: 
@@ -14881,10 +14929,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1734201071}
   m_LocalRotation: {x: .46174866, y: 0, z: 0, w: .887010813}
-  m_LocalPosition: {x: 0, y: 15, z: -2}
+  m_LocalPosition: {x: 0, y: 15, z: -13.0138474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 140086611}
 --- !u!82 &1734201077
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15636,6 +15684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7faf9c417664bfc849d092121a5fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: .0344824791, g: 0, b: 1, a: 0}
   shootingEnabled: 0
   rotateY: 0
   shootingToPlayer: 
@@ -18289,6 +18338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1c0e55e45184a16b707843e9057b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColor: {r: 1, g: 0, b: 0, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
   speed: 1
 --- !u!95 &2131579177
