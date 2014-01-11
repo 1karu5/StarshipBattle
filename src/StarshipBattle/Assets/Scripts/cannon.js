@@ -10,6 +10,7 @@ public class cannon extends actionClass
 	public var rotateY:float = 0;
 	public var shootingToPlayer:String;
 	public var shootingRaum:String;
+	public var waypoint:GameObject;
 
 	public var cannonName:String;
 
@@ -21,6 +22,8 @@ public class cannon extends actionClass
 	private var timer : float = 0;
 	private var prefab : GameObject;
 	private var freq : int = 3;
+	
+	private var gunnerCount : int = 0;
 
 	function Start () {
 		
@@ -42,6 +45,8 @@ public class cannon extends actionClass
 	}
 
 	function Update () {
+		countGunners();
+	
 		if (currentRotation != rotateY){
 			if (currentRotation > rotateY){
 				Alles_drehbare.transform.Rotate(0,0,-1);
@@ -52,20 +57,19 @@ public class cannon extends actionClass
 				currentRotation += 1;
 			}
 		}
-		else {
-			if (shootingEnabled){
-				// KanonenRohrSegment
-				timer += Time.deltaTime;
-	 			//Debug.Log(timer);
-				if(timer > freq){
-					var laser:GameObject = Instantiate(prefab, Alles_drehbare.transform.position, Quaternion.identity);
-					var toPosition = GameObject.Find(shootingToPlayer).transform.FindChild("Ship").transform.FindChild(shootingRaum).transform.position;
-					var laserFly:laserFly = laser.GetComponent("laserFly");
-					laserFly.toPosition = toPosition;
-					laser.gameObject.transform.parent = ownerObject.transform;
-					timer = 0;	
-				}
+		else if (shootingEnabled && gunnerCount > 0){
+			// KanonenRohrSegment
+			timer += Time.deltaTime;
+ 			//Debug.Log(timer);
+			if(timer > freq){
+				var laser:GameObject = Instantiate(prefab, Alles_drehbare.transform.position, Quaternion.identity);
+				var toPosition = GameObject.Find(shootingToPlayer).transform.FindChild("Ship").transform.FindChild(shootingRaum).transform.position;
+				var laserFly:laserFly = laser.GetComponent("laserFly");
+				laserFly.toPosition = toPosition;
+				laser.gameObject.transform.parent = ownerObject.transform;
+				timer = 0;	
 			}
+			
 		}
 	}
 	
@@ -76,6 +80,19 @@ public class cannon extends actionClass
 		scriptA.shootingEnabled = false;
 	}
 	
+	public function countGunners() {
+		var parent : Transform;
+		parent = GameObject.Find(ownerName).transform;
+		gunnerCount = 0;
+		
+	
+		if(parent.FindChild("gunner1").transform.position == waypoint.transform.position) {
+			gunnerCount++;
+		}
+		if(parent.FindChild("gunner2").transform.position == waypoint.transform.position) {
+			gunnerCount++;
+		}
+	}
 
 	public override function action(shootTo:int){
 		Debug.Log(shootTo);
