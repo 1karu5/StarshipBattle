@@ -31,7 +31,7 @@ public class cannon extends actionClass
 		Alles_drehbare = transform.FindChild("Alles_drehbare").gameObject;
 		prefab = GameObject.Find("laser");
 		
-		ownerObject = transform.parent.gameObject;
+		ownerObject = transform.root.gameObject;
 		ownerName = ownerObject.name;
 	}
 

@@ -12,16 +12,25 @@ public var updatePlus:float = 0.025;
 public var updateMinus:float = 0.025;
 public var updateMinusOnCollision:float = 20;
 
+private var prefab : GameObject;
 
 private var isEnabled:boolean = true;
 private var ownerName:String;
 private var health:float = 100.0;
 
+public var laserExplodeColor:Color;
+
 function Start () {
-	ownerName = transform.parent.gameObject.name;
+	ownerName = transform.root.gameObject.name;
+	Debug.Log("Owner:" + ownerName);
 	if (ownerName == "playerRight"){
 		posX = 0.6;
 	}
+	if (laserExplodeColor == null){
+		laserExplodeColor = Color.blue;
+	}
+	
+	prefab = GameObject.Find("spawnLight");
 }
 
 function Update () {
@@ -44,7 +53,7 @@ function changeIsEnabled(){
 }
 
 public static function enabling(playerName) {
-	var schildObj = GameObject.Find(playerName).transform.FindChild("schild").gameObject;
+	var schildObj = GameObject.Find(playerName).transform.FindChild("Ship").transform.FindChild("schild").gameObject;
 	var script:schildController = schildObj.GetComponent("schildController");
 	script.changeIsEnabled();
 }
@@ -59,8 +68,13 @@ function OnCollisionEnter(collision:Collision) {
 		    //    }
 		    //}
 			health = Mathf.Max(health - updateMinusOnCollision, 0.0);
+			
+			
+			var l:GameObject = Instantiate(prefab, collision.collider.gameObject.transform.position, Quaternion.identity);
+			l.light.color = laserExplodeColor;
 			Destroy(collision.collider.gameObject);
 			
+			Destroy(l,0.5);
 		}
 	}
 }
