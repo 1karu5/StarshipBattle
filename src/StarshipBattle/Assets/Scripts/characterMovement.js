@@ -43,6 +43,7 @@ public class characterMovement extends actionClass
 			calcNextWaypoint();
 		}else{
 			transform.position = m;
+			transform.rotation = Quaternion.LookRotation(nextWaypoint - transform.position);
 		}
 	}
 
