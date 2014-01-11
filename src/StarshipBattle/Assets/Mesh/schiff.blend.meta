@@ -30,6 +30,15 @@ ModelImporter:
     100048: antenne
     100050: ShipMesh
     100052: Huelle
+    100054: Dach
+    100056: Gitter_Main
+    100058: Korridor
+    100060: Raumschalter
+    100062: rohr_big
+    100064: rohr_big_001
+    100066: rohr_vertical
+    100068: rohr_vertical_001
+    100070: ShipLukas
     400000: EmptyCam
     400002: G_ngeNeu
     400004: Plane
@@ -57,6 +66,15 @@ ModelImporter:
     400048: antenne
     400050: ShipMesh
     400052: Huelle
+    400054: Dach
+    400056: Gitter_Main
+    400058: Korridor
+    400060: Raumschalter
+    400062: rohr_big
+    400064: rohr_big_001
+    400066: rohr_vertical
+    400068: rohr_vertical_001
+    400070: ShipLukas
     2300000: G_ngeNeu
     2300002: Plane
     2300004: Roof
@@ -75,6 +93,14 @@ ModelImporter:
     2300030: Triebwerk2
     2300032: antenne
     2300034: ShipMesh
+    2300036: Dach
+    2300038: Gitter_Main
+    2300040: Raumschalter
+    2300042: rohr_big
+    2300044: rohr_big_001
+    2300046: rohr_vertical
+    2300048: rohr_vertical_001
+    2300050: ShipLukas
     3300000: G_ngeNeu
     3300002: Plane
     3300004: Roof
@@ -93,6 +119,14 @@ ModelImporter:
     3300030: Triebwerk2
     3300032: antenne
     3300034: ShipMesh
+    3300036: Dach
+    3300038: Gitter_Main
+    3300040: Raumschalter
+    3300042: rohr_big
+    3300044: rohr_big_001
+    3300046: rohr_vertical
+    3300048: rohr_vertical_001
+    3300050: ShipLukas
     4300000: G_ngeNeu
     4300002: Waffe
     4300004: Roof
@@ -111,6 +145,14 @@ ModelImporter:
     4300030: h_lleRundung
     4300032: ShipMesh
     4300034: antenne
+    4300036: Gitter_Main
+    4300038: Raumschalter
+    4300040: rohr_big
+    4300042: rohr_big_001
+    4300044: rohr_vertical
+    4300046: rohr_vertical_001
+    4300048: Dach
+    4300050: ShipLukas
     7400000: Default Take
     9500000: //RootNode
   materials:
