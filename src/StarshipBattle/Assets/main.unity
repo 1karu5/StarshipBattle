@@ -10590,7 +10590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abeb2dbce7e0c439d9d1e19eff9d362c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posX: .0500000007
+  posX: .699999988
   posY: .949999988
   sizeX: .5
   sizeY: .0500000007
