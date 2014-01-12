@@ -67,3 +67,35 @@ public static function updateHealth(player, unit, val:float){
 	health[player][unit] = Mathf.Max(0.0, Mathf.Min(100.0, health[player][unit] + val));
 	Debug.Log("HealthController: " + player + " - " + unit + " - " + val);
 }
+
+public static function getHealth(player, unit){
+	return health[player][unit];
+}
+
+function OnGUI() {
+	if (loserName == null){
+	
+	
+		var XL = Screen.width * 0.03;
+		var XR = Screen.width * 0.92;
+	 	var YL = Screen.height * 0.03;
+	 	var sX = Screen.width * 0.1;
+	 	var sY = Screen.height * 0.1;
+		
+		GUI.Label(Rect(XL,YL * 1,sX,sY), "r1: "+ health["playerLeft"]["r1"]);
+		GUI.Label(Rect(XL,YL * 2,sX,sY), "r2: "+ health["playerLeft"]["r2"]);
+		GUI.Label(Rect(XL,YL * 3,sX,sY), "r3: "+ health["playerLeft"]["r3"]);
+		GUI.Label(Rect(XL,YL * 4,sX,sY), "r4: "+ health["playerLeft"]["r4"]);
+		GUI.Label(Rect(XL,YL * 5,sX,sY), "en: "+ health["playerLeft"]["engineer"]);
+		GUI.Label(Rect(XL,YL * 6,sX,sY), "g1: "+ health["playerLeft"]["gunner1"]);
+		GUI.Label(Rect(XL,YL * 7,sX,sY), "g2: "+ health["playerLeft"]["gunner2"]);
+		
+		GUI.Label(Rect(XR,YL * 1,sX,sY), "r1: "+ health["playerRight"]["r1"]);
+		GUI.Label(Rect(XR,YL * 2,sX,sY), "r2: "+ health["playerRight"]["r2"]);
+		GUI.Label(Rect(XR,YL * 3,sX,sY), "r3: "+ health["playerRight"]["r3"]);
+		GUI.Label(Rect(XR,YL * 4,sX,sY), "r4: "+ health["playerRight"]["r4"]);
+		GUI.Label(Rect(XR,YL * 5,sX,sY), "en: "+ health["playerRight"]["engineer"]);
+		GUI.Label(Rect(XR,YL * 6,sX,sY), "g1: "+ health["playerRight"]["gunner1"]);
+		GUI.Label(Rect(XR,YL * 7,sX,sY), "g2: "+ health["playerRight"]["gunner2"]);
+	}
+}
