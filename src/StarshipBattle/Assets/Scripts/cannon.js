@@ -74,10 +74,10 @@ public class cannon extends actionClass
 		parent = GameObject.Find(ownerName).transform;
 		gunnerCount = 0;
 		
-		if(parent.FindChild("gunner1").transform.position == waypoint.transform.position) {
+		if(parent.FindChild("gunner1") != null && parent.FindChild("gunner1").transform.position == waypoint.transform.position) {
 			gunnerCount++;
 		}
-		if(parent.FindChild("gunner2").transform.position == waypoint.transform.position) {
+		if(parent.FindChild("gunner2") != null && parent.FindChild("gunner2").transform.position == waypoint.transform.position) {
 			gunnerCount++;
 		}
 	}
