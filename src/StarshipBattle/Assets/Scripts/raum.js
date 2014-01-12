@@ -27,7 +27,7 @@ function Start () {
 }
 
 function Update () {
-	var dist = Vector3.Distance(engineer.position, transform.position);
+	var dist = Vector2.Distance(Vector2(engineer.position.x,engineer.position.z), Vector2(transform.position.x,transform.position.z));
 
 	if(dist < 2) {
 		healthController.updateHealth(ownerName, raumName, repairSpeed);
@@ -67,7 +67,8 @@ function OnCollisionEnter(collision:Collision) {
 		Destroy(l,0.5);
 		
 		for (var i:Transform in characters){
-			var dist = Vector3.Distance(i.position, transform.position);
+			var dist = Vector2.Distance(Vector2(i.position.x,i.position.z), Vector2(transform.position.x,transform.position.z));
+			
 			if (dist < 2){
 				healthController.updateHealth(ownerName, i.name, -damage * 0.3);
 			}

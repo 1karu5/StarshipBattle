@@ -3,7 +3,7 @@
 var posX:float = 0.05;
 var posY:float = 0.95;
 
-var sizeX:float = 0.5;
+var sizeX:float = 0.4;
 var sizeY:float = 0.05;
 
 private var schildRandom:float = 0.2;
@@ -25,7 +25,7 @@ function Start () {
 	ownerName = transform.root.gameObject.name;
 	Debug.Log("Owner:" + ownerName);
 	if (ownerName == "playerRight"){
-		posX = 0.6;
+		posX = 0.55;
 	}
 	if (laserExplodeColor == null){
 		laserExplodeColor = Color.blue;

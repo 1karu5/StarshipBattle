@@ -19,6 +19,8 @@
 	}
 });
 
+private var loserName:String;
+
 var timer:float;
 
 function Start () {
@@ -26,10 +28,31 @@ function Start () {
 }
 
 function Update () {
-	timer += Time.deltaTime;
-	if(timer > 5){
-		Debug.Log(health);
-		timer = 0;
+	if (loserName == null){
+	
+		timer += Time.deltaTime;
+		
+		if(timer > 5){
+			Debug.Log(health);
+			timer = 0;
+		}
+		
+		for (var playerName:String in ["playerLeft", "playerRight"]){
+			var player:Hashtable = health[playerName];
+			if (player["gunner1"] == 0.0 && player["gunner2"] == 0.0 && player["engineer"] == 0.0){
+				loserName = playerName;
+			}
+			if (player["engineer"] == 0.0){
+				if (player["r1"] == 0.0 && player["r2"] == 0.0 && player["r3"] == 0.0 && player["r4"] == 0.0){
+					loserName = playerName;	
+				}
+			}
+		}
+		if (loserName != null){
+			var mainLogic:GameObject = GameObject.Find("mainLogic");
+			DontDestroyOnLoad(mainLogic);
+			Application.LoadLevel("endscreen"); 
+		}
 	}
 }
 

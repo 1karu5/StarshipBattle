@@ -20,7 +20,7 @@ function Start () {
 
 function Update () {
 	for (var i:Transform in characters){
-		var dist = Vector3.Distance(i.position, transform.position);
+		var dist = Vector2.Distance(Vector2(i.position.x,i.position.z), Vector2(transform.position.x,transform.position.z));
 		if (dist < 2){
 			healthController.updateHealth(ownerName, i.name, recover);
 			timer += Time.deltaTime;
