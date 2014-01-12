@@ -8,7 +8,7 @@ public class actionClass extends MonoBehaviour
 
 	public var playerColor:Color=Color.red;
 
-	public virtual function action(val:int){
+	public function action(val:int){
 		Debug.Log("action in actionClass: "+val);	
 	}
 	
