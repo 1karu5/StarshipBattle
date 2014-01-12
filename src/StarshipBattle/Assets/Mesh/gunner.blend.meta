@@ -6,9 +6,51 @@ ModelImporter:
     100000: BezierCircle
     100002: //RootNode
     100004: Kanonier_Model
+    100006: Human_modell3
+    100008: Left_schulter
+    100010: master_001
+    100012: master_002
+    100014: master_003
+    100016: master_004
+    100018: master_005
+    100020: master_006
+    100022: master_007
+    100024: master_008
+    100026: master_009
+    100028: master_010
+    100030: master_013
+    100032: master_014
+    100034: master_015
+    100036: master_016
+    100038: master_017
+    100040: master_018
+    100042: master_019
+    100044: master_020
+    100046: Right_Shulter
     400000: BezierCircle
     400002: //RootNode
     400004: Kanonier_Model
+    400006: Human_modell3
+    400008: Left_schulter
+    400010: master_001
+    400012: master_002
+    400014: master_003
+    400016: master_004
+    400018: master_005
+    400020: master_006
+    400022: master_007
+    400024: master_008
+    400026: master_009
+    400028: master_010
+    400030: master_013
+    400032: master_014
+    400034: master_015
+    400036: master_016
+    400038: master_017
+    400040: master_018
+    400042: master_019
+    400044: master_020
+    400046: Right_Shulter
     2300000: BezierCircle
     2300002: Kanonier_Model
     3300000: BezierCircle
@@ -16,7 +58,11 @@ ModelImporter:
     4300000: BezierCircle
     4300002: Kanonier_Model
     7400000: Default Take
+    7400002: ArbeiteAmConsole
+    7400004: ruhestand
+    7400006: run_001
     9500000: //RootNode
+    13700000: Kanonier_Model
   materials:
     importMaterials: 1
     materialName: 0
