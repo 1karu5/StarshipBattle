@@ -6114,6 +6114,7 @@ MonoBehaviour:
   updatePlus: .0250000004
   updateMinus: .0250000004
   updateMinusOnCollision: 20
+  shieldDamage: {fileID: 8300000, guid: d2561801fdf1ca0478fd8255dfa337d1, type: 3}
   laserExplodeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &585269404
 Renderer:
@@ -12594,6 +12595,7 @@ MonoBehaviour:
   updatePlus: .0250000004
   updateMinus: .0250000004
   updateMinusOnCollision: 20
+  shieldDamage: {fileID: 8300000, guid: d2561801fdf1ca0478fd8255dfa337d1, type: 3}
   laserExplodeColor: {r: .588235319, g: .784313738, b: 1, a: .509803951}
 --- !u!23 &1199405114
 Renderer:
@@ -22007,7 +22009,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 3874c4277f53479469e07e48bee9c105, type: 2}
+  - {fileID: 2100000, guid: 83b47fd6796b8eb44b42318682bc56e7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

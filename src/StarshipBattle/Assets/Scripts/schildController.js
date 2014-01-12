@@ -11,6 +11,7 @@ private var schildRandom:float = 0.2;
 public var updatePlus:float = 0.025;
 public var updateMinus:float = 0.025;
 public var updateMinusOnCollision:float = 20;
+public var shieldDamage : AudioClip;
 
 private var prefab : GameObject;
 
@@ -68,7 +69,9 @@ function OnCollisionEnter(collision:Collision) {
 		    //    }
 		    //}
 			health = Mathf.Max(health - updateMinusOnCollision, 0.0);
-			
+		
+			//play sound
+			AudioSource.PlayClipAtPoint(shieldDamage, collision.collider.gameObject.transform.position);
 			
 			var l:GameObject = Instantiate(prefab, collision.collider.gameObject.transform.position, Quaternion.identity);
 			l.light.color = laserExplodeColor;
