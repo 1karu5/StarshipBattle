@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 6ab0273b101384f70a0e991069e7d59c
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Cube
+    100002: Cube_001
+    100004: Cube_002
+    100006: Cube_003
+    100008: Cube_004
+    100010: Cube_005
+    100012: Cylinder
+    100014: Cylinder_001
+    100016: //RootNode
+    100018: Raum
+    100020: HP_Station
+    100022: HP_Station2
+    100024: Kisten
+    100026: Monitor
+    400000: Cube
+    400002: Cube_001
+    400004: Cube_002
+    400006: Cube_003
+    400008: Cube_004
+    400010: Cube_005
+    400012: Cylinder
+    400014: Cylinder_001
+    400016: //RootNode
+    400018: Raum
+    400020: HP_Station
+    400022: HP_Station2
+    400024: Kisten
+    400026: Monitor
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Cube_002
+    2300006: Cube_003
+    2300008: Cube_004
+    2300010: Cube_005
+    2300012: Cylinder
+    2300014: Cylinder_001
+    2300016: Raum
+    2300018: HP_Station
+    2300020: HP_Station2
+    2300022: Kisten
+    2300024: Monitor
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Cube_002
+    3300006: Cube_003
+    3300008: Cube_004
+    3300010: Cube_005
+    3300012: Cylinder
+    3300014: Cylinder_001
+    3300016: Raum
+    3300018: HP_Station
+    3300020: HP_Station2
+    3300022: Kisten
+    3300024: Monitor
+    4300000: Cylinder_001
+    4300002: Cube_005
+    4300004: Cube_004
+    4300006: Cube_003
+    4300008: Cube_002
+    4300010: Cube_001
+    4300012: Cube
+    4300014: Cylinder
+    4300016: Raum
+    4300018: HP_Station2
+    4300020: Monitor
+    4300022: Kisten
+    4300024: HP_Station
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 
