@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
   - 82: {fileID: 8200000}
+  - 122: {fileID: 12200000}
   m_Layer: 0
   m_Name: laser
   m_TagString: Untagged
@@ -132,6 +133,17 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!122 &12200000
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4293533708
+  m_Size: .5
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
