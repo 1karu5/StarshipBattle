@@ -15,7 +15,7 @@ function Start () {
 		characters.push(ownerObj.Find(i).transform);
 	}
 	
-	prefab = GameObject.Find("spawnLight");
+	prefab = GameObject.Find("spawnLightMedic");
 }
 
 function Update () {
