@@ -59,6 +59,7 @@ ModelImporter:
     100106: Alles_drehbare
     100108: Alles_nicht_drehbare
     100110: TanksSeitlich
+    100112: Verbindungsst_ck
     400000: Antenne
     400002: AntenneD_nn
     400004: AntenneEckig
@@ -115,6 +116,7 @@ ModelImporter:
     400106: Alles_drehbare
     400108: Alles_nicht_drehbare
     400110: TanksSeitlich
+    400112: Verbindungsst_ck
     2300000: AntenneD_nn
     2300002: AntenneEckig
     2300004: AntenneParabol
@@ -159,6 +161,7 @@ ModelImporter:
     2300082: Zylinder2
     2300084: ZylinderRechts
     2300086: TanksSeitlich
+    2300088: Verbindungsst_ck
     3300000: AntenneD_nn
     3300002: AntenneEckig
     3300004: AntenneParabol
@@ -203,6 +206,7 @@ ModelImporter:
     3300082: Zylinder2
     3300084: ZylinderRechts
     3300086: TanksSeitlich
+    3300088: Verbindungsst_ck
     4300000: G_ngeNeuLoeschen
     4300002: ShipBodyKopieLoeschen
     4300004: ShipBody
@@ -247,6 +251,7 @@ ModelImporter:
     4300082: verstrebung
     4300084: KanonenRohrSegment
     4300086: TanksSeitlich
+    4300088: Verbindungsst_ck
     7400000: Default Take
     9500000: //RootNode
   materials:
