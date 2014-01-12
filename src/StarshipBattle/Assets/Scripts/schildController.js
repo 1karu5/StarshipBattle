@@ -44,7 +44,9 @@ function Update () {
 		health = Mathf.Max(health - updateMinus, 0.0);
 	}
 	else {
-		health = Mathf.Min(health + updatePlus, 100.0);
+		if (healthController.getHealth(ownerName, "r3") != 0){
+			health = Mathf.Min(health + updatePlus, 100.0);
+		}
 	}
 	transform.renderer.enabled = isEnabled;
 }
