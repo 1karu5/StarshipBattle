@@ -75,8 +75,14 @@ function Update () {
 }
 
 private function selectNextObjPlayer1(){	
-	player1Objects[player1Selected].highlight(false);	//unhighlight the old one
+
+	if(player1Objects[player1Selected]!=null){
+		player1Objects[player1Selected].highlight(false);	//unhighlight the old one
+	}
 	player1Selected = (player1Selected+1) % 5;
+	while(player1Objects[player1Selected]==null){
+		player1Selected = (player1Selected+1) % 5;
+	}
 	player1Objects[player1Selected].highlight(true);	//highlight the new
 }
 
