@@ -3,9 +3,9 @@
 
 public var damageMax:int = 30.0;
 public var damageMin:int = 15.0;
-public var repairSpeed:int = 0.25;
 public var roomDamage : AudioClip;
 
+private var repairSpeed:float = 0.25;
 private var engineer:Transform;
 private var raumName:String;
 private var prefab : GameObject;
