@@ -4,6 +4,7 @@
 public var damageMax:int = 30.0;
 public var damageMin:int = 15.0;
 public var repairSpeed:int = 0.25;
+public var roomDamage : AudioClip;
 
 private var engineer:Transform;
 private var raumName:String;
@@ -49,6 +50,12 @@ function Update () {
 
 function OnCollisionEnter(collision:Collision) {
 	if (collision.collider.name == "laser(Clone)"){
+		
+		Debug.Log("hit room");
+		
+		//play sound
+		AudioSource.PlayClipAtPoint(roomDamage, transform.position);
+	
 		Destroy(collision.collider.gameObject);
 		
 		var damage:float = Random.RandomRange(damageMin, damageMax);

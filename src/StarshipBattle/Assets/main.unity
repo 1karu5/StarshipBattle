@@ -2157,6 +2157,7 @@ MonoBehaviour:
   damageMax: 30
   damageMin: 15
   repairSpeed: 1
+  roomDamage: {fileID: 8300000, guid: 4ee00c8d7e3c15c49b790872f3490eb7, type: 3}
 --- !u!54 &171705931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5678,6 +5679,7 @@ MonoBehaviour:
   damageMax: 30
   damageMin: 15
   repairSpeed: 1
+  roomDamage: {fileID: 8300000, guid: 4ee00c8d7e3c15c49b790872f3490eb7, type: 3}
 --- !u!54 &524553519
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10668,6 +10670,7 @@ MonoBehaviour:
   damageMax: 30
   damageMin: 15
   repairSpeed: 1
+  roomDamage: {fileID: 8300000, guid: 4ee00c8d7e3c15c49b790872f3490eb7, type: 3}
 --- !u!54 &990315823
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14031,6 +14034,7 @@ MonoBehaviour:
   damageMax: 30
   damageMin: 15
   repairSpeed: 1
+  roomDamage: {fileID: 8300000, guid: 4ee00c8d7e3c15c49b790872f3490eb7, type: 3}
 --- !u!54 &1334250628
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14397,6 +14401,7 @@ MonoBehaviour:
   damageMax: 30
   damageMin: 15
   repairSpeed: 1
+  roomDamage: {fileID: 8300000, guid: 4ee00c8d7e3c15c49b790872f3490eb7, type: 3}
 --- !u!54 &1365181923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18862,6 +18867,7 @@ MonoBehaviour:
   damageMax: 30
   damageMin: 15
   repairSpeed: 1
+  roomDamage: {fileID: 8300000, guid: 4ee00c8d7e3c15c49b790872f3490eb7, type: 3}
 --- !u!54 &1784553321
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20028,6 +20034,7 @@ MonoBehaviour:
   damageMax: 30
   damageMin: 15
   repairSpeed: 1
+  roomDamage: {fileID: 8300000, guid: 4ee00c8d7e3c15c49b790872f3490eb7, type: 3}
 --- !u!54 &1895558848
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22337,6 +22344,7 @@ MonoBehaviour:
   damageMax: 30
   damageMin: 15
   repairSpeed: 1
+  roomDamage: {fileID: 8300000, guid: 4ee00c8d7e3c15c49b790872f3490eb7, type: 3}
 --- !u!54 &2128892299
 Rigidbody:
   m_ObjectHideFlags: 0
