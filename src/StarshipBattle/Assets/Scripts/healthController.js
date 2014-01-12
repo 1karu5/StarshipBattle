@@ -21,11 +21,14 @@
 
 private var loserName:String;
 public static var winner:String;
+private static var _characterDeath : AudioClip;
 
 var timer:float;
+public var characterDeath : AudioClip;
 
 function Start () {
 	timer = 0;
+	_characterDeath = characterDeath;
 }
 
 function Update () {
@@ -66,6 +69,12 @@ function Update () {
 public static function updateHealth(player, unit, val:float){
 	health[player][unit] = Mathf.Max(0.0, Mathf.Min(100.0, health[player][unit] + val));
 	Debug.Log("HealthController: " + player + " - " + unit + " - " + val);
+	var object : GameObject = GameObject.Find(player).transform.FindChild(unit).gameObject;
+	
+	if(health[player][unit] <= 0.0 && (unit == "gunner1" || unit == "gunner2" || unit == "engineer") && object != null) {
+		AudioSource.PlayClipAtPoint(_characterDeath, object.transform.position);
+		Destroy(object);
+	}
 }
 
 public static function getHealth(player, unit){

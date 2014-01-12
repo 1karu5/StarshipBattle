@@ -20,20 +20,22 @@ function Start () {
 
 function Update () {
 	for (var i:Transform in characters){
-		var dist = Vector3.Distance(i.position, transform.position);
-		if (dist < 2){
-			healthController.updateHealth(ownerName, i.name, recover);
-			timer += Time.deltaTime;
-			if (timer > freq){
-			
-				var l:GameObject = Instantiate(prefab, i.position, Quaternion.identity);
-				l.light.color = Color.white;
+		if(i != null) {
+			var dist = Vector3.Distance(i.position, transform.position);
+			if (dist < 2){
+				healthController.updateHealth(ownerName, i.name, recover);
+				timer += Time.deltaTime;
+				if (timer > freq){
 				
-				var laserFly:laserFly = l.GetComponent("laserFly");
-				laserFly.toPosition = i.position + Vector3(0,10,0);
-				
-				Destroy(l,2.0);
-				timer = 0;
+					var l:GameObject = Instantiate(prefab, i.position, Quaternion.identity);
+					l.light.color = Color.white;
+					
+					var laserFly:laserFly = l.GetComponent("laserFly");
+					laserFly.toPosition = i.position + Vector3(0,10,0);
+					
+					Destroy(l,2.0);
+					timer = 0;
+				}
 			}
 		}
 	}

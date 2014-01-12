@@ -67,10 +67,12 @@ function OnCollisionEnter(collision:Collision) {
 		Destroy(l,0.5);
 		
 		for (var i:Transform in characters){
-			var dist = Vector3.Distance(i.position, transform.position);
-			
-			if (dist < 2){
-				healthController.updateHealth(ownerName, i.name, -damage * 0.3);
+			if(i != null) {
+				var dist = Vector3.Distance(i.position, transform.position);
+				
+				if (dist < 2){
+					healthController.updateHealth(ownerName, i.name, -damage * 0.3);
+				}
 			}
 		}
 	}
