@@ -21,13 +21,13 @@ function Start () {
 	// find all characters
 	var ownerObj:GameObject = transform.root.gameObject;
 	ownerName = ownerObj.name;
-	for (var i:String in ["engineer", "gunner1", "gunner1"]){
-		characters.push(ownerObj.Find(i).transform);
+	for (var i:String in ["engineer", "gunner1", "gunner2"]){
+		characters.push(ownerObj.transform.Find(i).transform);
 	}
 }
 
 function Update () {
-	var dist = Vector2.Distance(Vector2(engineer.position.x,engineer.position.z), Vector2(transform.position.x,transform.position.z));
+	var dist = Vector3.Distance(engineer.position, transform.position);
 
 	if(dist < 2) {
 		healthController.updateHealth(ownerName, raumName, repairSpeed);
@@ -67,7 +67,7 @@ function OnCollisionEnter(collision:Collision) {
 		Destroy(l,0.5);
 		
 		for (var i:Transform in characters){
-			var dist = Vector2.Distance(Vector2(i.position.x,i.position.z), Vector2(transform.position.x,transform.position.z));
+			var dist = Vector3.Distance(i.position, transform.position);
 			
 			if (dist < 2){
 				healthController.updateHealth(ownerName, i.name, -damage * 0.3);

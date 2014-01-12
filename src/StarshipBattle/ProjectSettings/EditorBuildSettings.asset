@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/StarshipBattle.unity
   - enabled: 1
     path: Assets/main.unity
+  - enabled: 1
+    path: Assets/endscreen.unity

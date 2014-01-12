@@ -52,7 +52,7 @@ public class cannon extends actionClass
 			timer += Time.deltaTime;
 			if(timer > (freq/gunnerCount) ){
 				var laser:GameObject = Instantiate(prefab, Alles_drehbare.transform.position, Quaternion.identity);
-				var toPosition = GameObject.Find(shootingToPlayer).transform.FindChild("Ship").transform.FindChild(shootingRaum).transform.position;
+				var toPosition = GameObject.Find(shootingToPlayer).transform.FindChild(shootingRaum).transform.position;
 				var laserFly:laserFly = laser.GetComponent("laserFly");
 				laserFly.toPosition = toPosition;
 				laser.gameObject.transform.parent = ownerObject.transform;
