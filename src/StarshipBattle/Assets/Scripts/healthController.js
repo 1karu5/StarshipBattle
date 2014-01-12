@@ -20,6 +20,7 @@
 });
 
 private var loserName:String;
+public static var winner:String;
 
 var timer:float;
 
@@ -51,6 +52,12 @@ function Update () {
 		if (loserName != null){
 			var mainLogic:GameObject = GameObject.Find("mainLogic");
 			DontDestroyOnLoad(mainLogic);
+			if (loserName == "playerLeft"){
+				winner = "player right";
+			}
+			else {
+				winner = "player left";
+			}
 			Application.LoadLevel("endscreen"); 
 		}
 	}
