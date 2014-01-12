@@ -86,7 +86,7 @@ function OnGUI()
 {	
  	var X = Screen.width * posX;
  	var Y = Screen.height * posY;
- 	var sX = Screen.height * sizeX;
+ 	var sX = Screen.width * sizeX;
  	var sY = Screen.height * sizeY;
  	
     GUI.backgroundColor = Color.green;
