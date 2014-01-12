@@ -492,6 +492,82 @@ Prefab:
   m_RootGameObject: {fileID: 146470877}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &33824793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 33824794}
+  - 108: {fileID: 33824796}
+  - 114: {fileID: 33824795}
+  m_Layer: 0
+  m_Name: spawnLightMedic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &33824794
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33824793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -94.1942596, y: -100.340912, z: -112.976868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 900648432}
+--- !u!114 &33824795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33824793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696f1e64738e9468798288596c91a853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toPosition: {x: 0, y: 0, z: 0}
+  ownerName: 
+--- !u!108 &33824796
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33824793}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 4.61999989
+  m_Range: 3
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1 &37699916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a679f1728e5447b79dcdca8a7af2f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 0
 --- !u!4 &140086611
 Transform:
   m_ObjectHideFlags: 0
@@ -9021,6 +9097,7 @@ Transform:
   m_Children:
   - {fileID: 726393925}
   - {fileID: 1404965195}
+  - {fileID: 33824794}
   m_Father: {fileID: 0}
 --- !u!1 &914747606
 GameObject:
@@ -13225,7 +13302,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1404965195}
   - 108: {fileID: 1404965194}
-  - 114: {fileID: 1404965196}
   m_Layer: 0
   m_Name: spawnLight
   m_TagString: Untagged
@@ -13279,6 +13355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 900648432}
+<<<<<<< HEAD
 --- !u!114 &1404965196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13350,6 +13427,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1414087983}
   m_Mesh: {fileID: 4300026, guid: 57afb38995cc343be8d2030eb0750f84, type: 3}
+=======
+>>>>>>> af899c3dac35c44639e25016e37011cb394bbe01
 --- !u!1 &1414939010
 GameObject:
   m_ObjectHideFlags: 0
