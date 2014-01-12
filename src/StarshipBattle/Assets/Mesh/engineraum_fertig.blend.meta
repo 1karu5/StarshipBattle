@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 57afb38995cc343be8d2030eb0750f84
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: EmptyCam
+    100002: Engineerraum
+    100004: //RootNode
+    100006: Generator
+    100008: GeneratorAchse
+    100010: GeneratorCylinder_001
+    100012: GeneratorMonitor
+    100014: GeneratorRohre
+    100016: GeneratorSchrauben
+    100018: GeneratorSchraubenEmpty
+    100020: GeneratorTastatur
+    100022: GeneratorVorderseite
+    100024: Hammer
+    100026: Plane
+    100028: Sauerstofftanks
+    100030: Schrank
+    100032: Schraube
+    100034: Schraubenschl_ssel
+    100036: Spiegelaxe
+    400000: EmptyCam
+    400002: Engineerraum
+    400004: //RootNode
+    400006: Generator
+    400008: GeneratorAchse
+    400010: GeneratorCylinder_001
+    400012: GeneratorMonitor
+    400014: GeneratorRohre
+    400016: GeneratorSchrauben
+    400018: GeneratorSchraubenEmpty
+    400020: GeneratorTastatur
+    400022: GeneratorVorderseite
+    400024: Hammer
+    400026: Plane
+    400028: Sauerstofftanks
+    400030: Schrank
+    400032: Schraube
+    400034: Schraubenschl_ssel
+    400036: Spiegelaxe
+    2300000: Engineerraum
+    2300002: Generator
+    2300004: GeneratorCylinder_001
+    2300006: GeneratorMonitor
+    2300008: GeneratorRohre
+    2300010: GeneratorSchrauben
+    2300012: GeneratorTastatur
+    2300014: GeneratorVorderseite
+    2300016: Hammer
+    2300018: Plane
+    2300020: Sauerstofftanks
+    2300022: Schrank
+    2300024: Schraube
+    2300026: Schraubenschl_ssel
+    3300000: Engineerraum
+    3300002: Generator
+    3300004: GeneratorCylinder_001
+    3300006: GeneratorMonitor
+    3300008: GeneratorRohre
+    3300010: GeneratorSchrauben
+    3300012: GeneratorTastatur
+    3300014: GeneratorVorderseite
+    3300016: Hammer
+    3300018: Plane
+    3300020: Sauerstofftanks
+    3300022: Schrank
+    3300024: Schraube
+    3300026: Schraubenschl_ssel
+    4300000: Hammer
+    4300002: Sauerstofftanks
+    4300004: Schrank
+    4300006: GeneratorMonitor
+    4300008: GeneratorCylinder_001
+    4300010: GeneratorVorderseite
+    4300012: Generator
+    4300014: GeneratorRohre
+    4300016: Plane
+    4300018: Schraube
+    4300020: Schraubenschl_ssel
+    4300022: GeneratorTastatur
+    4300024: Engineerraum
+    4300026: GeneratorSchrauben
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 
