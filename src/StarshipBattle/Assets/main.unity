@@ -4706,6 +4706,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
   m_RootGameObject: {fileID: 681403127}
@@ -6363,6 +6367,10 @@ Prefab:
     - target: {fileID: 400000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
@@ -13362,6 +13370,10 @@ Prefab:
     - target: {fileID: 400000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
@@ -20756,6 +20768,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
   m_RootGameObject: {fileID: 1303146740}
@@ -22703,6 +22719,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -1.62920685e-07
       objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
   m_RootGameObject: {fileID: 299810236}
@@ -23549,6 +23569,10 @@ Prefab:
     - target: {fileID: 400000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
@@ -24792,6 +24816,10 @@ Prefab:
     - target: {fileID: 400000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
@@ -26751,6 +26779,10 @@ Prefab:
     - target: {fileID: 400000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdf901dfb9b0045c0898cc8fc12f8238, type: 2}
