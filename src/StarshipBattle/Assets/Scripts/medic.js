@@ -22,7 +22,7 @@ function Update () {
 	for (var i:Transform in characters){
 		if(i != null) {
 			var iHealth:float = healthController.getHealth(ownerName, i.name);
-			if (iHealth > 0.0){
+			if (iHealth > 0.0 && iHealth < 100.0){
 				var dist = Vector3.Distance(i.position, transform.position);
 				if (dist < 3){
 					healthController.updateHealth(ownerName, i.name, recover);

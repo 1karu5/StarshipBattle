@@ -63,10 +63,10 @@ function Update () {
 
 	if (engineer != null){
 		var engineerHealth:float = healthController.getHealth(ownerName, engineer.name);
-		if (engineerHealth > 0){
+		if (engineerHealth > 0 && roomHealth < 100.0){
 			var dist = Vector3.Distance(engineer.position, transform.position);
 			if(dist < 3) {
-				healthController.updateHealth(ownerName, raumName, repairSpeed);
+					healthController.updateHealth(ownerName, raumName, repairSpeed);
 			}
 		}
 	}
