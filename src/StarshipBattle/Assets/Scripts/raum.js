@@ -38,7 +38,7 @@ function Update () {
 				if (iHealth > 0.0){
 					var distI = Vector3.Distance(i.position, transform.position);
 					
-					if (distI < 2){
+					if (distI < 3){
 						healthController.updateHealth(ownerName, i.name, -100);
 					}
 				}
@@ -59,7 +59,7 @@ function Update () {
 		var engineerHealth:float = healthController.getHealth(ownerName, engineer.name);
 		if (engineerHealth > 0){
 			var dist = Vector3.Distance(engineer.position, transform.position);
-			if(dist < 2) {
+			if(dist < 3) {
 				healthController.updateHealth(ownerName, raumName, repairSpeed);
 			}
 		}
@@ -101,7 +101,7 @@ function OnCollisionEnter(collision:Collision) {
 				if (iHealth > 0.0){
 					var dist = Vector3.Distance(i.position, transform.position);
 					
-					if (dist < 2){
+					if (dist < 3){
 						healthController.updateHealth(ownerName, i.name, -damage * 1.0);
 					}
 				}

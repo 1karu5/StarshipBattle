@@ -738,9 +738,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53718705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -.800000012, z: 4.5}
+  m_LocalPosition: {x: -4.39181423, y: -.800000012, z: 4.34216595}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1787071756}
+  - {fileID: 660885059}
+  - {fileID: 254220869}
   m_Father: {fileID: 1778729450}
 --- !u!1 &58525628
 GameObject:
@@ -1698,7 +1701,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2471,6 +2474,32 @@ Transform:
   m_Children:
   - {fileID: 797550716}
   m_Father: {fileID: 657836323}
+--- !u!1 &197116795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 197116796}
+  m_Layer: 0
+  m_Name: gunner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &197116796
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197116795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .526074409, y: 0, z: 1.0580616}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1687725176}
 --- !u!1 &200897686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,6 +2960,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1704780389}
   m_GameObject: {fileID: 250711206}
   m_Mesh: {fileID: 4300018, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
+--- !u!1 &254220868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 254220869}
+  m_Layer: 0
+  m_Name: gunner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &254220869
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254220868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .372376442, y: 0, z: .999834061}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 53718707}
 --- !u!1 &255628218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3285,6 +3340,32 @@ Transform:
   m_LocalScale: {x: 1.21095765, y: 1.21095765, z: 1.21095765}
   m_Children: []
   m_Father: {fileID: 1070058469}
+--- !u!1 &316686454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 316686455}
+  m_Layer: 0
+  m_Name: gunner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &316686455
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316686454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14444923, y: 0, z: .821884155}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1687725176}
 --- !u!1 &318671762
 GameObject:
   m_ObjectHideFlags: 0
@@ -4323,6 +4404,32 @@ Transform:
   m_Children:
   - {fileID: 250711207}
   m_Father: {fileID: 1992031350}
+--- !u!1 &400015413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400015414}
+  m_Layer: 0
+  m_Name: engineer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400015414
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400015413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.878643513, y: 0, z: -.0919685364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1915971217}
 --- !u!1 &405268044
 GameObject:
   m_ObjectHideFlags: 0
@@ -7381,6 +7488,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1098011575}
   m_GameObject: {fileID: 660810560}
   m_Mesh: {fileID: 4300020, guid: 6ab0273b101384f70a0e991069e7d59c, type: 3}
+--- !u!1 &660885058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 660885059}
+  m_Layer: 0
+  m_Name: gunner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660885059
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 660885058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.132707119, y: 0, z: .858449459}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 53718707}
 --- !u!1 &661724675
 GameObject:
   m_ObjectHideFlags: 0
@@ -8678,7 +8811,7 @@ Transform:
   m_PrefabInternal: {fileID: 159015323}
   m_GameObject: {fileID: 742628783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.78953195, y: -.708608687, z: 15}
+  m_LocalPosition: {x: -2.78953195, y: -.708608687, z: 15.5}
   m_LocalScale: {x: .075000003, y: .075000003, z: .075000003}
   m_Children:
   - {fileID: 1335035278}
@@ -14952,6 +15085,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249472011}
   m_Mesh: {fileID: 4300012, guid: 86d7d53f187d841b3aaa7522c2fb2e42, type: 3}
+--- !u!1 &1255923264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1255923265}
+  m_Layer: 0
+  m_Name: engineer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1255923265
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255923264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.14817381, y: 0, z: 1.18242741}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1548044716}
 --- !u!1 &1259721548
 GameObject:
   m_ObjectHideFlags: 0
@@ -17828,6 +17987,32 @@ Transform:
   - {fileID: 1731496704}
   - {fileID: 700460938}
   m_Father: {fileID: 1906817228}
+--- !u!1 &1509288721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1509288722}
+  m_Layer: 0
+  m_Name: gunner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1509288722
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1509288721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.985928535, y: 0, z: -1.08975887}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1548044716}
 --- !u!1 &1513662237
 GameObject:
   m_ObjectHideFlags: 0
@@ -18121,9 +18306,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548044714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.15074062, y: -.800000012, z: 8}
+  m_LocalPosition: {x: -3.42664194, y: -.800000012, z: 8.1448555}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1255923265}
+  - {fileID: 1882510870}
+  - {fileID: 1509288722}
   m_Father: {fileID: 1778729450}
 --- !u!1 &1559405526
 GameObject:
@@ -18671,6 +18859,32 @@ Transform:
   m_LocalScale: {x: 1.00000012, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1791836769}
+--- !u!1 &1592315518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1592315519}
+  m_Layer: 0
+  m_Name: engineer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1592315519
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592315518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.948943138, y: 0, z: -.457366943}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1687725176}
 --- !u!1 &1596123102
 GameObject:
   m_ObjectHideFlags: 0
@@ -19313,6 +19527,32 @@ Transform:
   - {fileID: 1430410569}
   - {fileID: 266498214}
   m_Father: {fileID: 1831497834}
+--- !u!1 &1644585749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1644585750}
+  m_Layer: 0
+  m_Name: gunner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1644585750
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644585749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .923265457, y: 0, z: 1.10697174}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1915971217}
 --- !u!1 &1648821109
 GameObject:
   m_ObjectHideFlags: 0
@@ -19839,7 +20079,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: -.800000012, z: 15.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 197116796}
+  - {fileID: 316686455}
+  - {fileID: 1592315519}
   m_Father: {fileID: 1778729450}
 --- !u!1 &1690273396
 GameObject:
@@ -19984,6 +20227,32 @@ Transform:
   m_Children:
   - {fileID: 2098033497}
   m_Father: {fileID: 939269641}
+--- !u!1 &1699740834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1699740835}
+  m_Layer: 0
+  m_Name: engineer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1699740835
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1699740834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.1507411, y: -.800000012, z: 8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1778729450}
 --- !u!1001 &1704780389
 Prefab:
   m_ObjectHideFlags: 0
@@ -20688,6 +20957,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1699740835}
+  - {fileID: 1952535443}
+  - {fileID: 1911690499}
   - {fileID: 1687725176}
   - {fileID: 1502525971}
   - {fileID: 1915971217}
@@ -20988,6 +21260,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784553318}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1787071755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1787071756}
+  m_Layer: 0
+  m_Name: engineer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787071756
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1787071755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.814264297, y: 0, z: -.279236317}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 53718707}
 --- !u!1 &1788075646
 GameObject:
   m_ObjectHideFlags: 0
@@ -22263,6 +22561,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 886372328}
+--- !u!1 &1882510869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1882510870}
+  m_Layer: 0
+  m_Name: gunner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1882510870
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1882510869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.213216543, y: 0, z: -.992162228}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1548044716}
 --- !u!1 &1885955275
 GameObject:
   m_ObjectHideFlags: 0
@@ -22699,6 +23023,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 860880219}
   m_GameObject: {fileID: 1910461220}
   m_Mesh: {fileID: 4300020, guid: 0a97966b9334d4a18820d98311eb9304, type: 3}
+--- !u!1 &1911690498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1911690499}
+  m_Layer: 0
+  m_Name: gunner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1911690499
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1911690498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.1507411, y: -.800000012, z: 8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1778729450}
 --- !u!1 &1915971215
 GameObject:
   m_ObjectHideFlags: 0
@@ -22737,7 +23087,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: -.800000012, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 400015414}
+  - {fileID: 1966924686}
+  - {fileID: 1644585750}
   m_Father: {fileID: 1778729450}
 --- !u!1 &1921243854
 GameObject:
@@ -23082,6 +23435,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1942006351}
   m_Mesh: {fileID: 4300080, guid: 86d7d53f187d841b3aaa7522c2fb2e42, type: 3}
+--- !u!1 &1952535442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1952535443}
+  m_Layer: 0
+  m_Name: gunner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1952535443
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1952535442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.1507411, y: -.800000012, z: 8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1778729450}
 --- !u!1 &1961867800
 GameObject:
   m_ObjectHideFlags: 0
@@ -23205,6 +23584,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1966362136}
   m_Mesh: {fileID: 4300020, guid: 86d7d53f187d841b3aaa7522c2fb2e42, type: 3}
+--- !u!1 &1966924685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1966924686}
+  m_Layer: 0
+  m_Name: gunner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966924686
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1966924685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.35464716, y: 0, z: 1.04944706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1915971217}
 --- !u!1 &1969727727
 GameObject:
   m_ObjectHideFlags: 0
