@@ -17,15 +17,7 @@ public class characterMovement extends actionClass
 
 	function Start () {
 		ownerObject = transform.root.gameObject;
-		ownerName = ownerObject.name;
-		
-		//transform.animation.CrossFade("run_001");
-		//transform.animation.Play("run_001", PlayMode.StopAll);
-		//if (isGunner) {
-		//	animation.Play("run_001");
-		//	animation.Stop("run_001");
-		//}
-		
+		ownerName = ownerObject.name;	
 	}
 
 	function Update () {
@@ -36,12 +28,10 @@ public class characterMovement extends actionClass
 		}
 		if(targetRoom!=""){
 			move();
-			if (isGunner)
-				animation.Play("run_001");
+			animation.Play("run_001");
 		}
 		else {
-			if (isGunner)
-				animation.Stop("run_001");
+			animation.Stop("run_001");
 		}
 	}
 

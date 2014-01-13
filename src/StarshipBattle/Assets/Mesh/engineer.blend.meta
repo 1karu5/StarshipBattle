@@ -6,9 +6,49 @@ ModelImporter:
     100000: Engineer
     100002: //RootNode
     100004: Gun
+    100006: Human_modell3
+    100008: Left_schulter
+    100010: master_002
+    100012: master_003
+    100014: master_004
+    100016: master_005
+    100018: master_006
+    100020: master_007
+    100022: master_008
+    100024: master_009
+    100026: master_010
+    100028: master_013
+    100030: master_014
+    100032: master_015
+    100034: master_016
+    100036: master_017
+    100038: master_018
+    100040: master_019
+    100042: master_020
+    100044: Right_Shulter
     400000: Engineer
     400002: //RootNode
     400004: Gun
+    400006: Human_modell3
+    400008: Left_schulter
+    400010: master_002
+    400012: master_003
+    400014: master_004
+    400016: master_005
+    400018: master_006
+    400020: master_007
+    400022: master_008
+    400024: master_009
+    400026: master_010
+    400028: master_013
+    400030: master_014
+    400032: master_015
+    400034: master_016
+    400036: master_017
+    400038: master_018
+    400040: master_019
+    400042: master_020
+    400044: Right_Shulter
     2300000: Engineer
     2300002: Gun
     3300000: Engineer
@@ -16,7 +56,11 @@ ModelImporter:
     4300000: Gun
     4300002: Engineer
     7400000: Default Take
+    7400002: reparieren
+    7400004: run_001
     9500000: //RootNode
+    11100000: //RootNode
+    13700000: Engineer
   materials:
     importMaterials: 1
     materialName: 0
@@ -67,5 +111,5 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   userData: 
