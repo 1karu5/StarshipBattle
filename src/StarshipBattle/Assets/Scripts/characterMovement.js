@@ -12,14 +12,19 @@ public class characterMovement extends actionClass
 
 	//waypoints
 	private var waypoints = new Dictionary.<String,Vector3>();
+	private var playWalkAnimation:boolean = false;
+	public var isGunner:boolean = false;
 
 	function Start () {
-		ownerObject = transform.parent.gameObject;
-		
+		ownerObject = transform.root.gameObject;
 		ownerName = ownerObject.name;
 		
-		Debug.Log(ownerName);
-		
+		//transform.animation.CrossFade("run_001");
+		//transform.animation.Play("run_001", PlayMode.StopAll);
+		//if (isGunner) {
+		//	animation.Play("run_001");
+		//	animation.Stop("run_001");
+		//}
 		
 	}
 
@@ -31,6 +36,12 @@ public class characterMovement extends actionClass
 		}
 		if(targetRoom!=""){
 			move();
+			if (isGunner)
+				animation.Play("run_001");
+		}
+		else {
+			if (isGunner)
+				animation.Stop("run_001");
 		}
 	}
 

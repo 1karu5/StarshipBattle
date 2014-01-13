@@ -62,6 +62,7 @@ ModelImporter:
     7400004: ruhestand
     7400006: run_001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Kanonier_Model
   materials:
     importMaterials: 1
@@ -77,7 +78,303 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BezierCircle
+        weight: 1
+      - path: Human_modell3
+        weight: 1
+      - path: Human_modell3/master_001
+        weight: 1
+      - path: Human_modell3/master_002
+        weight: 1
+      - path: Human_modell3/master_002/master_006
+        weight: 1
+      - path: Human_modell3/master_002/master_006/master_007
+        weight: 1
+      - path: Human_modell3/master_002/master_006/master_007/master_019
+        weight: 1
+      - path: Human_modell3/master_003
+        weight: 1
+      - path: Human_modell3/master_003/master_004
+        weight: 1
+      - path: Human_modell3/master_003/master_004/master_005
+        weight: 1
+      - path: Human_modell3/master_003/master_004/master_005/master_020
+        weight: 1
+      - path: Human_modell3/master_008
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013/master_014
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013/master_014/master_015
+        weight: 1
+      - path: Human_modell3/master_008/master_009
+        weight: 1
+      - path: Human_modell3/master_008/master_009/master_010
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016/master_017
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016/master_017/master_018
+        weight: 1
+      - path: Kanonier_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArbeiteAmConsole
+      takeName: ArbeiteAmConsole
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BezierCircle
+        weight: 1
+      - path: Human_modell3
+        weight: 1
+      - path: Human_modell3/master_001
+        weight: 1
+      - path: Human_modell3/master_002
+        weight: 1
+      - path: Human_modell3/master_002/master_006
+        weight: 1
+      - path: Human_modell3/master_002/master_006/master_007
+        weight: 1
+      - path: Human_modell3/master_002/master_006/master_007/master_019
+        weight: 1
+      - path: Human_modell3/master_003
+        weight: 1
+      - path: Human_modell3/master_003/master_004
+        weight: 1
+      - path: Human_modell3/master_003/master_004/master_005
+        weight: 1
+      - path: Human_modell3/master_003/master_004/master_005/master_020
+        weight: 1
+      - path: Human_modell3/master_008
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013/master_014
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013/master_014/master_015
+        weight: 1
+      - path: Human_modell3/master_008/master_009
+        weight: 1
+      - path: Human_modell3/master_008/master_009/master_010
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016/master_017
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016/master_017/master_018
+        weight: 1
+      - path: Kanonier_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ruhestand
+      takeName: ruhestand
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BezierCircle
+        weight: 1
+      - path: Human_modell3
+        weight: 1
+      - path: Human_modell3/master_001
+        weight: 1
+      - path: Human_modell3/master_002
+        weight: 1
+      - path: Human_modell3/master_002/master_006
+        weight: 1
+      - path: Human_modell3/master_002/master_006/master_007
+        weight: 1
+      - path: Human_modell3/master_002/master_006/master_007/master_019
+        weight: 1
+      - path: Human_modell3/master_003
+        weight: 1
+      - path: Human_modell3/master_003/master_004
+        weight: 1
+      - path: Human_modell3/master_003/master_004/master_005
+        weight: 1
+      - path: Human_modell3/master_003/master_004/master_005/master_020
+        weight: 1
+      - path: Human_modell3/master_008
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013/master_014
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013/master_014/master_015
+        weight: 1
+      - path: Human_modell3/master_008/master_009
+        weight: 1
+      - path: Human_modell3/master_008/master_009/master_010
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016/master_017
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016/master_017/master_018
+        weight: 1
+      - path: Kanonier_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: run_001
+      takeName: run_001
+      firstFrame: -1
+      lastFrame: 53
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BezierCircle
+        weight: 1
+      - path: Human_modell3
+        weight: 1
+      - path: Human_modell3/master_001
+        weight: 1
+      - path: Human_modell3/master_002
+        weight: 1
+      - path: Human_modell3/master_002/master_006
+        weight: 1
+      - path: Human_modell3/master_002/master_006/master_007
+        weight: 1
+      - path: Human_modell3/master_002/master_006/master_007/master_019
+        weight: 1
+      - path: Human_modell3/master_003
+        weight: 1
+      - path: Human_modell3/master_003/master_004
+        weight: 1
+      - path: Human_modell3/master_003/master_004/master_005
+        weight: 1
+      - path: Human_modell3/master_003/master_004/master_005/master_020
+        weight: 1
+      - path: Human_modell3/master_008
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013/master_014
+        weight: 1
+      - path: Human_modell3/master_008/Left_schulter/master_013/master_014/master_015
+        weight: 1
+      - path: Human_modell3/master_008/master_009
+        weight: 1
+      - path: Human_modell3/master_008/master_009/master_010
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016/master_017
+        weight: 1
+      - path: Human_modell3/master_008/Right_Shulter/master_016/master_017/master_018
+        weight: 1
+      - path: Kanonier_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -113,5 +410,5 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   userData: 
