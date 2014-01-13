@@ -49,6 +49,12 @@ function Update () {
 		var waypointC:Transform = transform.root.transform.FindChild("waypoints").transform.FindChild("Waypoint_" + raumN + raumN);
 		
 		waypointR.position = waypointC.position + (waypointR.position - waypointC.position).normalized;
+		
+		for (var j:String in ["engineer", "gunner1", "gunner2"]){
+			var ch:Transform = waypointR.FindChild(j);
+			ch.position = waypointR.position;
+		}
+		
 	}
 
 	if (isDestroyed){
