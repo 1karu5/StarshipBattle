@@ -20,15 +20,15 @@ public class characterMovement extends actionClass
 		
 		Debug.Log(ownerName);
 		
+		
+	}
+
+	function Update () {
 		//find all waypoints
 		for(var i=1;i<=4;i++){
 			waypoints["Waypoint_"+i]=GameObject.Find(ownerName).transform.FindChild("waypoints").transform.FindChild("Waypoint_"+i).transform.position;
 			waypoints[("Waypoint_"+i)+i]=GameObject.Find(ownerName).transform.FindChild("waypoints").transform.FindChild("Waypoint_"+i+i).transform.position;
 		}
-		
-	}
-
-	function Update () {
 		if(targetRoom!=""){
 			move();
 		}

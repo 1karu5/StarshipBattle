@@ -86,9 +86,14 @@ private function selectNextObjPlayer1(){
 	player1Objects[player1Selected].highlight(true);	//highlight the new
 }
 
+private function selectNextObjPlayer2(){	
 
-private function selectNextObjPlayer2(){
-	player2Objects[player2Selected].highlight(false);	//unhighlight the old one	
+	if(player2Objects[player2Selected]!=null){
+		player2Objects[player2Selected].highlight(false);	//unhighlight the old one
+	}
 	player2Selected = (player2Selected+1) % 5;
+	while(player2Objects[player2Selected]==null){
+		player2Selected = (player2Selected+1) % 5;
+	}
 	player2Objects[player2Selected].highlight(true);	//highlight the new
 }

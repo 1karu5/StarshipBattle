@@ -3423,6 +3423,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 335623709}
   - 137: {fileID: 335623710}
+  - 111: {fileID: 335623711}
   m_Layer: 0
   m_Name: Kanonier_Model
   m_TagString: Untagged
@@ -3501,6 +3502,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 1.32345319, y: -.362407684, z: .340847731}
     m_Extent: {x: 9.05607605, y: 9.3143177, z: 2.47596121}
   m_DirtyAABB: 0
+--- !u!111 &335623711
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335623708}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &338679613
 GameObject:
   m_ObjectHideFlags: 0

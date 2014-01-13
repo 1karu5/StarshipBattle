@@ -23,7 +23,7 @@ public class cannon extends actionClass
 	private var gunnerCount : int = 0;
 
 	function Start () {
-		rotateTo["playerLeftBack"]=[-40,-15,-30,0];
+		rotateTo["playerLeftBack"]=[-40,-30,-15,0];
 		rotateTo["playerLeftFront"]=[0,15,30,40];
 		rotateTo["playerRightBack"]=[40,30,15,0];
 		rotateTo["playerRightFront"]=[0,-15,-30,-40];
