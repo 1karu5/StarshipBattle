@@ -12,6 +12,13 @@ private var healthBarLength : float= 100;
 function Update () {
 	var hTemp:float = healthController.getHealth(ownerName, character);
 	healthBarLength = (hTemp / 250) * 100;
+	
+	if (ownerName == null){
+		ownerName = transform.root.name;
+	}
+	if (character == null){
+		character = transform.name;
+	}
 }
 
 function OnGUI () {

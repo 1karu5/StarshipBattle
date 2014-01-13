@@ -65,13 +65,7 @@ function OnCollisionEnter(collision:Collision) {
 	if (isEnabled && collision.collider.name == "laser(Clone)" && collision.collider.transform.parent.name != ownerName){
 		if (Random.value > schildRandom){
 			Debug.Log("Destroy laser");
-			//if(collision.gameObject.rigidbody) {
-		    //    for(var contact in collision.contacts) {
-		    //        collision.gameObject.rigidbody.AddExplosionForce(5, contact.point, 5, 10);
-		    //    }
-		    //}
 			health = Mathf.Max(health - updateMinusOnCollision, 0.0);
-		
 			//play sound
 			AudioSource.PlayClipAtPoint(shieldDamage, collision.collider.gameObject.transform.position);
 			

@@ -27,10 +27,14 @@ function Start () {
 }
 
 function Update () {
-	var dist = Vector3.Distance(engineer.position, transform.position);
-
-	if(dist < 2) {
-		healthController.updateHealth(ownerName, raumName, repairSpeed);
+	if (engineer != null){
+		var engineerHealth:float = healthController.getHealth(ownerName, engineer.name);
+		if (engineerHealth > 0){
+			var dist = Vector3.Distance(engineer.position, transform.position);
+			if(dist < 2) {
+				healthController.updateHealth(ownerName, raumName, repairSpeed);
+			}
+		}
 	}
 	/*
 	if (health > 50){
@@ -50,9 +54,6 @@ function Update () {
 
 function OnCollisionEnter(collision:Collision) {
 	if (collision.collider.name == "laser(Clone)"){
-		
-		Debug.Log("hit room");
-		
 		//play sound
 		AudioSource.PlayClipAtPoint(roomDamage, transform.position);
 	
@@ -68,10 +69,13 @@ function OnCollisionEnter(collision:Collision) {
 		
 		for (var i:Transform in characters){
 			if(i != null) {
-				var dist = Vector3.Distance(i.position, transform.position);
-				
-				if (dist < 2){
-					healthController.updateHealth(ownerName, i.name, -damage * 0.3);
+				var iHealth:float = healthController.getHealth(ownerName, i.name);
+				if (iHealth > 0.0){
+					var dist = Vector3.Distance(i.position, transform.position);
+					
+					if (dist < 2){
+						healthController.updateHealth(ownerName, i.name, -damage * 0.3);
+					}
 				}
 			}
 		}
