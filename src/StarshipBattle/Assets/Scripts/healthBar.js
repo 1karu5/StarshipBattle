@@ -23,6 +23,6 @@ function Update () {
 
 function OnGUI () {
 	var screenPosition = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y,transform.position.z));
-	GUI.Box(new Rect(screenPosition.x - healthBarLeft / 2, Screen.height - screenPosition.y - barTop,healthBarLength, healthBarHeight), "");
+	GUI.Box(new Rect(screenPosition.x - healthBarLeft / 2, Screen.height - screenPosition.y - barTop,40, healthBarHeight), "");
 	GUI.DrawTexture(new Rect(screenPosition.x - healthBarLeft / 2,Screen.height - screenPosition.y - barTop,healthBarLength, healthBarHeight), healthTex);	
 }	
