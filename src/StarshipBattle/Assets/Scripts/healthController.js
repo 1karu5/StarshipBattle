@@ -1,4 +1,6 @@
-﻿public static var health: Hashtable = new Hashtable({
+﻿#pragma strict
+
+public static var health: Hashtable = new Hashtable({
 	"playerLeft": {
 		"r1": 100.0,
 		"r2": 100.0,
@@ -67,18 +69,24 @@ function Update () {
 }
 
 public static function updateHealth(player, unit, val:float){
-	health[player][unit] = Mathf.Max(0.0, Mathf.Min(100.0, health[player][unit] + val));
+	var playerTemp:Hashtable = health[player];
+	var unitTemp:float = playerTemp[unit];
+
+	playerTemp[unit] = Mathf.Max(0.0, Mathf.Min(100.0, unitTemp + val));
 	Debug.Log("HealthController: " + player + " - " + unit + " - " + val);
 	var object : GameObject = GameObject.Find(player).transform.FindChild(unit).gameObject;
 	
-	if(health[player][unit] <= 0.0 && (unit == "gunner1" || unit == "gunner2" || unit == "engineer") && object != null) {
+	var unitTemp2:float = playerTemp[unit];
+	
+	if(unitTemp2 <= 0.0 && (unit == "gunner1" || unit == "gunner2" || unit == "engineer") && object != null) {
 		AudioSource.PlayClipAtPoint(_characterDeath, object.transform.position);
 		Destroy(object);
 	}
 }
 
 public static function getHealth(player, unit){
-	return health[player][unit];
+	var pTemp:Hashtable = health[player];
+	return pTemp[unit];
 }
 
 function OnGUI() {
@@ -91,20 +99,23 @@ function OnGUI() {
 	 	var sX = Screen.width * 0.1;
 	 	var sY = Screen.height * 0.1;
 		
-		GUI.Label(Rect(XL,YL * 1,sX,sY), "r1: "+ health["playerLeft"]["r1"]);
-		GUI.Label(Rect(XL,YL * 2,sX,sY), "r2: "+ health["playerLeft"]["r2"]);
-		GUI.Label(Rect(XL,YL * 3,sX,sY), "r3: "+ health["playerLeft"]["r3"]);
-		GUI.Label(Rect(XL,YL * 4,sX,sY), "r4: "+ health["playerLeft"]["r4"]);
-		GUI.Label(Rect(XL,YL * 5,sX,sY), "en: "+ health["playerLeft"]["engineer"]);
-		GUI.Label(Rect(XL,YL * 6,sX,sY), "g1: "+ health["playerLeft"]["gunner1"]);
-		GUI.Label(Rect(XL,YL * 7,sX,sY), "g2: "+ health["playerLeft"]["gunner2"]);
+		var playerLeftHashTable:Hashtable = health["playerLeft"];
+		var playerRightHashTable:Hashtable = health["playerRight"];
 		
-		GUI.Label(Rect(XR,YL * 1,sX,sY), "r1: "+ health["playerRight"]["r1"]);
-		GUI.Label(Rect(XR,YL * 2,sX,sY), "r2: "+ health["playerRight"]["r2"]);
-		GUI.Label(Rect(XR,YL * 3,sX,sY), "r3: "+ health["playerRight"]["r3"]);
-		GUI.Label(Rect(XR,YL * 4,sX,sY), "r4: "+ health["playerRight"]["r4"]);
-		GUI.Label(Rect(XR,YL * 5,sX,sY), "en: "+ health["playerRight"]["engineer"]);
-		GUI.Label(Rect(XR,YL * 6,sX,sY), "g1: "+ health["playerRight"]["gunner1"]);
-		GUI.Label(Rect(XR,YL * 7,sX,sY), "g2: "+ health["playerRight"]["gunner2"]);
+		GUI.Label(Rect(XL,YL * 1,sX,sY), "r1: "+ playerLeftHashTable["r1"]);
+		GUI.Label(Rect(XL,YL * 2,sX,sY), "r2: "+ playerLeftHashTable["r2"]);
+		GUI.Label(Rect(XL,YL * 3,sX,sY), "r3: "+ playerLeftHashTable["r3"]);
+		GUI.Label(Rect(XL,YL * 4,sX,sY), "r4: "+ playerLeftHashTable["r4"]);
+		GUI.Label(Rect(XL,YL * 5,sX,sY), "en: "+ playerLeftHashTable["engineer"]);
+		GUI.Label(Rect(XL,YL * 6,sX,sY), "g1: "+ playerLeftHashTable["gunner1"]);
+		GUI.Label(Rect(XL,YL * 7,sX,sY), "g2: "+ playerLeftHashTable["gunner2"]);
+		
+		GUI.Label(Rect(XR,YL * 1,sX,sY), "r1: "+ playerRightHashTable["r1"]);
+		GUI.Label(Rect(XR,YL * 2,sX,sY), "r2: "+ playerRightHashTable["r2"]);
+		GUI.Label(Rect(XR,YL * 3,sX,sY), "r3: "+ playerRightHashTable["r3"]);
+		GUI.Label(Rect(XR,YL * 4,sX,sY), "r4: "+ playerRightHashTable["r4"]);
+		GUI.Label(Rect(XR,YL * 5,sX,sY), "en: "+ playerRightHashTable["engineer"]);
+		GUI.Label(Rect(XR,YL * 6,sX,sY), "g1: "+ playerRightHashTable["gunner1"]);
+		GUI.Label(Rect(XR,YL * 7,sX,sY), "g2: "+ playerRightHashTable["gunner2"]);
 	}
 }
