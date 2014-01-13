@@ -1,8 +1,8 @@
-﻿public var ownerName : String;
+﻿#pragma strict
+
+public var ownerName : String;
 public var character:String;
 public var healthTex:Texture;
-
-private var health : float;
 
 private var healthBarHeight : int= 5;
 private var healthBarLeft : int= 50;
@@ -10,7 +10,8 @@ private var barTop : int= 1;
 private var healthBarLength : float= 100;
 
 function Update () {
-	healthBarLength = (healthController.getHealth(ownerName, character) /250) * 100;
+	var hTemp:float = healthController.getHealth(ownerName, character);
+	healthBarLength = (hTemp / 250) * 100;
 }
 
 function OnGUI () {
