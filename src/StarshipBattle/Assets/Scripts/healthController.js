@@ -39,7 +39,7 @@ function Update () {
 		timer += Time.deltaTime;
 		
 		if(timer > 5){
-			Debug.Log(health);
+			//Debug.Log(health);
 			timer = 0;
 		}
 		
@@ -73,7 +73,7 @@ public static function updateHealth(player, unit, val:float){
 	var unitTemp:float = playerTemp[unit];
 
 	playerTemp[unit] = Mathf.Max(0.0, Mathf.Min(100.0, unitTemp + val));
-	Debug.Log("HealthController: " + player + " - " + unit + " - " + val);
+	//Debug.Log("HealthController: " + player + " - " + unit + " - " + val);
 	var object : GameObject = GameObject.Find(player).transform.FindChild(unit).gameObject;
 	
 	var unitTemp2:float = playerTemp[unit];

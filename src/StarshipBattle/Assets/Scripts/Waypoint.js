@@ -2,14 +2,6 @@
 
 var neighbors:GameObject[];
 
-function Start () {
-
-}
-
-function Update () {
-
-}
-
 function OnDrawGizmos()
 {
 	Gizmos.color = Color (1,0,0,.5);

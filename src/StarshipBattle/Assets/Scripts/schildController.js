@@ -23,7 +23,7 @@ public var laserExplodeColor:Color;
 
 function Start () {
 	ownerName = transform.root.gameObject.name;
-	Debug.Log("Owner:" + ownerName);
+	//Debug.Log("Owner:" + ownerName);
 	if (ownerName == "playerRight"){
 		posX = 0.55;
 	}
