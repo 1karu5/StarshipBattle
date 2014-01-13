@@ -12,7 +12,12 @@ public class actionClass extends MonoBehaviour
 		Debug.Log("action in actionClass: "+val);	
 	}
 	
-	public function highlight(show:boolean){	
+	public function highlight(show:boolean){
+		//highlight plyers hp bar
+		var bar:healthBar = gameObject.GetComponent("healthBar");
+		if(bar!=null){
+			bar.highlight(show);
+		}
 		if(show){
 			for(var obj:Renderer in GetComponentsInChildren(Renderer)){
 				for (var mat:Material in obj.materials) {

@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: eb9274a2ff98142c1878375356aca6e6
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - healthTex: {fileID: 2800000, guid: e23a88e1ab46641fe80b0c4002f295bd, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
