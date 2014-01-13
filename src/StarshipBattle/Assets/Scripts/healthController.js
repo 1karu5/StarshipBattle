@@ -48,11 +48,11 @@ function Update () {
 			if (player["gunner1"] == 0.0 && player["gunner2"] == 0.0 && player["engineer"] == 0.0){
 				loserName = playerName;
 			}
-			if (player["engineer"] == 0.0){
-				if (player["r1"] == 0.0 && player["r2"] == 0.0 && player["r3"] == 0.0 && player["r4"] == 0.0){
-					loserName = playerName;	
-				}
+			
+			if (player["r1"] == 0.0 && player["r2"] == 0.0 && player["r3"] == 0.0 && player["r4"] == 0.0){
+				loserName = playerName;	
 			}
+			
 		}
 		if (loserName != null){
 			var mainLogic:GameObject = GameObject.Find("mainLogic");
