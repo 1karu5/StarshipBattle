@@ -35,7 +35,7 @@ function Update () {
 						var laserFly:laserFly = l.GetComponent("laserFly");
 						laserFly.toPosition = i.position + Vector3(0,10,0);
 						
-						Destroy(l,2.0);
+						Destroy(l,0.5);
 						timer = 0;
 					}
 				}

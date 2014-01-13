@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerColor: {r: .158620834, g: 0, b: 1, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
-  speed: 1
+  speed: 3
   isGunner: 1
 --- !u!111 &940089
 Animation:
@@ -1663,11 +1663,12 @@ Animation:
   m_GameObject: {fileID: 146470877}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400004, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
+  m_Animation: {fileID: 7400006, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   - {fileID: 7400002, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   - {fileID: 7400004, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
+  - {fileID: 7400006, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -1685,7 +1686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerColor: {r: .0758619308, g: 0, b: 1, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
-  speed: 1
+  speed: 3
   isGunner: 1
 --- !u!114 &146470881
 MonoBehaviour:
@@ -3087,14 +3088,14 @@ Transform:
   m_LocalPosition: {x: -3.3443718, y: 5.72847939, z: -7.82119322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 299810237}
-  - {fileID: 261703929}
-  - {fileID: 1386399880}
   - {fileID: 681403128}
   - {fileID: 918642168}
+  - {fileID: 1386399880}
   - {fileID: 1303146741}
+  - {fileID: 299810237}
   - {fileID: 1001441012}
   - {fileID: 1244616909}
+  - {fileID: 261703929}
   m_Father: {fileID: 455897396}
 --- !u!1 &250711206
 GameObject:
@@ -8272,13 +8273,13 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 464804518}
+  - {fileID: 1280317735}
+  - {fileID: 2011527169}
+  - {fileID: 1476471150}
+  - {fileID: 855521328}
   - {fileID: 1302848256}
   - {fileID: 1219098041}
   - {fileID: 102272193}
-  - {fileID: 2011527169}
-  - {fileID: 1280317735}
-  - {fileID: 855521328}
-  - {fileID: 1476471150}
   m_Father: {fileID: 478561222}
 --- !u!1 &669172486
 GameObject:
@@ -9621,7 +9622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerColor: {r: 1, g: 0, b: 0, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
-  speed: 1
+  speed: 3
   isGunner: 1
 --- !u!111 &742628786
 Animation:
@@ -20649,7 +20650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerColor: {r: 1, g: 0, b: 0, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
-  speed: 1
+  speed: 3
   isGunner: 1
 --- !u!111 &1559405530
 Animation:
@@ -20660,11 +20661,12 @@ Animation:
   m_GameObject: {fileID: 1559405526}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400004, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
+  m_Animation: {fileID: 7400006, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   - {fileID: 7400002, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   - {fileID: 7400004, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
+  - {fileID: 7400006, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -25355,7 +25357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerColor: {r: .158620834, g: 0, b: 1, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
-  speed: 1
+  speed: 3
   isGunner: 1
 --- !u!111 &1906817232
 Animation:
@@ -27836,7 +27838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerColor: {r: 1, g: 0, b: 0, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
-  speed: 1
+  speed: 3
   isGunner: 1
 --- !u!111 &2131579177
 Animation:

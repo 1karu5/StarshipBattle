@@ -18,6 +18,7 @@ public class characterMovement extends actionClass
 	function Start () {
 		ownerObject = transform.root.gameObject;
 		ownerName = ownerObject.name;	
+		animation.Play("stehen");
 	}
 
 	function Update () {
@@ -31,7 +32,7 @@ public class characterMovement extends actionClass
 			animation.Play("run_001");
 		}
 		else {
-			animation.Stop("run_001");
+			animation.Play("stehen");
 		}
 	}
 
