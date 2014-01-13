@@ -57,7 +57,7 @@ ModelImporter:
     3300002: Kanonier_Model
     4300000: BezierCircle
     4300002: Kanonier_Model
-    7400000: Default Take
+    7400000: stehen
     7400002: ArbeiteAmConsole
     7400004: ruhestand
     7400006: run_001
@@ -80,7 +80,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Default Take
+      name: stehen
       takeName: Default Take
       firstFrame: 0
       lastFrame: 29
