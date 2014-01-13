@@ -12,8 +12,10 @@ private var prefab : GameObject;
 
 private var characters:Array = new Array();
 private var ownerName:String;
+private var isDestroyed:boolean = false;
 
 function Start () {
+	
 	engineer = transform.root.FindChild("engineer");
 	prefab = GameObject.Find("spawnLight");
 	raumName = transform.name;
@@ -27,6 +29,27 @@ function Start () {
 }
 
 function Update () {
+	var roomHealth:float = healthController.getHealth(ownerName, transform.name);
+	if (roomHealth == 0.0){
+		isDestroyed = true;
+		for (var i:Transform in characters){
+			if(i != null) {
+				var iHealth:float = healthController.getHealth(ownerName, i.name);
+				if (iHealth > 0.0){
+					var distI = Vector3.Distance(i.position, transform.position);
+					
+					if (distI < 2){
+						healthController.updateHealth(ownerName, i.name, -100);
+					}
+				}
+			}
+		}
+	}
+
+	if (isDestroyed){
+		return;
+	}
+
 	if (engineer != null){
 		var engineerHealth:float = healthController.getHealth(ownerName, engineer.name);
 		if (engineerHealth > 0){
@@ -53,6 +76,9 @@ function Update () {
 }
 
 function OnCollisionEnter(collision:Collision) {
+	if (isDestroyed){
+		return;
+	}
 	if (collision.collider.name == "laser(Clone)"){
 		//play sound
 		AudioSource.PlayClipAtPoint(roomDamage, transform.position);
@@ -74,7 +100,7 @@ function OnCollisionEnter(collision:Collision) {
 					var dist = Vector3.Distance(i.position, transform.position);
 					
 					if (dist < 2){
-						healthController.updateHealth(ownerName, i.name, -damage * 0.3);
+						healthController.updateHealth(ownerName, i.name, -damage * 1.0);
 					}
 				}
 			}

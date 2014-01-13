@@ -1,28 +1,8 @@
 ﻿#pragma strict
 
-public static var health: Hashtable = new Hashtable({
-	"playerLeft": {
-		"r1": 100.0,
-		"r2": 100.0,
-		"r3": 100.0,
-		"r4": 100.0,
-		"engineer": 100.0,
-		"gunner1": 100.0,
-		"gunner2": 100.0
-	},
-	"playerRight": {
-		"r1": 100.0,
-		"r2": 100.0,
-		"r3": 100.0,
-		"r4": 100.0,
-		"engineer": 100.0,
-		"gunner1": 100.0,
-		"gunner2": 100.0
-	}
-});
+public static var health: Hashtable;;
 
 private var loserName:String;
-public static var winner:String;
 private static var _characterDeath : AudioClip;
 
 var timer:float;
@@ -31,6 +11,26 @@ public var characterDeath : AudioClip;
 function Start () {
 	timer = 0;
 	_characterDeath = characterDeath;
+	health = new Hashtable({
+		"playerLeft": {
+			"r1": 100.0,
+			"r2": 100.0,
+			"r3": 100.0,
+			"r4": 100.0,
+			"engineer": 100.0,
+			"gunner1": 100.0,
+			"gunner2": 100.0
+		},
+		"playerRight": {
+			"r1": 100.0,
+			"r2": 100.0,
+			"r3": 100.0,
+			"r4": 100.0,
+			"engineer": 100.0,
+			"gunner1": 100.0,
+			"gunner2": 100.0
+		}
+	});
 }
 
 function Update () {
@@ -55,13 +55,13 @@ function Update () {
 			
 		}
 		if (loserName != null){
-			var mainLogic:GameObject = GameObject.Find("mainLogic");
-			DontDestroyOnLoad(mainLogic);
+			var winnerObj:GameObject = GameObject.Find("winner");
+			DontDestroyOnLoad(winnerObj);
 			if (loserName == "playerLeft"){
-				winner = "player right";
+				winner.winnerName = "player right";
 			}
 			else {
-				winner = "player left";
+				winner.winnerName = "player left";
 			}
 			Application.LoadLevel("endscreen"); 
 		}
@@ -106,16 +106,16 @@ function OnGUI() {
 		GUI.Label(Rect(XL,YL * 2,sX,sY), "r2: "+ playerLeftHashTable["r2"]);
 		GUI.Label(Rect(XL,YL * 3,sX,sY), "r3: "+ playerLeftHashTable["r3"]);
 		GUI.Label(Rect(XL,YL * 4,sX,sY), "r4: "+ playerLeftHashTable["r4"]);
-		GUI.Label(Rect(XL,YL * 5,sX,sY), "en: "+ playerLeftHashTable["engineer"]);
-		GUI.Label(Rect(XL,YL * 6,sX,sY), "g1: "+ playerLeftHashTable["gunner1"]);
-		GUI.Label(Rect(XL,YL * 7,sX,sY), "g2: "+ playerLeftHashTable["gunner2"]);
+		//GUI.Label(Rect(XL,YL * 5,sX,sY), "en: "+ playerLeftHashTable["engineer"]);
+		//GUI.Label(Rect(XL,YL * 6,sX,sY), "g1: "+ playerLeftHashTable["gunner1"]);
+		//GUI.Label(Rect(XL,YL * 7,sX,sY), "g2: "+ playerLeftHashTable["gunner2"]);
 		
 		GUI.Label(Rect(XR,YL * 1,sX,sY), "r1: "+ playerRightHashTable["r1"]);
 		GUI.Label(Rect(XR,YL * 2,sX,sY), "r2: "+ playerRightHashTable["r2"]);
 		GUI.Label(Rect(XR,YL * 3,sX,sY), "r3: "+ playerRightHashTable["r3"]);
 		GUI.Label(Rect(XR,YL * 4,sX,sY), "r4: "+ playerRightHashTable["r4"]);
-		GUI.Label(Rect(XR,YL * 5,sX,sY), "en: "+ playerRightHashTable["engineer"]);
-		GUI.Label(Rect(XR,YL * 6,sX,sY), "g1: "+ playerRightHashTable["gunner1"]);
-		GUI.Label(Rect(XR,YL * 7,sX,sY), "g2: "+ playerRightHashTable["gunner2"]);
+		//GUI.Label(Rect(XR,YL * 5,sX,sY), "en: "+ playerRightHashTable["engineer"]);
+		//GUI.Label(Rect(XR,YL * 6,sX,sY), "g1: "+ playerRightHashTable["gunner1"]);
+		//GUI.Label(Rect(XR,YL * 7,sX,sY), "g2: "+ playerRightHashTable["gunner2"]);
 	}
 }

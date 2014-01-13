@@ -3,14 +3,18 @@
 private var border : float;
 private var buttonWidth : float;
 private var buttonHeight : float;
-public var winner : String;
+public var winnerName : String;
 
 function Start () {
 	
 	border = Screen.width / 10;
 	buttonWidth = Screen.width / 5;
 	buttonHeight = buttonWidth * 0.382;
+	winnerName = winner.winnerName;
 	
+	winner.winnerName = null;
+	
+	Destroy(GameObject.Find("mainLogic"));
 }
 
 function Update () {
@@ -21,7 +25,7 @@ function OnGUI() {
 	
 	var buttonPosY = Screen.height - border * 2;
 	
-	GUI.Label(Rect(border,border,border * 8,border*3), "<color=white><size=60>Winner is: "+healthController.winner+"</size></color>");
+	GUI.Label(Rect(border,border,border * 8,border*3), "<color=white><size=60>Winner is: "+winnerName+"</size></color>");
 	
 	if(GUI.Button(Rect(border, buttonPosY, buttonWidth, buttonHeight),"Back to Main Menu")){
 		Application.LoadLevel("StarshipBattle"); 
