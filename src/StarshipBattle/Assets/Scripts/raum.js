@@ -76,9 +76,6 @@ function Update () {
 }
 
 function OnCollisionEnter(collision:Collision) {
-	if (isDestroyed){
-		return;
-	}
 	if (collision.collider.name == "laser(Clone)"){
 		//play sound
 		AudioSource.PlayClipAtPoint(roomDamage, transform.position);
