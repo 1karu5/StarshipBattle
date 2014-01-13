@@ -29,8 +29,12 @@ function Start () {
 }
 
 function Update () {
+	if (isDestroyed){
+		return;
+	}
+	
 	var roomHealth:float = healthController.getHealth(ownerName, transform.name);
-	if (roomHealth == 0.0){
+	if (roomHealth == 0.0 && !isDestroyed){
 		isDestroyed = true;
 		for (var i:Transform in characters){
 			if(i != null) {
@@ -48,7 +52,7 @@ function Update () {
 		var waypointR:Transform = transform.root.transform.FindChild("waypoints").transform.FindChild("Waypoint_" + raumN);
 		var waypointC:Transform = transform.root.transform.FindChild("waypoints").transform.FindChild("Waypoint_" + raumN + raumN);
 		
-		waypointR.position = waypointC.position + (waypointR.position - waypointC.position).normalized;
+		waypointR.position = waypointC.position + (waypointR.position - waypointC.position).normalized * 0.5;
 		
 		for (var j:String in ["engineer", "gunner1", "gunner2"]){
 			var ch:Transform = waypointR.FindChild(j);
@@ -57,9 +61,6 @@ function Update () {
 		
 	}
 
-	if (isDestroyed){
-		return;
-	}
 
 	if (engineer != null){
 		var engineerHealth:float = healthController.getHealth(ownerName, engineer.name);
@@ -100,6 +101,10 @@ function OnCollisionEnter(collision:Collision) {
 		var l:GameObject = Instantiate(prefab, transform.position, Quaternion.identity);
 		l.light.color = Color.red;
 		Destroy(l,0.5);
+		
+		if (isDestroyed){
+			return;
+		}
 		
 		for (var i:Transform in characters){
 			if(i != null) {
