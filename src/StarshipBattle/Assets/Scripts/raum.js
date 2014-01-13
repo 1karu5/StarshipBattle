@@ -48,17 +48,6 @@ function Update () {
 				}
 			}
 		}
-		var raumN = transform.name[1];
-		var waypointR:Transform = transform.root.transform.FindChild("waypoints").transform.FindChild("Waypoint_" + raumN);
-		var waypointC:Transform = transform.root.transform.FindChild("waypoints").transform.FindChild("Waypoint_" + raumN + raumN);
-		
-		waypointR.position = waypointC.position + (waypointR.position - waypointC.position).normalized * 0.5;
-		
-		for (var j:String in ["engineer", "gunner1", "gunner2"]){
-			var ch:Transform = waypointR.FindChild(j);
-			ch.position = waypointR.position;
-		}
-		
 	}
 
 

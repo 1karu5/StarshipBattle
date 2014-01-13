@@ -90,6 +90,10 @@ public class characterMovement extends actionClass
 			//TODO: stop walk animation	
 		}else{
 			if("Waypoint_"+where==targetRoom+targetRoom.Substring(targetRoom.length-1,1)){	//move inside the room
+				if(healthController.getHealth(ownerName,"r"+targetRoom.Substring(targetRoom.length-1,1))==0.0){	//room destroyed
+					targetRoom="";
+					return;	
+				}
 				nextWaypoint = waypoints[targetRoom].transform.position;
 				Debug.Log("move inside the room: "+targetRoom);
 			}
