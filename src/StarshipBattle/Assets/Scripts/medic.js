@@ -24,7 +24,7 @@ function Update () {
 			var iHealth:float = healthController.getHealth(ownerName, i.name);
 			if (iHealth > 0.0){
 				var dist = Vector3.Distance(i.position, transform.position);
-				if (dist < 2){
+				if (dist < 3){
 					healthController.updateHealth(ownerName, i.name, recover);
 					timer += Time.deltaTime;
 					if (timer > freq){
