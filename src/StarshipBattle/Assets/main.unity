@@ -131,7 +131,7 @@ Halo:
   m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4294901760
   m_Size: 1
 --- !u!114 &940090
 MonoBehaviour:
@@ -1939,7 +1939,7 @@ Halo:
   m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4294901760
   m_Size: 1
 --- !u!1 &150260618
 GameObject:
@@ -10110,7 +10110,7 @@ Halo:
   m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294901760
+    rgba: 4278190335
   m_Size: 1
 --- !u!114 &742628787
 MonoBehaviour:
@@ -12347,10 +12347,10 @@ Halo:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 897295576}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4294901760
   m_Size: 1
 --- !u!1 &899305756
 GameObject:
@@ -14936,7 +14936,7 @@ Halo:
   m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4294901760
   m_Size: 1
 --- !u!1 &1059050127
 GameObject:
@@ -15141,10 +15141,10 @@ Halo:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1070058468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294901760
+    rgba: 4278190335
   m_Size: 1
 --- !u!1 &1072408202
 GameObject:
@@ -21730,7 +21730,7 @@ Halo:
   m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294901760
+    rgba: 4278190335
   m_Size: 1
 --- !u!114 &1559405529
 MonoBehaviour:
@@ -22636,7 +22636,7 @@ Halo:
   m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294901760
+    rgba: 4278190335
   m_Size: 1
 --- !u!1 &1609427028
 GameObject:
@@ -26698,7 +26698,7 @@ Halo:
   m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4294901760
   m_Size: 1
 --- !u!114 &1906817230
 MonoBehaviour:
@@ -29305,7 +29305,7 @@ Halo:
   m_Enabled: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294901760
+    rgba: 4278190335
   m_Size: 1
 --- !u!114 &2131579178
 MonoBehaviour:
