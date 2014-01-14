@@ -92,6 +92,10 @@ public class characterMovement extends actionClass
 			if(isGunner && (targetRoom == "Waypoint_1"||targetRoom == "Waypoint_4")){
 				Debug.Log("ARBEITE!");
 				animation.Play("ArbeiteAmConsole");
+				if(ownerName == "playerRight"){
+					transform.rotation.y = transform.rotation.y + 180;
+					//transform.Rotate(Vector3.up*Time.deltaTime*speed);
+				}
 			}else{
 				Debug.Log("STEH!");
 				animation.Play("stehen");
