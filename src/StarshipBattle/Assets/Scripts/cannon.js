@@ -97,9 +97,22 @@ public class cannon extends actionClass
 		shootingRaum = "r" + shootTo;
 	}
 	
+	
+	
 	public override function highlight(show:boolean){
-		var antenne:Transform = transform.FindChild("Alles_drehbare").transform.FindChild("Cannon").transform.FindChild("Antenne");
-		var halo:Component = antenne.GetComponent("Halo");
-		halo.GetType().GetProperty("enabled").SetValue(halo, show, null);
+		if(show){
+			for(var obj:Renderer in GetComponentsInChildren(Renderer)){
+				for (var mat:Material in obj.materials) {
+        			mat.color = playerColor;
+    			}
+			}
+		}
+		else{
+			for(var obj:Renderer in GetComponentsInChildren(Renderer)){
+				for (var mat:Material in obj.materials) {
+        			mat.color = Color.white;
+    			}
+			}
+		}
 	}
 }
