@@ -19,7 +19,7 @@ public class cannon extends actionClass
 	private var rotationPart:GameObject;
 
 	private var timer : float = 0;
-	private var prefab : GameObject;
+	private var laserPrefab : GameObject;
 	private var freq : int = 3;
 	
 	
@@ -32,7 +32,7 @@ public class cannon extends actionClass
 		rotateTo["playerRightFront"]=[0,-15,-30,-40];
 
 		rotationPart = transform.FindChild("rotationPart").gameObject;
-		prefab = GameObject.Find("laser");
+		laserPrefab = GameObject.Find("laser");
 		
 		ownerObject = transform.root.gameObject;
 		ownerName = ownerObject.name;
@@ -54,7 +54,7 @@ public class cannon extends actionClass
 		else if (shootingEnabled && gunnerCount > 0){
 			timer += Time.deltaTime;
 			if(timer > (freq/gunnerCount) ){
-				var laser:GameObject = Instantiate(prefab, rotationPart.transform.position, Quaternion.identity);
+				var laser:GameObject = Instantiate(laserPrefab, rotationPart.transform.position, Quaternion.identity);
 				var toPosition = GameObject.Find(shootingToPlayer).transform.FindChild(shootingRaum).transform.position;
 				var laserFly:laserFly = laser.GetComponent("laserFly");
 				laserFly.toPosition = toPosition;
