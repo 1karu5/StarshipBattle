@@ -96,4 +96,10 @@ public class cannon extends actionClass
 		shootingToPlayer = (ownerName == "playerLeft" ? "playerRight": "playerLeft");
 		shootingRaum = "r" + shootTo;
 	}
+	
+	public override function highlight(show:boolean){
+		var antenne:Transform = transform.FindChild("Alles_drehbare").transform.FindChild("Cannon").transform.FindChild("Antenne");
+		var halo:Component = antenne.GetComponent("Halo");
+		halo.GetType().GetProperty("enabled").SetValue(halo, show, null);
+	}
 }

@@ -18,19 +18,8 @@ public class actionClass extends MonoBehaviour
 		if(bar!=null){
 			bar.highlight(show);
 		}
-		if(show){
-			for(var obj:Renderer in GetComponentsInChildren(Renderer)){
-				for (var mat:Material in obj.materials) {
-        			mat.color = playerColor;
-    			}
-			}
-		}
-		else{
-			for(var obj:Renderer in GetComponentsInChildren(Renderer)){
-				for (var mat:Material in obj.materials) {
-        			mat.color = Color.white;
-    			}
-			}
-		}
+		
+		var halo:Component = transform.GetComponent("Halo");
+		halo.GetType().GetProperty("enabled").SetValue(halo, show, null);
 	}
 }

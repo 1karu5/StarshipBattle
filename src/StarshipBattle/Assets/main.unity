@@ -85,6 +85,7 @@ GameObject:
   - 111: {fileID: 940091}
   - 114: {fileID: 940088}
   - 114: {fileID: 940090}
+  - 122: {fileID: 940089}
   m_Layer: 0
   m_Name: gunner1
   m_TagString: Untagged
@@ -121,6 +122,17 @@ MonoBehaviour:
   toPosition: {x: 0, y: 0, z: 0}
   speed: 3
   isGunner: 1
+--- !u!122 &940089
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 940086}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 1
 --- !u!114 &940090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,6 +1861,7 @@ GameObject:
   - 111: {fileID: 146470879}
   - 114: {fileID: 146470880}
   - 114: {fileID: 146470881}
+  - 122: {fileID: 146470882}
   m_Layer: 0
   m_Name: engineer
   m_TagString: Untagged
@@ -1917,6 +1930,17 @@ MonoBehaviour:
   ownerName: playerLeft
   character: engineer
   healthTex: {fileID: 2800000, guid: e23a88e1ab46641fe80b0c4002f295bd, type: 3}
+--- !u!122 &146470882
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146470877}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 1
 --- !u!1 &150260618
 GameObject:
   m_ObjectHideFlags: 0
@@ -10040,6 +10064,7 @@ GameObject:
   - 111: {fileID: 742628788}
   - 114: {fileID: 742628785}
   - 114: {fileID: 742628787}
+  - 122: {fileID: 742628786}
   m_Layer: 0
   m_Name: gunner1
   m_TagString: Untagged
@@ -10076,6 +10101,17 @@ MonoBehaviour:
   toPosition: {x: 0, y: 0, z: 0}
   speed: 3
   isGunner: 1
+--- !u!122 &742628786
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 742628783}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294901760
+  m_Size: 1
 --- !u!114 &742628787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12281,6 +12317,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 897295577}
+  - 122: {fileID: 897295578}
   m_Layer: 0
   m_Name: Antenne
   m_TagString: Untagged
@@ -12304,6 +12341,17 @@ Transform:
   - {fileID: 746816645}
   - {fileID: 583819001}
   m_Father: {fileID: 1831497834}
+--- !u!122 &897295578
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 897295576}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 1
 --- !u!1 &899305756
 GameObject:
   m_ObjectHideFlags: 0
@@ -13139,6 +13187,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 944230609}
+  - 122: {fileID: 944230610}
   m_Layer: 0
   m_Name: Alles_drehbare
   m_TagString: Untagged
@@ -13158,6 +13207,17 @@ Transform:
   m_Children:
   - {fileID: 176927413}
   m_Father: {fileID: 1791779786}
+--- !u!122 &944230610
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944230608}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 0
 --- !u!1 &948988756
 GameObject:
   m_ObjectHideFlags: 0
@@ -14843,6 +14903,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1058674874}
+  - 122: {fileID: 1058674875}
   m_Layer: 0
   m_Name: Antenne
   m_TagString: Untagged
@@ -14866,6 +14927,17 @@ Transform:
   - {fileID: 550727321}
   - {fileID: 1669203580}
   m_Father: {fileID: 176927413}
+--- !u!122 &1058674875
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058674873}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 1
 --- !u!1 &1059050127
 GameObject:
   m_ObjectHideFlags: 0
@@ -15039,6 +15111,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1070058469}
+  - 122: {fileID: 1070058470}
   m_Layer: 0
   m_Name: Antenne
   m_TagString: Untagged
@@ -15062,6 +15135,17 @@ Transform:
   - {fileID: 1287911067}
   - {fileID: 257818446}
   m_Father: {fileID: 975188441}
+--- !u!122 &1070058470
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1070058468}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294901760
+  m_Size: 1
 --- !u!1 &1072408202
 GameObject:
   m_ObjectHideFlags: 0
@@ -21616,6 +21700,7 @@ GameObject:
   - 111: {fileID: 1559405530}
   - 114: {fileID: 1559405529}
   - 114: {fileID: 1559405531}
+  - 122: {fileID: 1559405528}
   m_Layer: 0
   m_Name: engineer
   m_TagString: Untagged
@@ -21636,6 +21721,17 @@ Transform:
   - {fileID: 1321760814}
   - {fileID: 713808029}
   m_Father: {fileID: 5751329}
+--- !u!122 &1559405528
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559405526}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294901760
+  m_Size: 1
 --- !u!114 &1559405529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22507,6 +22603,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1608825304}
+  - 122: {fileID: 1608825305}
   m_Layer: 0
   m_Name: Antenne
   m_TagString: Untagged
@@ -22530,6 +22627,17 @@ Transform:
   - {fileID: 625451197}
   - {fileID: 1316464225}
   m_Father: {fileID: 119700791}
+--- !u!122 &1608825305
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1608825303}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294901760
+  m_Size: 1
 --- !u!1 &1609427028
 GameObject:
   m_ObjectHideFlags: 0
@@ -26559,6 +26667,7 @@ GameObject:
   - 111: {fileID: 1906817232}
   - 114: {fileID: 1906817231}
   - 114: {fileID: 1906817230}
+  - 122: {fileID: 1906817229}
   m_Layer: 0
   m_Name: gunner2
   m_TagString: Untagged
@@ -26580,6 +26689,17 @@ Transform:
   - {fileID: 1503261615}
   - {fileID: 634730314}
   m_Father: {fileID: 142087612}
+--- !u!122 &1906817229
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906817227}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 1
 --- !u!114 &1906817230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29139,6 +29259,7 @@ GameObject:
   - 111: {fileID: 2131579179}
   - 114: {fileID: 2131579176}
   - 114: {fileID: 2131579178}
+  - 122: {fileID: 2131579177}
   m_Layer: 0
   m_Name: gunner2
   m_TagString: Untagged
@@ -29175,6 +29296,17 @@ MonoBehaviour:
   toPosition: {x: 0, y: 0, z: 0}
   speed: 3
   isGunner: 1
+--- !u!122 &2131579177
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2131579174}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294901760
+  m_Size: 1
 --- !u!114 &2131579178
 MonoBehaviour:
   m_ObjectHideFlags: 0
