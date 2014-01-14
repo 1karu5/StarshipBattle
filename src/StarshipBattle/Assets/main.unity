@@ -85,7 +85,6 @@ GameObject:
   - 111: {fileID: 940091}
   - 114: {fileID: 940088}
   - 114: {fileID: 940090}
-  - 111: {fileID: 940089}
   m_Layer: 0
   m_Name: gunner1
   m_TagString: Untagged
@@ -122,21 +121,6 @@ MonoBehaviour:
   toPosition: {x: 0, y: 0, z: 0}
   speed: 3
   isGunner: 1
---- !u!111 &940089
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 940086}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
-  m_Animations:
-  - {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &940090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownerName: playerLeft
-  character: gunner2
+  character: gunner1
   healthTex: {fileID: 2800000, guid: e23a88e1ab46641fe80b0c4002f295bd, type: 3}
 --- !u!111 &940091
 Animation:
@@ -169,7 +153,7 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_CullingType: 0
 --- !u!1 &3857050
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +542,10 @@ Prefab:
     - target: {fileID: 400000, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
+      propertyPath: m_CullingType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
@@ -1899,7 +1887,7 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_CullingType: 0
 --- !u!114 &146470880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,7 +1902,7 @@ MonoBehaviour:
   playerColor: {r: .0758619308, g: 0, b: 1, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
   speed: 3
-  isGunner: 1
+  isGunner: 0
 --- !u!114 &146470881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2122,6 +2110,10 @@ Prefab:
     - target: {fileID: 100002, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
       propertyPath: m_Name
       value: gunner1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
+      propertyPath: m_CullingType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
@@ -6358,6 +6350,10 @@ Prefab:
       propertyPath: m_Name
       value: gunner2
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
+      propertyPath: m_CullingType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
   m_RootGameObject: {fileID: 1906817227}
@@ -10040,7 +10036,6 @@ GameObject:
   - 111: {fileID: 742628788}
   - 114: {fileID: 742628785}
   - 114: {fileID: 742628787}
-  - 111: {fileID: 742628786}
   m_Layer: 0
   m_Name: gunner1
   m_TagString: Untagged
@@ -10077,21 +10072,6 @@ MonoBehaviour:
   toPosition: {x: 0, y: 0, z: 0}
   speed: 3
   isGunner: 1
---- !u!111 &742628786
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 742628783}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
-  m_Animations:
-  - {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &742628787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10124,7 +10104,7 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_CullingType: 0
 --- !u!1 &746544551
 GameObject:
   m_ObjectHideFlags: 0
@@ -13513,6 +13493,10 @@ Prefab:
       propertyPath: m_Name
       value: gunner1
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
+      propertyPath: m_CullingType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
   m_RootGameObject: {fileID: 940086}
@@ -16080,6 +16064,10 @@ Prefab:
     - target: {fileID: 100002, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
       propertyPath: m_Name
       value: gunner2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
+      propertyPath: m_CullingType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
@@ -21548,7 +21536,6 @@ GameObject:
   - 4: {fileID: 1559405527}
   - 111: {fileID: 1559405530}
   - 114: {fileID: 1559405529}
-  - 23: {fileID: 1559405528}
   - 114: {fileID: 1559405531}
   m_Layer: 0
   m_Name: engineer
@@ -21570,27 +21557,6 @@ Transform:
   - {fileID: 1321760814}
   - {fileID: 713808029}
   m_Father: {fileID: 5751329}
---- !u!23 &1559405528
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1559405526}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!114 &1559405529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21605,7 +21571,7 @@ MonoBehaviour:
   playerColor: {r: 1, g: 0, b: 0, a: 0}
   toPosition: {x: 0, y: 0, z: 0}
   speed: 3
-  isGunner: 1
+  isGunner: 0
 --- !u!111 &1559405530
 Animation:
   m_ObjectHideFlags: 0
@@ -21624,7 +21590,7 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_CullingType: 0
 --- !u!114 &1559405531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24287,6 +24253,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .075000003
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
+      propertyPath: m_CullingType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3bbdc447ee004d048ef57e8506177cf, type: 3}
   m_RootGameObject: {fileID: 1559405526}
@@ -26510,7 +26480,6 @@ GameObject:
   - 111: {fileID: 1906817232}
   - 114: {fileID: 1906817231}
   - 114: {fileID: 1906817230}
-  - 111: {fileID: 1906817229}
   m_Layer: 0
   m_Name: gunner2
   m_TagString: Untagged
@@ -26532,21 +26501,6 @@ Transform:
   - {fileID: 1503261615}
   - {fileID: 634730314}
   m_Father: {fileID: 142087612}
---- !u!111 &1906817229
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1906817227}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
-  m_Animations:
-  - {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &1906817230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26594,7 +26548,7 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_CullingType: 0
 --- !u!1 &1907167468
 GameObject:
   m_ObjectHideFlags: 0
@@ -29106,7 +29060,6 @@ GameObject:
   - 111: {fileID: 2131579179}
   - 114: {fileID: 2131579176}
   - 114: {fileID: 2131579178}
-  - 111: {fileID: 2131579177}
   m_Layer: 0
   m_Name: gunner2
   m_TagString: Untagged
@@ -29143,21 +29096,6 @@ MonoBehaviour:
   toPosition: {x: 0, y: 0, z: 0}
   speed: 3
   isGunner: 1
---- !u!111 &2131579177
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2131579174}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
-  m_Animations:
-  - {fileID: 7400006, guid: 237a15735e6e32441affc6ab12e66c6d, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &2131579178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29190,7 +29128,7 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_CullingType: 0
 --- !u!1 &2132402217
 GameObject:
   m_ObjectHideFlags: 0

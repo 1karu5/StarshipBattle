@@ -21,6 +21,9 @@ public class characterMovement extends actionClass
 		ownerObject = transform.root.gameObject;
 		ownerName = ownerObject.name;	
 		animation.Play("stehen");
+		
+		//Loop last animation
+		animation.wrapMode = WrapMode.Loop;
 	}
 
 	function Update () {
@@ -31,11 +34,19 @@ public class characterMovement extends actionClass
 		}
 		if(targetRoom!=""){
 			move();
-			animation.Play("run_001");
 		}
 		else {
+			//animation.Play("stehen");
+		}
+		
+		if(!isGunner && targetRoom == "" && healthController.getHealth(ownerName,"r"+whereAmI())!= null && healthController.getHealth(ownerName,"r"+whereAmI())!=100){
+			Debug.Log("REPARIER!");
+			animation.Play("reparieren");
+		}else if(!isGunner && targetRoom == ""){
+			Debug.Log("ENGI STEHEN!");
 			animation.Play("stehen");
 		}
+		
 	}
 
 	private function move(){
@@ -78,9 +89,21 @@ public class characterMovement extends actionClass
 		var where = whereAmI();
 		//Debug.Log("calcNext: where="+where);
 		if(end){
+			if(isGunner && (targetRoom == "Waypoint_1"||targetRoom == "Waypoint_4")){
+				Debug.Log("ARBEITE!");
+				animation.Play("ArbeiteAmConsole");
+			}else{
+				Debug.Log("STEH!");
+				animation.Play("stehen");
+			}
+		
+		
 			targetRoom="";
 			return;
 		}
+		
+		animation.Play("run_001");
+		Debug.Log("RUN!");
 		
 		if("Waypoint_"+where==targetRoom){	//arived
 			//Debug.Log("arived");
