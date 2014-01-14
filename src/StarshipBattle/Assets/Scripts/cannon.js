@@ -31,7 +31,7 @@ public class cannon extends actionClass
 		rotateTo["playerRightBack"]=[40,30,15,0];
 		rotateTo["playerRightFront"]=[0,-15,-30,-40];
 
-		rotationPart = transform.FindChild("rotationPart").gameObject;
+		rotationPart = transform.FindChild("Alles_drehbare").gameObject;
 		laserPrefab = GameObject.Find("laser");
 		
 		ownerObject = transform.root.gameObject;
