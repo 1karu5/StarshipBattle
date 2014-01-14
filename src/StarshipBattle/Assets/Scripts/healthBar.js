@@ -49,6 +49,6 @@ public function highlight(show:boolean){
 	if(show){
 		currentColor = Color.yellow;
 	}else{
-		currentColor =Color.black;
+		currentColor = Color.black;
 	}
 }
