@@ -15,7 +15,7 @@ public var shieldDamage : AudioClip;
 
 private var prefab : GameObject;
 
-private var isEnabled:boolean = true;
+private var isEnabled:boolean = false;
 private var ownerName:String;
 private var health:float = 100.0;
 
