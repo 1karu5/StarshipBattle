@@ -7251,7 +7251,7 @@ MonoBehaviour:
   updateMinus: .0250000004
   updateMinusOnCollision: 20
   shieldDamage: {fileID: 8300000, guid: d2561801fdf1ca0478fd8255dfa337d1, type: 3}
-  laserExplodeColor: {r: 0, g: 0, b: 0, a: 0}
+  laserExplodeColor: {r: .588235319, g: .784313738, b: 1, a: 0}
 --- !u!23 &585269404
 Renderer:
   m_ObjectHideFlags: 0
