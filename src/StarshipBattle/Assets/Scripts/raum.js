@@ -30,6 +30,8 @@ function Start () {
 
 function Update () {
 	if (isDestroyed){
+		//make room black
+		GameObject.Find(ownerName).transform.FindChild("Raeume").transform.FindChild("deckel"+raumName).renderer.material.color = Color (0,0,0,0.8);
 		return;
 	}
 	
@@ -87,13 +89,13 @@ function OnCollisionEnter(collision:Collision) {
 		
 		healthController.updateHealth(ownerName, raumName, -damage);
 		
-		var l:GameObject = Instantiate(prefab, transform.position, Quaternion.identity);
-		l.light.color = Color.red;
-		Destroy(l,0.5);
-		
 		if (isDestroyed){
 			return;
 		}
+		
+		var l:GameObject = Instantiate(prefab, transform.position, Quaternion.identity);
+		l.light.color = Color.red;
+		Destroy(l,0.5);
 		
 		for (var i:Transform in characters){
 			if(i != null) {
