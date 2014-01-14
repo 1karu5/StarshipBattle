@@ -94,7 +94,7 @@ function OnGUI() {
 	
 	
 		var XL = Screen.width * 0.03;
-		var XR = Screen.width * 0.92;
+		var XR = Screen.width * 0.79;
 	 	var YL = Screen.height * 0.03;
 	 	var sX = Screen.width * 0.1;
 	 	var sY = Screen.height * 0.1;
@@ -102,18 +102,28 @@ function OnGUI() {
 		var playerLeftHashTable:Hashtable = health["playerLeft"];
 		var playerRightHashTable:Hashtable = health["playerRight"];
 		
-		GUI.Label(Rect(XL,YL * 1,sX,sY), "r1: "+ playerLeftHashTable["r1"]);
-		GUI.Label(Rect(XL,YL * 2,sX,sY), "r2: "+ playerLeftHashTable["r2"]);
-		GUI.Label(Rect(XL,YL * 3,sX,sY), "r3: "+ playerLeftHashTable["r3"]);
-		GUI.Label(Rect(XL,YL * 4,sX,sY), "r4: "+ playerLeftHashTable["r4"]);
+		GUI.backgroundColor = Color.green;
+		
+		GUI.Label(Rect(XL,YL * 1,sX,sY), "Weaponroom 1:");
+		GUI.HorizontalScrollbar(Rect (XL+100,YL * 1,sX,sY), 0, playerLeftHashTable["r1"], 0, 100);
+		GUI.Label(Rect(XL,YL * 2,sX,sY), "Medicroom:");
+		GUI.HorizontalScrollbar(Rect (XL+100,YL * 2,sX,sY), 0, playerLeftHashTable["r2"], 0, 100);
+		GUI.Label(Rect(XL,YL * 3,sX,sY), "Engineroom:");
+		GUI.HorizontalScrollbar(Rect (XL+100,YL * 3,sX,sY), 0, playerLeftHashTable["r3"], 0, 100);
+		GUI.Label(Rect(XL,YL * 4,sX,sY), "Weaponroom 2:");
+		GUI.HorizontalScrollbar(Rect (XL+100,YL * 4,sX,sY), 0, playerLeftHashTable["r4"], 0, 100);
 		//GUI.Label(Rect(XL,YL * 5,sX,sY), "en: "+ playerLeftHashTable["engineer"]);
 		//GUI.Label(Rect(XL,YL * 6,sX,sY), "g1: "+ playerLeftHashTable["gunner1"]);
 		//GUI.Label(Rect(XL,YL * 7,sX,sY), "g2: "+ playerLeftHashTable["gunner2"]);
 		
-		GUI.Label(Rect(XR,YL * 1,sX,sY), "r1: "+ playerRightHashTable["r1"]);
-		GUI.Label(Rect(XR,YL * 2,sX,sY), "r2: "+ playerRightHashTable["r2"]);
-		GUI.Label(Rect(XR,YL * 3,sX,sY), "r3: "+ playerRightHashTable["r3"]);
-		GUI.Label(Rect(XR,YL * 4,sX,sY), "r4: "+ playerRightHashTable["r4"]);
+		GUI.Label(Rect(XR,YL * 1,sX,sY), "Weaponroom 1:");
+		GUI.HorizontalScrollbar(Rect (XR+100,YL * 1,sX,sY), 0, playerRightHashTable["r1"], 0, 100);
+		GUI.Label(Rect(XR,YL * 2,sX,sY), "Medicroom:");
+		GUI.HorizontalScrollbar(Rect (XR+100,YL * 2,sX,sY), 0, playerRightHashTable["r2"], 0, 100);
+		GUI.Label(Rect(XR,YL * 3,sX,sY), "Engineroom:");
+		GUI.HorizontalScrollbar(Rect (XR+100,YL * 3,sX,sY), 0, playerRightHashTable["r3"], 0, 100);
+		GUI.Label(Rect(XR,YL * 4,sX,sY), "Weaponroom 2:");
+		GUI.HorizontalScrollbar(Rect (XR+100,YL * 4,sX,sY), 0, playerRightHashTable["r4"], 0, 100);
 		//GUI.Label(Rect(XR,YL * 5,sX,sY), "en: "+ playerRightHashTable["engineer"]);
 		//GUI.Label(Rect(XR,YL * 6,sX,sY), "g1: "+ playerRightHashTable["gunner1"]);
 		//GUI.Label(Rect(XR,YL * 7,sX,sY), "g2: "+ playerRightHashTable["gunner2"]);
